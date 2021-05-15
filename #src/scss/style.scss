@@ -1,5 +1,7 @@
-@import "mixins";
-@import "fonts";
-@import "normalize";
-@import "global";
-// @import "forms";
+@import "./main/mixins";
+@import "./main/normalize";
+@import "./main/reset";
+@import "./main/fonts";
+@import "./main/global";
+
+@import 'header';

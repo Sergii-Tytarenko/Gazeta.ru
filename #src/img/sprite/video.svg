@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <path id="video" class="cls-1" d="M40,31a9,9,0,1,1-9,9A9,9,0,0,1,40,31Zm-2.172,4.966v8.069L44.035,40Z" transform="translate(-31 -31)"/>
+</svg>

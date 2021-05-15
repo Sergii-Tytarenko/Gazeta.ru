@@ -9,6 +9,7 @@ html,body {
     font-size: 14px;
     font-weight: 400;
     line-height: 1.2;
+	background-color: #f1f1f1;
 }
 
 body.lock {
@@ -16,10 +17,13 @@ body.lock {
 }
 
 .wrapper {
+	position: relative;
 	display: flex;
 	flex-direction: column;
 
+	max-width: 1680px;
 	min-height: 100vh;
+	margin: 0 auto;
 	overflow: hidden;
 }
 

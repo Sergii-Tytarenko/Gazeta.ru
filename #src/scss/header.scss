@@ -1,6 +1,85 @@
 /*----------------------------------------------------------------
    Main Header
 ----------------------------------------------------------------*/
+.main-header {
+	// .main-header__aside
+	&__aside {}
+	// .main-header__video
+	&__video {}
+	// .main-header__photo
+	&__photo {}
+	// .main-header__logo
+	&__logo {}
+	// .main-header__middle
+	&__middle {}
+	// .main-header__row
+	&__row {}
+	// .main-header__exchange
+	&__exchange {}
+	// .main-header__social
+	&__social {}
+	// .main-header__counselor
+	&__counselor {}
+	// .main-header__col
+	&__col {}
+	// .main-header__date
+	&__date {}
+	// .main-header__weather
+	&__weather {}
+	// .main-header__thermometer
+	&__thermometer {}
+	// .main-header__article
+	&__article {}
+	// .main-header__author
+	&__author {}
+	// .main-header__text
+	&__text {}
+	// .main-header__time
+	&__time {
+		// .main-header__time--hidden
+		&--hidden {}
+	}
+	// .main-header__cl
+	&__cl {}
+	// .main-header__nav
+	&__nav {}
+}
+.video-icon {
+}
+.photo-icon {
+}
+.logo {
+	// .logo--main
+	&--main {}
+}
+.seach {
+	// .seach__icon
+	&__icon {}
+}
+.burger {
+}
+.container {
+}
+.dollar {
+}
+.euro {
+}
+.social {
+	// .social__item
+	&__item {}
+	// .social__link
+	&__link {}
+	// .social__icon
+	&__icon {}
+}
+.main-nav {
+	// .main-nav__list
+	&__list {}
+	// .main-nav__row
+	&__row {}
+	// .main-nav__link
+	&__link {}
+}
 
 
 /*----------------------------------------------------------------
