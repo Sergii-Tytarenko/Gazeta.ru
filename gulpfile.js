@@ -222,6 +222,7 @@ function server() {
             baseDir: "./" + distPath,
             port: 3000,
         },
+        browser: 'chrome',
         notify: false,
     });
 }
@@ -238,10 +239,10 @@ function watchFiles() {
 const build = series( clean, fonts_otf, parallel(html, js, images, sprite, favicon), fonts, styles, server);
 const watch = parallel( build, watchFiles);
 
-exports.clean = clean;
 exports.html = html;
 exports.styles = styles;
 exports.js = js;
+exports.jsDev = jsDev;
 exports.images = images;
 exports.sprite = sprite;
 exports.favicon = favicon;
@@ -250,5 +251,6 @@ exports.fonts = fonts;
 exports.watchFiles = watchFiles;
 exports.build = build;
 exports.watch = watch;
-exports.jsDev = jsDev;
+exports.clean = clean;
+exports.server = server;
 exports.default = watch;

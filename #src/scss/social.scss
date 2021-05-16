@@ -1,0 +1,24 @@
+.social {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	// .social__item
+	&__item {
+		margin-right: 25px;
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+	// .social__link
+	&__link {
+		display: block;
+		line-height: 0;
+	}
+	// .social__icon
+	&__icon {
+		fill: #b4b4b4;
+	}
+}

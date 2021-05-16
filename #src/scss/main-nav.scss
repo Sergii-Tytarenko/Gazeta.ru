@@ -1,0 +1,31 @@
+.main-nav {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 100%;
+	max-width: 270px;
+
+	background-color: #f9f9f9;
+	// .main-nav__list
+	&__list {
+		display: flex;
+		flex-direction: column;
+		padding: 30px 25px;
+
+		list-style: none;
+	}
+	// .main-nav__row
+	&__row {
+		margin-bottom: 40px;
+		
+		&:last-child {
+			margin: 0;
+		}
+	}
+	// .main-nav__link
+	&__link {
+		color: #000;
+		font-size: 16px;
+		font-weight: 500;
+	}
+}

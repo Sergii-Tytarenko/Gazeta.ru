@@ -13,9 +13,9 @@
         </a>
         <a class="logo main-header__logo" href="index.html" title="Главная">gazeta.ru</a>
 
-        <button class="seach" type="button" data-modal="#seach" title="Поиск">
-            <svg class="seach__icon" width="18" height="18">
-                <use xlink:href="img/sprite.svg#poisk_ico">
+        <button class="search" type="button" data-modal="#search" title="Поиск">
+            <svg class="search__icon" width="18" height="18">
+                <use xlink:href="img/sprite.svg#search">
             </svg>
         </button>
 
@@ -25,53 +25,53 @@
     </div>
 
     <!-- content -->
-    <div class="main-header__middle container">
-        <div class="main-header__row">
+    <div class="main-header__middle">
+        <div class="main-header__row main-header__row--top">
             <p class="main-header__exchange" aria-label="Курс валют">
-                <span class="dollar">&dollar; 63.08</span>
-                <span class="euro">&euro; 69.81</span>
+                <span class="main-header__dollar">&dollar; 63.08</span>
+                <span class="main-header__euro">&euro; 69.81</span>
             </p>
 
             <!-- header social list -->
             <ul class="main-header__social social" aria-label="Мы в соцсетях">
                 <li class="social__item">
                     <a class="social__link" href="#" title="">
-                        <svg class="social__icon" width="18" height="18">
+                        <svg class="social__icon" width="18" height="16">
                             <use xlink:href="img/sprite.svg#fb">
                         </svg>
                     </a>
                 </li>
                 <li class="social__item">
                     <a class="social__link" href="#" title="">
-                        <svg class="social__icon" width="18" height="18">
+                        <svg class="social__icon" width="18" height="16">
                             <use xlink:href="img/sprite.svg#google">
                         </svg>
                     </a>
                 </li>
                 <li class="social__item">
                     <a class="social__link" href="#" title="">
-                        <svg class="social__icon" width="18" height="18">
+                        <svg class="social__icon" width="18" height="16">
                             <use xlink:href="img/sprite.svg#mail">
                         </svg>
                     </a>
                 </li>
                 <li class="social__item">
                     <a class="social__link" href="#" title="">
-                        <svg class="social__icon" width="18" height="18">
+                        <svg class="social__icon" width="18" height="16">
                             <use xlink:href="img/sprite.svg#vk">
                         </svg>
                     </a>
                 </li>
                 <li class="social__item">
                     <a class="social__link" href="#" title="">
-                        <svg class="social__icon" width="18" height="18">
+                        <svg class="social__icon" width="18" height="16">
                             <use xlink:href="img/sprite.svg#twi">
                         </svg>
                     </a>
                 </li>
                 <li class="social__item">
                     <a class="social__link" href="#" title="">
-                        <svg class="social__icon" width="18" height="18">
+                        <svg class="social__icon" width="18" height="16">
                             <use xlink:href="img/sprite.svg#rss">
                         </svg>
                     </a>
@@ -80,16 +80,8 @@
 
             <a class="main-header__counselor" href="#">Пенсионный советник</a>
         </div>
-        <div class="main-header__row">
-            <div class="main-header__col">
-                <a class="logo main-header__logo logo--main" href="index.html" title="Главная">gazeta.ru</a>
-                <p class="main-header__date">13 мая, понедельник</p>
-                <p class="main-header__weather">
-                    Ростов на дону
-                    <span class="main-header__thermometer">+23 C&deg;</span>
-                </p>
-            </div>
 
+        <div class="main-header__row main-header__row--bottom">
             <div class="main-header__col">
                 <a class="main-header__article" href="#">
                     <div class="main-header__author">
@@ -104,6 +96,15 @@
             </div>
 
             <div class="main-header__col">
+                <a class="logo main-header__logo logo--main" href="index.html" title="Главная">gazeta.ru</a>
+                <p class="main-header__date">13 мая, понедельник</p>
+                <p class="main-header__weather">
+                    Ростов на дону
+                    <span class="main-header__thermometer">+23 C&deg;</span>
+                </p>
+            </div>
+            
+            <div class="main-header__col">
                 <a class="main-header__article" href="#">
                     <div class="main-header__author">
                         <img src="img/header/author2.jpg" alt="Денис Драгунский">
@@ -116,41 +117,41 @@
                 </a>
             </div>
         </div>
-
-         <!-- main navigation -->
-        <nav class="main-header__nav main-nav">
-            <ul class="main-nav__list">
-                <li class="main-nav__row">
-                    <a class="main-nav__link" href="#">Новости</a>
-                </li>
-                <li class="main-nav__row">
-                    <a class="main-nav__link" href="#">Политика</a>
-                </li>
-                <li class="main-nav__row">
-                    <a class="main-nav__link" href="#">Бизнесс</a>
-                </li>
-                <li class="main-nav__row">
-                    <a class="main-nav__link" href="#">Oбщество</a>
-                </li>
-                <li class="main-nav__row">
-                    <a class="main-nav__link" href="#">Армия</a>
-                </li>
-                <li class="main-nav__row">
-                    <a class="main-nav__link" href="#">Наука</a>
-                </li>
-                <li class="main-nav__row">
-                    <a class="main-nav__link" href="#">Культура</a>
-                </li>
-                <li class="main-nav__row">
-                    <a class="main-nav__link" href="#">Технологии</a>
-                </li>
-                <li class="main-nav__row">
-                    <a class="main-nav__link" href="#">Авто</a>
-                </li>
-                <li class="main-nav__row">
-                    <a class="main-nav__link" href="#">Спорт</a>
-                </li>
-            </ul>
-        </nav>
     </div>
+
+    <!-- main navigation -->
+    <nav class="main-header__nav main-nav">
+        <ul class="main-nav__list">
+            <li class="main-nav__row">
+                <a class="main-nav__link" href="#">Новости</a>
+            </li>
+            <li class="main-nav__row">
+                <a class="main-nav__link" href="#">Политика</a>
+            </li>
+            <li class="main-nav__row">
+                <a class="main-nav__link" href="#">Бизнесс</a>
+            </li>
+            <li class="main-nav__row">
+                <a class="main-nav__link" href="#">Oбщество</a>
+            </li>
+            <li class="main-nav__row">
+                <a class="main-nav__link" href="#">Армия</a>
+            </li>
+            <li class="main-nav__row">
+                <a class="main-nav__link" href="#">Наука</a>
+            </li>
+            <li class="main-nav__row">
+                <a class="main-nav__link" href="#">Культура</a>
+            </li>
+            <li class="main-nav__row">
+                <a class="main-nav__link" href="#">Технологии</a>
+            </li>
+            <li class="main-nav__row">
+                <a class="main-nav__link" href="#">Авто</a>
+            </li>
+            <li class="main-nav__row">
+                <a class="main-nav__link" href="#">Спорт</a>
+            </li>
+        </ul>
+    </nav>
 </header>
