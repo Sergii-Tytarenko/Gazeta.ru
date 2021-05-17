@@ -18,17 +18,27 @@ body.lock {
 
 .wrapper {
 	position: relative;
+	max-width: 1680px;
+	margin: 0 auto;
+
+	overflow: hidden;
+}
+
+.root {
 	display: flex;
 	flex-direction: column;
-
-	max-width: 1680px;
 	min-height: 100vh;
-	margin: 0 auto;
-	overflow: hidden;
+	padding-top: 80px;
+	@media(min-width: 1536px) {
+		max-width: 1330px;
+		margin: 0 270px 0 80px;
+		padding: 0;
+	}
 }
 
 .container {
 	max-width: 1300px;
+	width: 100%;
 	margin: 0 auto;
 	padding: 0 30px;
 }
@@ -64,3 +74,7 @@ body.lock {
 	clip: rect(0 0 0 0);
 	overflow: hidden;
 }
+
+.js-focus-visible :focus:not(.focus-visible) {
+	outline: none;
+  }

@@ -14,92 +14,241 @@
 		flex-direction: column;
 		align-items: center;
 		width: 80px;
-		height: 1050px;
+		height: 950px;
 		max-height: 100vh;
 		padding: 30px 0;
 
 		background-color: #b11217;
+		@media(max-width: 1535px) {
+			flex-direction: row;
+
+			height: 80px;
+			width: 100%;
+			padding: 0 30px;
+		}
 	}
-	// .main-header__video
-	&__video {
-		margin-bottom: 20px;
-	}
-	// .main-header__photo
+	&__video,
 	&__photo {
 		margin-bottom: 20px;
+		transition: transform .1s linear;
+		&:focus {
+			outline: 2px solid #fff;
+			outline-offset: 3px;
+			
+		}
+		&:hover {
+			transform: scale(1.1);
+		}
+		@media(max-width: 1535px) {
+			margin: 0 20px 0 0;
+			&:last-child {
+				margin: 0;
+			}
+		}
+	}
+	// .main-header__video
+	&__video {}
+	// .main-header__photo
+	&__photo {
 	}
 	// .main-header__logo
-	&__logo {}
+	&__logo {
+		margin-bottom: 20px;
+	}
 	// .main-header__middle
 	&__middle {
-		margin: 0 270px 0 80px;
 		padding: 0 30px;
 	}
 	// .main-header__row
 	&__row {
 		display: flex;
-		justify-content: center;
 		align-items: center;
-		padding: 30px 0;
 		&--top {
 			justify-content: space-between;
 			min-height: 80px;
 			padding: 10px 0;
 		}
 		&--bottom {
-			min-height: 280px;
+			justify-content: center;
+			min-height: 265px;
+			padding-bottom: 75px;
 		}
 	}
 	// .main-header__exchange
 	&__exchange {
 		margin: 0;
+		font-weight: 500;
 	}
-	// .main-header__euro
-	&__euro {}
-	// .main-header__dollar
-	&__dollar {}
+	// .main-header__currency
+	&__currency {
+		position: relative;
+		display: inline-block;
+		padding-left: 13px;
+		margin-right: 10px;
+		&:last-child {
+			margin: 0;
+		}
+		&::before {
+			content: '';
+			position: absolute;
+			top: 50%;
+			left: 0;
+
+			width: 6px;
+			height: 6px;
+			margin-top: -3px;
+			border-radius: 50%;
+		}
+		&--up::before {
+			background-color: #8ac287;
+		}
+		&--down::before {
+			background-color: #e6173b;
+		}
+	}
 	// .main-header__social
-	&__social {}
+	&__social {
+		margin-right: -20px;
+	}
 	// .main-header__counselor
-	&__counselor {}
+	&__counselor {
+		position: relative;
+		padding-left: 13px;
+
+		color: #000;
+		font-weight: 500;
+		&::before {
+			content: '';
+			position: absolute;
+			top: 50%;
+			left: 0;
+
+			width: 6px;
+			height: 6px;
+			margin-top: -3px;
+			border-radius: 50%;
+			background-color: #e6173b;
+		}
+		&--active::before {
+			background-color: #8ac287;
+		}
+		&--disabled::before {
+			background-color: #e6173b;
+		}
+		&:hover {
+			text-decoration: underline;
+		}
+		&:focus {
+			outline: 2px solid rgb(216, 25, 18);
+			outline-offset: 2px;
+		}
+	}
 	// .main-header__col
 	&__col {
+		flex: 0 0 33.333%;
+		&:first-child {
+			padding-left: 45px;
+		}
+		&:last-child {
+			padding-right: 45px;
+			.main-header__article {
+				margin-left: auto;
+			}
+		}
 		&:nth-child(2) {
-			padding: 0 130px;
+			flex-shrink: 0;
+
+			font-size: 16px;
+			text-align: center;
 		}
 	}
 	// .main-header__date
-	&__date {}
+	&__date {
+		margin: 0 0 10px;
+	}
 	// .main-header__weather
-	&__weather {}
+	&__weather {
+		margin: 0;
+	}
 	// .main-header__thermometer
-	&__thermometer {}
+	&__thermometer {
+		display: inline-block;
+		padding-left: 25px;
+		margin-left: 10px;
+		
+		background: url('../img/header/cloud_ico.svg') left top 2px  no-repeat;
+	}
 	// .main-header__article
-	&__article {}
+	&__article {
+		display: flex;
+		align-items: center;
+		max-width: 345px;
+
+		color: #000;
+		transition: color .3s;
+		&:hover {
+			color: rgb(185, 9, 3);
+			.main-header__time {
+				color: rgb(185, 9, 3);
+			}
+		}
+		&:focus {
+			outline: 2px solid rgb(216, 25, 18);
+			outline-offset: 2px;
+		}
+	}
 	// .main-header__author
-	&__author {}
+	&__author {
+		flex-shrink: 0;
+		width: 85px;
+		height: 85px;
+		margin-right: 20px;
+
+		border-radius: 50%;
+		overflow: hidden;
+		& img {
+			display: block;
+			width: 100%;
+			height: 100%;
+
+			object-fit: cover;
+			object-position: center;
+		}
+	}
+	// .main-header__desc
+	&__desc {
+	}
 	// .main-header__text
-	&__text {}
+	&__text {
+		margin: 0 0 10px;
+
+		font-weight: 500;
+		line-height: 1.5;
+	}
 	// .main-header__time
 	&__time {
+		transition: color .3s;
 		// .main-header__time--hidden
-		&--hidden {}
+		&--hidden {
+			display: none;
+		}
 	}
-	// .main-header__cl
-	&__cl {}
+	// .main-header__hours
+	&__hours {
+		display: inline-block;
+		padding-left: 20px;
+		margin-left: 5px;
+
+		background: url('../img/header/clock.svg') left center no-repeat;
+	}
 	// .main-header__nav
 	&__nav {}
 }
 
-.video-icon {
-	fill: #fff;
-}
-
+.video-icon,
 .photo-icon {
 	fill: #fff;
-
 }
-
 
 
 /*----------------------------------------------------------------
@@ -107,8 +256,29 @@
 ----------------------------------------------------------------*/
 .logo {
 	display: none;
+
+	color: #fff;
+	font-family: Hoefler, serif;
+	font-weight: 400;
+	font-size: 56px;
+	letter-spacing: 1px;
+	text-transform: lowercase;
+	@media(max-width: 1535px) {
+		display: block;
+		margin: 0 auto;
+		visibility: hidden;
+	}
 	// .logo--main
 	&--main {
+		display: block;
+		visibility: visible !important;
+
+		color: #000;
+		font-size: 70px;
+		&:focus {
+			outline: 2px solid rgb(216, 25, 18);
+			outline-offset: 2px;
+		}
 	}
 }
 
@@ -124,6 +294,17 @@
 	border: none;
 	background-color: transparent;
 	cursor: pointer;
+	transition: transform .1s linear;
+	@media(max-width: 1535px) {
+		margin: 0 20px 0 0;
+	}
+	&:focus {
+		outline: 2px solid #fff;
+		outline-offset: 3px;
+	}
+	&:hover {
+		transform: scale(1.1);
+	}
 	// .seach__icon
 	&__icon {
 		width: 18px;
@@ -175,6 +356,9 @@
 		margin-top: -1px;
 
 		background-color: #fff;
+	}
+	@media(max-width: 1535px) {
+		display: block;
 	}
 }
 

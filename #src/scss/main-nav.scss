@@ -4,12 +4,20 @@
 	right: 0;
 	width: 100%;
 	max-width: 270px;
+	height: 100vh;
 
 	background-color: #f9f9f9;
+	@media(max-width: 1535px) {
+		left: 0;
+		max-width: none;
+		height: auto;
+		transform: translate(0, -100%);
+	}
 	// .main-nav__list
 	&__list {
 		display: flex;
 		flex-direction: column;
+		margin: 0;
 		padding: 30px 25px;
 
 		list-style: none;
@@ -17,7 +25,6 @@
 	// .main-nav__row
 	&__row {
 		margin-bottom: 40px;
-		
 		&:last-child {
 			margin: 0;
 		}
@@ -27,5 +34,12 @@
 		color: #000;
 		font-size: 16px;
 		font-weight: 500;
+		&:hover {
+			text-decoration: underline;
+		}
+		&:focus {
+			outline: 2px solid rgb(216, 25, 18);
+			outline-offset: 2px;
+		}
 	}
 }

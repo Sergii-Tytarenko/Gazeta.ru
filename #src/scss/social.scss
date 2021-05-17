@@ -16,9 +16,19 @@
 	&__link {
 		display: block;
 		line-height: 0;
+		&:hover {
+			.social__icon {
+				fill: darken($color: #b4b4b4, $amount: 25%)
+			}
+		}
+		&:focus {
+			outline: 2px solid rgb(216, 25, 18);
+			outline-offset: 2px;
+		}
 	}
 	// .social__icon
 	&__icon {
 		fill: #b4b4b4;
+		transition: fill .2s;
 	}
 }

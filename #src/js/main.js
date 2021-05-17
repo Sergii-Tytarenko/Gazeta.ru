@@ -1,10 +1,6 @@
-import lightgallery from './vendors/light_gallery';
+/* Vendors
+---------------------------------------------------------------*/
+// import lightgallery from './vendors/light_gallery';
+import focusVisible from './vendors/focusVisible';
 
-
- /* Main
- ---------------------------------------------------------------*/
-function showText(text = 'no text') {
-    console.log(text);
-}
-showText('last');
 

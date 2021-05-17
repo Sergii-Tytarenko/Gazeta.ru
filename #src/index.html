@@ -3,10 +3,13 @@
 @include('_head.html', {})
 <body>
 	<div class="wrapper">
-		@include('_header.html',{})
-		<main class="page">
+		<div class="root">
+			@include('_header.html',{})
+			<main class="page">
 
-		</main> <!-- /.page -->
+			</main> <!-- /.page -->
+			@include('_footer.html', {})
+		</div><!-- /.root -->
 	</div> <!-- /.wrapper -->
 	
 	<!-- Modal windows-->
