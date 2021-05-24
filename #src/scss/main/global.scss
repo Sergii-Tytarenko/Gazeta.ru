@@ -28,11 +28,15 @@ body.lock {
 	display: flex;
 	flex-direction: column;
 	min-height: 100vh;
-	padding-top: 80px;
+	margin-left: 60px;
 	@media(min-width: 1536px) {
 		max-width: 1330px;
 		margin: 0 270px 0 80px;
 		padding: 0;
+	}
+	@media(max-width: 1240px) {
+		max-width: none;
+		margin: 0;
 	}
 }
 

@@ -1,0 +1,39 @@
+.rubrics {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 100%;
+	max-width: 270px;
+	height: 100vh;
+
+	background-color: #f9f9f9;
+	// .rubrics__list
+	&__list {
+		display: flex;
+		flex-direction: column;
+		margin: 0;
+		padding: 30px 25px;
+
+		list-style: none;
+	}
+	// .rubrics__row
+	&__row {
+		margin-bottom: 40px;
+		&:last-child {
+			margin: 0;
+		}
+	}
+	// .rubrics__link
+	&__link {
+		color: #000;
+		font-size: 16px;
+		font-weight: 500;
+		&:hover {
+			text-decoration: underline;
+		}
+		&:focus {
+			outline: 2px solid rgb(216, 25, 18);
+			outline-offset: 2px;
+		}
+	}
+}

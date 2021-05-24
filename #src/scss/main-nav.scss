@@ -1,45 +1,69 @@
+/*----------------------------------------------------------------
+    Main/burger navigation
+----------------------------------------------------------------*/
 .main-nav {
-	position: absolute;
-	top: 0;
-	right: 0;
-	width: 100%;
-	max-width: 270px;
-	height: 100vh;
+    background: #b11217;
+    // .main-nav__menu
+    &__menu {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 -1px 0 0; 
+        padding: 0;
 
-	background-color: #f9f9f9;
-	@media(max-width: 1535px) {
-		left: 0;
-		max-width: none;
-		height: auto;
-		transform: translate(0, -100%);
-	}
-	// .main-nav__list
-	&__list {
-		display: flex;
-		flex-direction: column;
-		margin: 0;
-		padding: 30px 25px;
+        list-style: none;
+        border-bottom: 1px solid #c2464a;
+    }
+    // .main-nav__col
+    &__col {
+        flex: 1 1 25%;
+    }
+    // .main-nav__btn
+    &__btn {
+        position: relative;
+        display: block;
+        width: 100%;
+        height: 100%;
+        padding: 20px 15px;
 
-		list-style: none;
-	}
-	// .main-nav__row
-	&__row {
-		margin-bottom: 40px;
-		&:last-child {
-			margin: 0;
-		}
-	}
-	// .main-nav__link
-	&__link {
-		color: #000;
-		font-size: 16px;
-		font-weight: 500;
-		&:hover {
-			text-decoration: underline;
-		}
-		&:focus {
-			outline: 2px solid rgb(216, 25, 18);
-			outline-offset: 2px;
-		}
-	}
+        color: #fff;
+        text-align: center;
+        font-size: 18px;
+
+        border: none;
+        background: transparent;
+       
+        border-top: 1px solid #c2464a;
+        border-right: 1px solid #c2464a;
+        &::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 4px;
+
+            background-color: transparent;
+            transition: background .3s;
+        }
+        &--active::after {
+            background-color: #fff;
+        }
+    }
+    // .main-nav__inner
+    &__inner {}
+    // .main-nav__footer
+    &__footer {}
+    // .main-nav__search
+    &__search {}
+    // .main-nav__social
+    &__social {}
 }
+.search {
+    // .search__input
+    &__input {}
+    // .search__btn
+    &__btn {}
+    // .search__icon
+    &__icon {}
+}
+
