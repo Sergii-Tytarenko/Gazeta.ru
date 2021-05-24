@@ -2,7 +2,21 @@
     Main/burger navigation
 ----------------------------------------------------------------*/
 .main-nav {
+    position: absolute;
+    top: -100%;
+    left: 0;
+    width: 100%;
+   
     background: #b11217;
+    opacity: 0;
+    transition: opacity .3s;
+    &.active {
+        top: 80px;
+        opacity: 1;
+        @media(max-width: 767px) {
+            top: 60px;
+        }
+    }
     // .main-nav__menu
     &__menu {
         display: flex;
@@ -27,7 +41,7 @@
 
         color: #fff;
         text-align: center;
-        font-size: 18px;
+        font-size: 28px;
 
         border: none;
         background: transparent;
@@ -50,20 +64,32 @@
         }
     }
     // .main-nav__inner
-    &__inner {}
+    &__inner {
+        display: flex;
+        flex-direction: column;
+        max-height: calc(100vh - 122px);
+        overflow-y: auto;
+        padding: 70px 80px 35px;
+        @media(max-width: 767px) {
+            padding: 50px 30px 35px;
+        }
+    }
+    // .main-nav__item
+    &__item {
+        margin-bottom: 50px;
+    }
     // .main-nav__footer
-    &__footer {}
+    &__footer {
+        margin-top: auto;
+    }
     // .main-nav__search
-    &__search {}
+    &__search {
+        margin-bottom: 45px;
+    }
     // .main-nav__social
-    &__social {}
+    &__social {
+        
+    }
 }
-.search {
-    // .search__input
-    &__input {}
-    // .search__btn
-    &__btn {}
-    // .search__icon
-    &__icon {}
-}
+
 

@@ -269,12 +269,20 @@
 	}
 	// .main-header__rubrics
 	&__rubrics {
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: 100%;
+		max-width: 270px;
+		height: 100vh;
+
+		background-color: #f9f9f9;
 		@media(max-width: 1535px) {
 			display: none;
 		}
 	}
-	// .main-header__search
-	&__search {
+	// .main-header__search-btn
+	&__search-btn {
 		display: inline-block;
 		margin-top: auto;
 

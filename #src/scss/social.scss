@@ -2,9 +2,26 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	flex-wrap: wrap;
 	padding: 0;
 	margin: 0;
 	list-style: none;
+	&--nav {
+		.social__item {
+			margin-bottom: 10px;
+		}
+		.social__icon {
+            fill: #fff;
+        }
+		.social__link {
+			&:hover,
+			&:focus {
+				.social__icon {
+					fill: #fff;
+				}
+			}
+		}
+	}
 	// .social__item
 	&__item {
 		margin-right: 25px;

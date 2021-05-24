@@ -1,12 +1,4 @@
 .rubrics {
-	position: absolute;
-	top: 0;
-	right: 0;
-	width: 100%;
-	max-width: 270px;
-	height: 100vh;
-
-	background-color: #f9f9f9;
 	// .rubrics__list
 	&__list {
 		display: flex;
@@ -36,4 +28,21 @@
 			outline-offset: 2px;
 		}
 	}
+
+	&--nav {
+		// .rubrics__list
+		.rubrics__list {
+			align-items: center;
+		}
+		// .rubrics__row
+		.rubrics__row {
+		}
+		// .rubrics__link
+		.rubrics__link {
+			color: #fff;
+			font-size: 38px;
+		}
+	
+	}
 }
+
