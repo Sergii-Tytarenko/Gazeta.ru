@@ -105,6 +105,20 @@ function styles() {
 
 function js() {
     return src(path.src.js)
+      .pipe(webpackStream({
+        mode: "development",
+        devtool: '#@source-map',
+        output: {
+            filename: 'script.js',
+        }
+    }))
+    .on('error', function (err) { console.log(err.toString()); this.emit('end'); })
+    .pipe(dest(path.build.js))
+    .pipe(browserSync.stream())
+}
+
+function jsProd() {
+    return src(path.src.js)
     .pipe(webpackStream({
         mode: "production",
         output: {
@@ -125,20 +139,6 @@ function js() {
             ]
           }
       }))
-    .on('error', function (err) { console.log(err.toString()); this.emit('end'); })
-    .pipe(dest(path.build.js))
-    .pipe(browserSync.stream())
-}
-
-function jsDev() {
-    return src(path.src.js)
-    .pipe(webpackStream({
-        mode: "development",
-        devtool: '#@source-map',
-        output: {
-            filename: 'script.js',
-        }
-    }))
     .pipe(dest(path.build.js))
     .pipe(browserSync.stream())
 }
@@ -242,7 +242,7 @@ const watch = parallel( build, watchFiles);
 exports.html = html;
 exports.styles = styles;
 exports.js = js;
-exports.jsDev = jsDev;
+exports.jsProd = jsProd;
 exports.images = images;
 exports.sprite = sprite;
 exports.favicon = favicon;
