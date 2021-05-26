@@ -5,9 +5,6 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    // @media(max-width: 767px) {
-    //     display: none;
-    // }
     // .edition__list
     &__list {
         display: flex;
@@ -20,7 +17,7 @@
     }
     // .edition__row
     &__row {
-        margin-bottom: 2.5em;
+        margin-bottom: 2em;
     }
     // .edition__link
     &__link {
@@ -30,7 +27,7 @@
             font-size: 32px;
         }
         @media(max-width: 420px) {
-            font-size: 28px;
+            font-size: 24px;
         }
     }
     // .edition__sub-lk

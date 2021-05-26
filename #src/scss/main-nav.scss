@@ -5,8 +5,7 @@
     position: absolute;
     top: -100%;
     left: 0;
-
-    
+    display: none;
     width: 100%;
    
     background: #b11217;
@@ -28,6 +27,9 @@
         @media(min-width: 768px) {
             display: none;
         }
+    }
+    @media(max-width: 1240px) {
+        display: block;
     }
     // .main-nav__col
     &__col {
@@ -61,7 +63,7 @@
             background-color: transparent;
             transition: background .3s;
         }
-        &--active::after {
+        &.active::after {
             background-color: #fff;
         }
         @media(max-width: 420px) {
@@ -89,7 +91,7 @@
     &__content {
         display: flex;
         justify-content: space-around;
-        margin-bottom: 100px;
+        margin-bottom: 120px;
         @media(max-width: 1024px) {
             justify-content: space-between;
         }
@@ -100,6 +102,9 @@
     }
     // .main-nav__links
     &__links {
+        &.hide {
+            display: none;
+        }
     }
     // .main-nav__footer
     &__footer {

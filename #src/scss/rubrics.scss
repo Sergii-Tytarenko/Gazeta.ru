@@ -1,7 +1,4 @@
 .rubrics {
-	@media(max-width: 767px) {
-        display: none;
-    }
 	// .rubrics__list
 	&__list {
 		display: flex;
@@ -36,10 +33,14 @@
 		// .rubrics__list
 		.rubrics__list {
 			align-items: center;
+			padding-bottom: 0;
 		}
 		// .rubrics__row
 		.rubrics__row {
-			margin-bottom: 2.5em;
+			margin-bottom: 2em;
+			&:last-child {
+				margin: 0;
+			}
 		}
 		// .rubrics__link
 		.rubrics__link {
@@ -53,7 +54,7 @@
 				font-size: 32px;
 			}
 			@media(max-width: 420px) {
-				font-size: 28px;
+				font-size: 24px;
 			}
 		}
 	
