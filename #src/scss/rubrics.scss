@@ -1,4 +1,7 @@
 .rubrics {
+	@media(max-width: 767px) {
+        display: none;
+    }
 	// .rubrics__list
 	&__list {
 		display: flex;
@@ -36,11 +39,22 @@
 		}
 		// .rubrics__row
 		.rubrics__row {
+			margin-bottom: 2.5em;
 		}
 		// .rubrics__link
 		.rubrics__link {
 			color: #fff;
-			font-size: 38px;
+			font-size: 28px;
+			&:focus {
+				outline: 2px solid #ffda4a;
+				outline-offset: 2px;
+			}
+			@media(max-width: 767px) {
+				font-size: 32px;
+			}
+			@media(max-width: 420px) {
+				font-size: 28px;
+			}
 		}
 	
 	}

@@ -97,7 +97,7 @@
 -----------------------------------------------------------------------------*/
 const body = document.querySelector('body'),
       mainHeader = document.querySelector('.main-header'),
-      burger = document.querySelector('.burger');
+      burger = document.querySelector('.burger'),
       burgerNav = document.querySelector('.main-nav'),
       burgerNavLink = mainHeader.querySelectorAll('a');
 
@@ -117,7 +117,7 @@ burger.addEventListener('click', function () {
 });
 
 
-/* Close menu when links is active
+/* Close menu when links are active
 -----------------------------------------------------------------------------*/
 for (let i = 0; i < burgerNavLink.length; i++) {
     burgerNavLink[i].addEventListener("click", function() {
@@ -128,7 +128,7 @@ for (let i = 0; i < burgerNavLink.length; i++) {
 }
 
 
-/* Functions of burger nav
+/* Functions the burger's nav
 -----------------------------------------------------------------------------*/
 function showBurgerNav () {
     burgerNav.classList.add('active');
@@ -219,6 +219,25 @@ __webpack_require__.r(__webpack_exports__);
 ---------------------------------------------------------------*/
 
 
+
+
+/* Burger menu height
+---------------------------------------------------------------*/
+window.addEventListener('resize', () => calcNavHeigt());
+calcNavHeigt()
+
+function calcNavHeigt() {
+    let mainNav = document.querySelector('.main-nav');
+
+    if (mainNav) {
+        let wrapper = mainNav.querySelector('.main-nav__wrapper');
+        let menuHeight = mainNav.querySelector('.main-nav__menu').clientHeight;
+        let asideHeight = document.querySelector('.main-header__aside').clientHeight;
+        let h = document.body.clientHeight - (asideHeight + menuHeight);
+    
+        wrapper.style.maxHeight = h + 'px';
+    }
+}
 
 
 

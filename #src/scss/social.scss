@@ -1,3 +1,6 @@
+/*----------------------------------------------------------------
+	Social links
+----------------------------------------------------------------*/
 .social {
 	display: flex;
 	justify-content: center;
@@ -8,10 +11,14 @@
 	list-style: none;
 	&--nav {
 		.social__item {
-			margin-bottom: 10px;
+			margin-bottom: 20px;
 		}
 		.social__icon {
             fill: #fff;
+			@media(max-width: 420px) {
+				width: 30px;
+				height: 30px;
+			}
         }
 		.social__link {
 			&:hover,
