@@ -1,3 +1,39 @@
 /*----------------------------------------------------------------
     Main Footer
 ----------------------------------------------------------------*/
+.main-footer {
+    color: #fff;
+    background-color: #000;
+    // .main-footer__body
+    &__body {
+        padding: 80px 30px;
+        text-align: center;
+        border-top: 2px solid #2a2a2a;
+        border-bottom: 2px solid #2a2a2a;
+    }
+    // .main-footer__info
+    &__info {}
+    // .main-footer__copy
+    &__copy {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        list-style: none;
+        margin: 0;
+        padding: 40px 45px;
+    }
+    // .main-footer__col
+    &__col {
+    }
+    // .main-footer__partners
+    &__partners {}
+    // .main-footer__text
+    &__text {
+       max-width: 725px;
+       text-align: center;
+    }
+    // .main-footer__age
+    &__age {}
+}
+
+

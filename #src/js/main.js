@@ -7,26 +7,22 @@ import burger from './files/burger';
 /* Header functions
 ---------------------------------------------------------------*/
 let headerAside = document.querySelector('.main-header__aside'),
+    mainNav = document.querySelector('.main-nav'),
+    navWrapper = document.querySelector('.main-nav__wrapper'),
     menu = document.querySelector('.main-nav__menu'),
     menuBtns = document.querySelectorAll('.main-nav__btn'),
     linksBlock = document.querySelectorAll('.main-nav__links');
 
 
-/* Navigation wrapper height
+/* Navigation's wrapper height (max-height at the small display)
 ---------------------------------------------------------------*/
 window.addEventListener('resize', () => calcNavHeigt());
 calcNavHeigt()
 
 function calcNavHeigt() {
-    let mainNav = document.querySelector('.main-nav');
-
     if (mainNav) {
-        let wrapper = mainNav.querySelector('.main-nav__wrapper');
-        let menuHeight = mainNav.querySelector('.main-nav__menu').offsetHeight;
-        let asideHeight = document.querySelector('.main-header__aside').offsetHeight;
-        let h = document.body.clientHeight - (asideHeight + menuHeight);
-    
-        wrapper.style.maxHeight = h + 'px';
+        let h = document.body.clientHeight - (headerAside.offsetHeight +  menu.offsetHeight);
+        navWrapper.style.maxHeight = h + 'px';
     }
 }
 
@@ -35,11 +31,6 @@ function calcNavHeigt() {
 ---------------------------------------------------------------*/
 window.addEventListener('resize', () => checkMenu());
 checkMenu()
-
-window.addEventListener('scroll', () => {
-    let height = pageYOffset;
-    scrollAside(height)
-})
 
 function checkMenu() {
     let  menuHide = getComputedStyle(menu).display === 'none';
@@ -85,9 +76,17 @@ function initTabs() {
     }
 }
 
-function scrollAside(value) {
-   if (getComputedStyle(headerAside).position == 'absolute') {
-      headerAside.style.top = value + 'px';
-   }
-}
+
+/* Scroll aside
+---------------------------------------------------------------*/
+window.addEventListener('scroll', () => {
+    let height = pageYOffset;
+
+    if (getComputedStyle(headerAside).position == 'absolute') {
+        setTimeout(() => {
+            headerAside.style.top = height + 'px';
+        }, 500);
+
+    }
+})
 
