@@ -3,16 +3,26 @@
 ----------------------------------------------------------------*/
 .main-footer {
     color: #fff;
-    background-color: #000;
+    background-color: #2e2e2e;
     // .main-footer__body
     &__body {
-        padding: 80px 30px;
+        padding: 65px 30px 80px;
+
         text-align: center;
-        border-top: 2px solid #2a2a2a;
-        border-bottom: 2px solid #2a2a2a;
+        border-top: 2px solid #3f3f3f;
+        border-bottom: 2px solid #3f3f3f;
+        @media(max-width: 1240px) {
+			padding: 32px 30px 40px;
+		}
+        @media(max-width: 767px) {
+            padding: 17px 15px 25px;
+        }
     }
     // .main-footer__info
-    &__info {}
+    &__info {
+        margin: 10px 0 0;
+        line-height: 1.8;
+    }
     // .main-footer__copy
     &__copy {
         display: flex;
@@ -20,20 +30,51 @@
         justify-content: space-between;
         list-style: none;
         margin: 0;
-        padding: 40px 45px;
+        padding: 40px 0;
+        @media(max-width: 767px) {
+            flex-direction: column;;
+			padding: 25px 0 0;
+		}
     }
     // .main-footer__col
     &__col {
+        padding: 0 45px;
+        @media(max-width: 1240px) {
+			padding: 0 30px;
+		}
+        @media(max-width: 767px) {
+            padding: 0 15px 25px;
+            &:nth-child(2) {
+                order: -1;
+            }
+        }
     }
     // .main-footer__partners
-    &__partners {}
+    &__partners {
+        display: inline-block;
+
+        font-size: 28px;
+        color: #fff;
+        transition: color .3s;
+        &:hover {
+            color: darken(#fff, 25%);
+        }
+        &:focus {
+            outline: 2px solid #fff;
+            outline-offset: 2px;
+        }
+        @media(max-width: 1240px) {
+            font-size: 20px;
+		}
+    }
     // .main-footer__text
     &__text {
        max-width: 725px;
+       margin: 0 auto;
+       
        text-align: center;
+       line-height: 1.4;
     }
-    // .main-footer__age
-    &__age {}
 }
 
 

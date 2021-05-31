@@ -304,8 +304,6 @@
 	&__icon {
 		fill: #f4dedf;
 	}
-	// .main-header__nav
-	&__nav {}
 }
 
 
@@ -333,12 +331,10 @@
 		&:focus {
 			outline: 2px solid #fff;
 			outline-offset: 3px;
-			
 		}
 		&:hover {
 			transform: scale(1.1);
 		}
-		
 	}
 	// .media-list__icon
 	&__icon {
@@ -346,114 +342,5 @@
 	}
 }
 
-/*----------------------------------------------------------------
-	Logo
-----------------------------------------------------------------*/
-.logo {
-	display: none;
-
-	color: #fff;
-	font-family: Hoefler, serif;
-	font-weight: 400;
-	font-size: 45px;
-	letter-spacing: 1px;
-	text-transform: lowercase;
-	// .logo--main
-	&--main {
-		display: inline-block;;
-		margin-bottom: 20px;
-
-		color: #000;
-		font-size: 70px;
-		&:focus {
-			outline: 2px solid rgb(216, 25, 18);
-			outline-offset: 2px;
-		}
-		@media(max-width: 1240px) {
-			display: none;
-		}
-	}
-	&--footer {
-		display: inline-block;
-	}
-}
 
 
-/*----------------------------------------------------------------
-    Burger
-----------------------------------------------------------------*/
-.burger {
-	position: relative;
-
-	display: none;
-	width: 32px;
-	height: 20px;
-	padding: 0;
-
-	font-size: 0;
-	color: transparent;
-	cursor: pointer;
-	transition: all .3s ease;
-	border: none;
-	background-color: transparent;
-	&::before,
-	&:after {
-		content: '';
-		position: absolute;
-		left: 0;
-
-		width: 100%;
-		height: 3px;
-
-		background-color: #fff;
-		transition: all .3s ease;
-	}
-	&::before {
-		top: -1px;
-		width: 26px;
-	}
-	&::after {
-		bottom: 0;
-		width: 20px;
-	}
-	span {
-		position: absolute;
-		top: 50%;
-		left: 0;
-		width: 100%;
-		height: 3px;
-		margin-top: -2px;
-
-		background-color: #fff;
-		&::after {
-			content: '';
-			position: absolute;
-			top: -15px;
-			left: -5px;
-			width: 35px;
-			height: 35px;
-			background-color: transparent;
-		}
-	}
-	@media(max-width: 1240px) {
-		display: block;
-	}
-}
-
-.burger.active {
-	span {
-		background-color: transparent;
-    }
-    &::before,
-	&:after {
-        width: 26px;
-    }
-	&::before {
-		transform:  translate(0, -50%) rotate(45deg);
-		top: 10px
-	}
-	&::after {
-		transform:  translate(0, 50%) rotate(-45deg);
-		bottom: 10px;
-	}
-}
