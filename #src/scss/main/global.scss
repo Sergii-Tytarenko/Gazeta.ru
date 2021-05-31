@@ -19,6 +19,7 @@ body.lock {
 .wrapper {
 	position: relative;
 	max-width: 1680px;
+	height: 100%;
 	margin: 0 auto;
 
 	overflow: hidden;
@@ -81,4 +82,5 @@ body.lock {
 
 .js-focus-visible :focus:not(.focus-visible) {
 	outline: none;
-  }
+}
+

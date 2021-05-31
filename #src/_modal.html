@@ -1,7 +1,22 @@
-<!-- <div class="modal" tabindex="-1" id="">
+<div class="modal modal--search" tabindex="-1" id="search">
     <button class="modal__close" type="button">
         <span class="visually-hidden">Close window</span>
     </button>
+
+    <div class="modal__content">
+         <!-- search -->
+         <form class="search search--modal" action="#" method="GET" name="search">
+            <label class="visually-hidden" for="search__input">Поиск по сайту</label>
+            <input class="search__input" id="search__input" name="search" type="text" placeholder="Поиск по сайту" required autocomplete="off">
+
+            <button class="search__btn" type="submit">
+                Найти
+                <svg class="search__icon" width="25" height="25">
+                    <use xlink:href="img/sprite.svg#search"></use>
+                </svg>
+            </button>
+        </form>
+    </div>
 </div>
 
-<div class="overlay"></div> -->
+<div class="overlay"></div>

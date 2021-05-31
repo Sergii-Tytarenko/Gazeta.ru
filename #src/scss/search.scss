@@ -3,6 +3,12 @@
 ----------------------------------------------------------------*/
 .search {
     position: relative;
+    &--modal {
+        width: clamp(280px, 500px, 50vw);
+        .search__input {
+            border-bottom: 2px solid #fff;
+        }
+    }
     // .search__input
     &__input {
         display: block;
@@ -41,6 +47,7 @@
         outline: none;
         font-size: 0;
         background-color: transparent;
+        cursor: pointer;
     }
     // .search__icon
     &__icon {

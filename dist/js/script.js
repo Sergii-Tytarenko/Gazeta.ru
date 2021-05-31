@@ -86,17 +86,22 @@
 /************************************************************************/
 /******/ ({
 
-/***/ "./#src/js/files/burger.js":
-/*!*********************************!*\
-  !*** ./#src/js/files/burger.js ***!
-  \*********************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/***/ "./#src/js/main.js":
+/*!*************************!*\
+  !*** ./#src/js/main.js ***!
+  \*************************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _vendors_focusVisible__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./vendors/focusVisible */ "./#src/js/vendors/focusVisible.js");
+/* harmony import */ var _vendors_focusVisible__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_vendors_focusVisible__WEBPACK_IMPORTED_MODULE_0__);
+
 
 /* Burger 
 -----------------------------------------------------------------------------*/
-const body = document.querySelector('body'),
-      mainHeader = document.querySelector('.main-header'),
+const mainHeader = document.querySelector('.main-header'),
       burger = document.querySelector('.burger'),
       burgerNav = document.querySelector('.main-nav'),
       burgerNavLink = mainHeader.querySelectorAll('a');
@@ -142,84 +147,6 @@ function closeBurgerNav () {
     mainHeader.classList.remove('active');
     body_lock(0);
 }
-
-
-/* BodyLock
------------------------------------------------------------------------------*/
-let unlock = true;
-function body_lock(delay) {
-	let body = document.querySelector("body");
-	
-    if (body.classList.contains("lock")) {
-      body_lock_remove(delay);
-    } else {
-      body_lock_add(delay);
-    }
-}
-
-function body_lock_remove(delay) {
-	let body = document.querySelector("body");
-
-	if (unlock) {
-		let lock_padding = document.querySelectorAll(".lp");
-
-		setTimeout(() => {
-		for (let index = 0; index < lock_padding.length; index++) {
-			const el = lock_padding[index];
-			el.style.paddingRight = "0px";
-		}
-		body.style.paddingRight = "0px";
-		body.classList.remove("lock");
-		}, delay);
-
-		unlock = false;
-		setTimeout(function () {
-		unlock = true;
-		}, delay);
-	}
-}
-
-function body_lock_add(delay) {
-	let body = document.querySelector("body");
-
-	if (unlock) {
-	let lock_padding = document.querySelectorAll(".lp");
-
-	for (let index = 0; index < lock_padding.length; index++) {
-		const el = lock_padding[index];
-		el.style.paddingRight = window.innerWidth - document.querySelector(".wrapper").offsetWidth + "px";
-	}
-	body.style.paddingRight = window.innerWidth - document.querySelector(".wrapper").offsetWidth + "px";
-	body.classList.add("lock");
-
-	unlock = false;
-	setTimeout(function () {
-		unlock = true;
-	}, delay);
-	}
-}
-
-
-/***/ }),
-
-/***/ "./#src/js/main.js":
-/*!*************************!*\
-  !*** ./#src/js/main.js ***!
-  \*************************/
-/*! no exports provided */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _vendors_focusVisible__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./vendors/focusVisible */ "./#src/js/vendors/focusVisible.js");
-/* harmony import */ var _vendors_focusVisible__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_vendors_focusVisible__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _files_burger__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./files/burger */ "./#src/js/files/burger.js");
-/* harmony import */ var _files_burger__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_files_burger__WEBPACK_IMPORTED_MODULE_1__);
-/* Vendors
----------------------------------------------------------------*/
-
-
-
 
 /* Header functions
 ---------------------------------------------------------------*/
@@ -307,6 +234,114 @@ window.addEventListener('scroll', () => {
     }
 })
 
+
+/* Modal Windows
+-----------------------------------------------------------------------------*/
+let modalLinks = document.querySelectorAll('.modal-link'),
+    overlay = document.querySelector('.overlay');
+
+if (modalLinks.length > 0) {
+    for (let i = 0; i < modalLinks.length; i++) {
+
+        modalLinks[i].addEventListener('click', (e) => {
+            let linkTarget = e.target.dataset.modal,
+            	modalWindow = document.querySelector(`${linkTarget}`);
+
+            modalActive(modalWindow);
+        });
+        
+    }
+}
+
+function modalActive (target) {
+    if (target) {
+        modalShow (target);
+
+        let closeBtn = target.querySelector('.modal__close');
+
+        closeBtn.addEventListener('click', () => {
+            modalClose (target);
+        });
+
+        overlay.addEventListener('click', () => {
+            modalClose (target);
+        });
+
+        document.addEventListener('keydown', function (e) {
+            if (e.code === 'Escape') {
+                modalClose (target);
+            }
+        });
+    }
+}
+
+function modalShow (target) {
+	target.classList.add('show');
+	overlay.classList.add('active');
+	body_lock(0);
+}
+
+function modalClose (target) {
+	target.classList.remove('show');
+	overlay.classList.remove('active');
+	body_lock(0);
+}
+
+
+/* BodyLock
+-----------------------------------------------------------------------------*/
+let unlock = true;
+function body_lock(delay) {
+	let body = document.querySelector("body");
+	
+    if (body.classList.contains("lock")) {
+      body_lock_remove(delay);
+    } else {
+      body_lock_add(delay);
+    }
+}
+
+function body_lock_remove(delay) {
+	let body = document.querySelector("body");
+
+	if (unlock) {
+		let lock_padding = document.querySelectorAll(".lp");
+
+		setTimeout(() => {
+		for (let index = 0; index < lock_padding.length; index++) {
+			const el = lock_padding[index];
+			el.style.paddingRight = "0px";
+		}
+		body.style.paddingRight = "0px";
+		body.classList.remove("lock");
+		}, delay);
+
+		unlock = false;
+		setTimeout(function () {
+		unlock = true;
+		}, delay);
+	}
+}
+
+function body_lock_add(delay) {
+	let body = document.querySelector("body");
+
+	if (unlock) {
+	let lock_padding = document.querySelectorAll(".lp");
+
+	for (let index = 0; index < lock_padding.length; index++) {
+		const el = lock_padding[index];
+		el.style.paddingRight = window.innerWidth - document.querySelector(".wrapper").offsetWidth + "px";
+	}
+	body.style.paddingRight = window.innerWidth - document.querySelector(".wrapper").offsetWidth + "px";
+	body.classList.add("lock");
+
+	unlock = false;
+	setTimeout(function () {
+		unlock = true;
+	}, delay);
+	}
+}
 
 
 /***/ }),
