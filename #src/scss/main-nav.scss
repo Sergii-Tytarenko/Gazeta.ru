@@ -83,18 +83,12 @@
         @media(max-width: 767px) {
             padding: 50px 30px 30px;
         }
-        @media(max-width: 420px) {
-            padding: 50px 15px 30px;
-        }
     }
     // .main-nav__content
     &__content {
         display: flex;
         justify-content: space-around;
         margin-bottom: 120px;
-        @media(max-width: 1024px) {
-            justify-content: space-between;
-        }
         @media(max-width: 767px) {
            flex-direction: column;
            align-content: center;

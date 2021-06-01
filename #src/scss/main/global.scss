@@ -19,7 +19,6 @@ body.lock {
 .wrapper {
 	position: relative;
 	max-width: 1680px;
-	height: 100%;
 	margin: 0 auto;
 
 	overflow: hidden;
@@ -28,6 +27,7 @@ body.lock {
 .root {
 	display: flex;
 	flex-direction: column;
+	height: 100%;
 	min-height: 100vh;
 	margin-left: 60px;
 	@media(min-width: 1536px) {

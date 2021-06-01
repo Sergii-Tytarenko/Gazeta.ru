@@ -8,12 +8,16 @@
         .search__input {
             border-bottom: 2px solid #fff;
         }
+        .search__input::placeholder {
+            font-size: 22px;
+        }
     }
     // .search__input
     &__input {
         display: block;
         width: 100%;
         height: 40px;
+        padding-right: 30px;
 
         color: #fff;
         font-size: 18px;
