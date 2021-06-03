@@ -2,6 +2,7 @@
     Top News
 ----------------------------------------------------------------*/
 .top-news {
+    padding: 0 var(--m-padding) 0;
     // .top-news__list
     &__list {
         margin: 0;
@@ -29,7 +30,7 @@
     }
     // .top-news__title
     &__title {
-        width: calc(100% - (var(--m-padding) * 2));
+        width: calc(100% - 60px);
         margin: 0 0 20px;
         z-index: 1;
         color: #fff;
@@ -67,7 +68,7 @@
         line-height: 1.3;
         @include hover;
         &--head {
-            width: calc(100% - (var(--m-padding) * 2));
+            width: calc(100% - 60px);
             z-index: 1;
             color: #fff;
             &:hover {

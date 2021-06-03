@@ -872,7 +872,7 @@ body.lock {
   right: 0;
   width: 100%;
   max-width: 270px;
-  height: 100vh;
+  height: 100%;
   background-color: #f9f9f9;
 }
 
@@ -1024,6 +1024,7 @@ body.lock {
   position: absolute;
   top: -100%;
   left: 0;
+  z-index: 999;
   display: none;
   width: 100%;
   background: #b11217;
@@ -1656,13 +1657,13 @@ body.lock {
   background-color: #f1f1f1;
 }
 
-.topics__column {
-  padding: 0 var(--m-padding) 0;
-}
-
 /*----------------------------------------------------------------
     Top News
 ----------------------------------------------------------------*/
+
+.top-news {
+  padding: 0 var(--m-padding) 0;
+}
 
 .top-news__list {
   margin: 0;
@@ -1695,7 +1696,7 @@ body.lock {
 }
 
 .top-news__title {
-  width: calc(100% - (var(--m-padding) * 2));
+  width: calc(100% - 60px);
   margin: 0 0 20px;
   z-index: 1;
   color: #fff;
@@ -1737,6 +1738,7 @@ body.lock {
 
 .top-news__lk:hover {
   color: #b90903;
+  text-decoration: initial;
 }
 
 .top-news__lk:focus {
@@ -1745,7 +1747,7 @@ body.lock {
 }
 
 .top-news__lk--head {
-  width: calc(100% - (var(--m-padding) * 2));
+  width: calc(100% - 60px);
   z-index: 1;
   color: #fff;
 }
@@ -1755,6 +1757,136 @@ body.lock {
   text-decoration: underline;
 }
 
+/*----------------------------------------------------------------
+    Day's News, Time block and Button
+----------------------------------------------------------------*/
+
+.day-news {
+  -ms-grid-row-span: 5;
+  grid-row: span 5;
+  padding-bottom: var(--m-padding);
+  text-align: center;
+  margin-right: -1px;
+  border-right: 1px solid #dcdcdc;
+  border-left: 1px solid #dcdcdc;
+}
+
+.day-news__title {
+  margin: 0;
+  padding: 15px var(--m-padding);
+  -moz-text-align-last: left;
+  text-align-last: left;
+  border-bottom: 1px solid #dcdcdc;
+}
+
+.day-news__list {
+  margin: 0;
+  padding: 15px var(--m-padding) 35px;
+  list-style: none;
+  text-align: left;
+}
+
+.day-news__row {
+  margin-bottom: 25px;
+}
+
+.day-news__lk {
+  display: inline-block;
+  margin-bottom: 5px;
+  color: #000;
+  font-weight: 500;
+  -webkit-transition: color .3s;
+  -o-transition: color .3s;
+  transition: color .3s;
+}
+
+.day-news__lk:hover {
+  color: #b90903;
+  text-decoration: initial;
+}
+
+.day-news__lk:focus {
+  outline: 2px solid #d81912;
+  outline-offset: 2px;
+}
+
+.day-news__rubric {
+  display: inline-block;
+  margin-right: 5px;
+  -webkit-transition: color .3s;
+  -o-transition: color .3s;
+  transition: color .3s;
+}
+
+.day-news__rubric:hover {
+  color: #000;
+  text-decoration: underline;
+}
+
+.day-news__rubric:focus {
+  outline: 2px solid #d81912;
+  outline-offset: 2px;
+}
+
+.day-news__time,
+.day-news__rubric {
+  color: #636363;
+  font-size: 12px;
+}
+
+.day-news__btn {
+  margin: 0 auto;
+}
+
+/* Time
+---------------------------------------------------------------*/
+
+.time {
+  display: inline-block;
+  padding-left: 18px;
+  background: url("../img/icons/ico_clock.png") left center no-repeat;
+}
+
+/* Button
+---------------------------------------------------------------*/
+
+.btn {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 45px;
+  padding: 0 50px;
+  color: #333;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 14px;
+  line-height: 1.2;
+  font-weight: 700;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 30px;
+  outline: none;
+  cursor: pointer;
+  background-color: #fff;
+  -webkit-transition: all .3s;
+  -o-transition: all .3s;
+  transition: all .3s;
+}
+
+.b-post {
+  -ms-grid-column: 2;
+  grid-column-start: 2;
+  -ms-grid-column-span: 2;
+  grid-column-end: 4;
+  height: 100%;
+  background-color: #ccc;
+}
+
 @media (min-width: 768px) {
   .main-nav__menu {
     display: none;
@@ -1762,6 +1894,12 @@ body.lock {
 
   .main-nav__wrapper {
     border-top: 1px solid #c2464a;
+  }
+
+  .btn:hover,
+  .btn:focus {
+    -webkit-box-shadow: 0 0 10px #999;
+    box-shadow: 0 0 10px #999;
   }
 }
 

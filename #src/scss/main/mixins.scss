@@ -9,10 +9,11 @@
     }
 }
 
-@mixin hover($text: rgb(185, 9, 3), $outline: rgb(216, 25, 18)) {
+@mixin hover($text: rgb(185, 9, 3), $outline: rgb(216, 25, 18), $line: initial) {
     transition: color .3s;
     &:hover {
         color: $text;
+        text-decoration: $line;
     }
     &:focus {
         outline: 2px solid $outline;

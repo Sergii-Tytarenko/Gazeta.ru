@@ -6,15 +6,93 @@
 		<div class="root">
 			@include('_header.html',{})
 			<main class="page">
-
 				<section class="topics">
-					<h1 class="visually-hidden">Новости России и мира, статьи и обзоры от ведущих журналистов</h1>
+					<h1 class="visually-hidden">Новости России и мира. Газета ру</h1>
 
-					<div class="topics__column"></div>
-					<div class="topics__column"></div>
-					<div class="topics__column"></div>
-					<div class="topics__column">
-						<!-- Top-News -->
+						<!-- day's news -->
+						<div class="day-news">
+							<h2 class="day-news__title">Новости дня</h2>
+
+							<ul class="day-news__list">
+								<li class="day-news__row">
+									<a class="day-news__lk" href="#">Росздравнадзор изымает препараты от тромбоза компании Pfizer</a>
+
+									<div class="day-news__footer">
+										<a class="day-news__rubric" href="#">Политика</a>
+										<time class="day-news__time time" datetime="2016-06-11T15:23">15:23</time>
+									</div>
+								</li>
+
+								<li class="day-news__row">
+									<a class="day-news__lk" href="#">Гости фестиваля в Москве купили более 8 тонн варенья за три дня</a>
+
+									<div class="day-news__footer">
+										<a class="day-news__rubric" href="#">Общество</a>
+										<time class="day-news__time time" datetime="2016-06-11T16:15">16:15</time>
+									</div>
+								</li>
+
+								<li class="day-news__row">
+									<a class="day-news__lk" href="#">Росздравнадзор изымает препараты от тромбоза компании Pfizer</a>
+
+									<div class="day-news__footer">
+										<a class="day-news__rubric" href="#">Политика</a>
+										<time class="day-news__time time" datetime="2016-06-11T18:56">18:56</time>
+									</div>
+								</li>
+								
+								<li class="day-news__row">
+									<a class="day-news__lk" href="#">Власти Казахстана установили связь подозреваемого из Алма-Аты с салафитами</a>
+
+									<div class="day-news__footer">
+										<a class="day-news__rubric" href="#">Армия</a>
+										<time class="day-news__time time" datetime="2016-06-11T19:03">19:03</time>
+									</div>
+								</li>
+
+								<li class="day-news__row">
+									<a class="day-news__lk" href="#">Источник: в Рыбинске заключенные прекратили голодовку</a>
+
+									<div class="day-news__footer">
+										<a class="day-news__rubric" href="#">Политика</a>
+										<time class="day-news__time time" datetime="2016-06-11T15:23">15:23</time>
+									</div>
+								</li>
+
+								<li class="day-news__row">
+									<a class="day-news__lk" href="#">Гости фестиваля в Москве купили более 8 тонн варенья за три дня</a>
+
+									<div class="day-news__footer">
+										<a class="day-news__rubric" href="#">Общество</a>
+										<time class="day-news__time time" datetime="2016-06-11T 16:15"> 16:15</time>
+									</div>
+								</li>
+
+								<li class="day-news__row">
+									<a class="day-news__lk" href="#">Росздравнадзор изымает препараты от тромбоза компании Pfizer</a>
+
+									<div class="day-news__footer">
+										<a class="day-news__rubric" href="#">Политика</a>
+										<time class="day-news__time time" datetime="2016-06-11T18:56">18:56</time>
+									</div>
+								</li>
+
+								<li class="day-news__row">
+									<a class="day-news__lk" href="#">Белый дом прокомментировал резкие высказывания Дутерте в адрес Обамы</a>
+
+									<div class="day-news__footer">
+										<a class="day-news__rubric" href="#">Армия</a>
+										<time class="day-news__time time" datetime="2016-06-11T19:03">19:03</time>
+									</div>
+								</li>
+							</ul><!-- /.day-news__list -->
+
+							<a class="day-news__btn btn" href="#">Все новости</a>
+						</div><!-- /.day-news -->
+
+						<!-- big post -->
+						<div class="b-post"></div>
+						<!-- top-news -->
 						<div class="top-news">
 							<ul class="top-news__list">
 								<li class="top-news__row top-news__row--head img-cover">
@@ -43,7 +121,6 @@
 								</li>
 							</ul>
 						</div>
-					</div>
 				</section>
 			</main> <!-- /.page -->
 			@include('_footer.html', {})
