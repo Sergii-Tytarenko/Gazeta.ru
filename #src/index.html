@@ -6,7 +6,45 @@
 		<div class="root">
 			@include('_header.html',{})
 			<main class="page">
-		
+
+				<section class="topics">
+					<h1 class="visually-hidden">Новости России и мира, статьи и обзоры от ведущих журналистов</h1>
+
+					<div class="topics__column"></div>
+					<div class="topics__column"></div>
+					<div class="topics__column"></div>
+					<div class="topics__column">
+						<!-- Top-News -->
+						<div class="top-news">
+							<ul class="top-news__list">
+								<li class="top-news__row top-news__row--head img-cover">
+									<h2 class="top-news__title">Главное</h2>
+									<a class="top-news__photo" href="#">
+										<img class="top-news__img" src="img/photos/photo1.jpg" width="300" height="300" alt="Plane photo">
+									</a>
+
+									<a class="top-news__lk top-news__lk--head" href="#">Опознание погибших в катастрофе Ту-154 пройдет в Москве</a>
+								</li>
+
+								<li class="top-news__row">
+									<a class="top-news__lk" href="#">Президент Филиппин послал Обаму к черту</a>
+								</li>
+
+								<li class="top-news__row">
+									<a class="top-news__lk" href="#">Кудрин рассказал, как «пахал» с Путиным в 90-е</a>
+								</li>
+
+								<li class="top-news__row">
+									<a class="top-news__lk" href="#">В РПЦ предложили отредактировать Библию</a>
+								</li>
+
+								<li class="top-news__row">
+									<a class="top-news__lk" href="#">В «Мемориале» сообщили о признании организации иноагентом</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</section>
 			</main> <!-- /.page -->
 			@include('_footer.html', {})
 		</div><!-- /.root -->

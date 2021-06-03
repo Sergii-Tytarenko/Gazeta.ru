@@ -8,3 +8,15 @@
         font-display: swap;
     }
 }
+
+@mixin hover($text: rgb(185, 9, 3), $outline: rgb(216, 25, 18)) {
+    transition: color .3s;
+    &:hover {
+        color: $text;
+    }
+    &:focus {
+        outline: 2px solid $outline;
+        outline-offset: 2px;
+    }
+}
+

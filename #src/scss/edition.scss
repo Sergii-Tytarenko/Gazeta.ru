@@ -43,6 +43,9 @@
             @media(max-width: 767px) {
                 font-size: 18px;
             }
+            @media(max-width: 420px) {
+            font-size: 14px;
+        }
         }
         &:focus {
             outline: 2px solid #ffda4a;

@@ -1,0 +1,18 @@
+/*----------------------------------------------------------------
+    Topics
+----------------------------------------------------------------*/
+.topics {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: start;
+
+    max-width: 1330px;
+	width: 100%;
+	margin: 0 auto;
+
+    background-color: #f1f1f1;
+    // .topics__column
+    &__column {
+        padding: 0 var(--m-padding) 0;
+    }
+}
