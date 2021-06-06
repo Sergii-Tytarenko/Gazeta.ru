@@ -243,3 +243,23 @@ function body_lock_add(delay) {
 	}, delay);
 	}
 }
+
+
+/* Crop text
+---------------------------------------------------------------*/
+(function () {
+
+    const cropElement = document.querySelectorAll('.crop-text'),
+          size = 17,                                          
+          endCharacter = '...';                                
+
+    cropElement.forEach(el => {
+        let text = el.innerHTML.split(" ");
+        
+        if (text.length > size) {
+            text = text.slice(0, size).join(" ");
+            el.innerHTML = text + endCharacter;
+        }
+    });
+
+}());

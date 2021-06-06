@@ -1,0 +1,89 @@
+/*----------------------------------------------------------------
+    Big Post
+----------------------------------------------------------------*/
+.big-post {
+    grid-column-start: 2;
+    grid-column-end: 4;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    background-color: #000;
+    border-bottom: 1px solid #dcdcdc;
+    // .big-post__photo
+    &__photo {
+        &::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+
+            background: rgb(255,255,255);
+            background: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(0,0,0,0.3) 100%);
+        }
+    }
+    // .big-post__content
+    &__content {
+        display: block;
+        z-index: 2;
+        @include hover($text: #fff);
+        &:focus {
+            outline-offset: -2px;
+        }
+    }
+    // .big-post__about
+    &__about {
+        margin-bottom: 30px;
+        padding: 0 var(--m-padding);
+    }
+    // .big-post__title
+    &__title {
+        margin-bottom: 10px;
+    }
+    // .big-post__desc
+    &__desc {
+        padding: 15px var(--m-padding);
+
+        color: #fff;
+        line-height: 1.8;
+        border-top: 1px solid #92929259;
+        border-bottom: 1px solid #92929259;
+        .article-text {
+            max-width: 420px;
+        }
+    }
+    // .big-post__footer
+    &__footer {   
+        z-index: 1;  
+        display: flex;
+        height: 60px;
+    }
+    // .big-post__col
+    &__col {
+        flex: 0 1 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &:first-child {
+        border-right: 1px solid #92929259;
+        }
+    }
+    // .big-post__commnets
+    &__commnets {
+        color: #fff;
+        font-size: 16px;
+        @include hover($text: #fff, $line: underline);
+    }
+    // .big-post__quick
+    &__quick {
+        @include hover($text: #fff, $line: underline);
+    }
+}
+
+
+
+
