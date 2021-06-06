@@ -61,7 +61,6 @@
 /* Article info
 ---------------------------------------------------------------*/
 .article-info {
-    color: #636363;
     font-size: 12px;
     font-family: FiraSans, sans-serif;
     * {
@@ -77,7 +76,6 @@
     &__hours {
         color: inherit;
         font-size: inherit;
-        font-family: inherit;
     }
     // .article-info__date
     &__date {
@@ -106,18 +104,22 @@
 /* Article text
 ---------------------------------------------------------------*/
 .article-text {
+    display: block;
     margin: 0;
+    transition: color .3s;
 }
 
 /* Comments
 ---------------------------------------------------------------*/
 .commnets {
-    display: inline-block;
-    color: #000;
+    color: inherit;
 
     padding-left: 25px;
-    background: url('../../img/icons/comment.png') left center no-repeat;
+    background: url('../../img/icons/comment-dark.png') left center no-repeat;
     @include hover($text: initial, $line: underline);
+    &--light {
+        background: url('../../img/icons/comment.png') left center no-repeat;
+    }
 }
 
 

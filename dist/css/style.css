@@ -478,7 +478,7 @@ body {
   font-family: FiraSans, Arial, Helvetica, sans-serif;
   font-size: 14px;
   font-weight: 400;
-  line-height: 1.2;
+  line-height: 1.4;
   background-color: #f1f1f1;
 }
 
@@ -616,7 +616,6 @@ body.lock {
 ---------------------------------------------------------------*/
 
 .article-info {
-  color: #636363;
   font-size: 12px;
   font-family: FiraSans, sans-serif;
 }
@@ -647,7 +646,6 @@ body.lock {
 .article-info__hours {
   color: inherit;
   font-size: inherit;
-  font-family: inherit;
 }
 
 .article-info__date {
@@ -674,17 +672,20 @@ body.lock {
 ---------------------------------------------------------------*/
 
 .article-text {
+  display: block;
   margin: 0;
+  -webkit-transition: color .3s;
+  -o-transition: color .3s;
+  transition: color .3s;
 }
 
 /* Comments
 ---------------------------------------------------------------*/
 
 .commnets {
-  display: inline-block;
-  color: #000;
+  color: inherit;
   padding-left: 25px;
-  background: url("../../img/icons/comment.png") left center no-repeat;
+  background: url("../../img/icons/comment-dark.png") left center no-repeat;
   -webkit-transition: color .3s;
   -o-transition: color .3s;
   transition: color .3s;
@@ -698,6 +699,10 @@ body.lock {
 .commnets:focus {
   outline: 2px solid #d81912;
   outline-offset: 2px;
+}
+
+.commnets--light {
+  background: url("../../img/icons/comment.png") left center no-repeat;
 }
 
 /* Quick shoing
@@ -1828,6 +1833,7 @@ body.lock {
 .top-news {
   padding: 0 var(--m-padding) 0;
   border-bottom: 1px solid #dcdcdc;
+  border-right: 1px solid #dcdcdc;
 }
 
 .top-news__list {
@@ -1924,11 +1930,12 @@ body.lock {
 ----------------------------------------------------------------*/
 
 .day-news {
-  -ms-grid-row-span: 50;
-  grid-row: span 50;
+  -ms-grid-row-span: 20;
+  grid-row: span 20;
   padding-bottom: var(--m-padding);
-  text-align: center;
+  height: 100%;
   margin-right: -1px;
+  text-align: center;
   border-right: 1px solid #dcdcdc;
   border-left: 1px solid #dcdcdc;
 }
@@ -1938,6 +1945,10 @@ body.lock {
   padding: 15px var(--m-padding);
   text-align: left;
   border-bottom: 1px solid #dcdcdc;
+}
+
+.day-news__footer {
+  color: #636363;
 }
 
 .day-news__list {
@@ -2118,6 +2129,69 @@ body.lock {
 .big-post__quick:focus {
   outline: 2px solid #d81912;
   outline-offset: 2px;
+}
+
+/*----------------------------------------------------------------
+    Post (article)
+----------------------------------------------------------------*/
+
+.post {
+  position: relative;
+  padding: var(--m-padding);
+  height: 100%;
+  border-right: 1px solid #dcdcdc;
+  border-bottom: 1px solid #dcdcdc;
+  -webkit-transition: background .3s;
+  -o-transition: background .3s;
+  transition: background .3s;
+}
+
+.post:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.post__photo {
+  height: 170px;
+  margin-bottom: 15px;
+}
+
+.post__lk {
+  display: block;
+  margin-bottom: 5px;
+  -webkit-transition: color .3s;
+  -o-transition: color .3s;
+  transition: color .3s;
+}
+
+.post__lk::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.post__lk:hover {
+  color: #b90903;
+  text-decoration: initial;
+}
+
+.post__lk:focus {
+  outline: 2px solid #d81912;
+  outline-offset: 2px;
+}
+
+.post__lk:hover .post__title {
+  color: #b90903;
+}
+
+.post__info {
+  color: #313131;
+}
+
+.post__commnets {
+  margin-bottom: 15px;
 }
 
 @media (min-width: 768px) {
