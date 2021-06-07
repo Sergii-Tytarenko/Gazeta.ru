@@ -1,4 +1,5 @@
 import focusVisible from './vendors/focusVisible';
+import Swiper from 'swiper/bundle';
 
 /* Burger 
 -----------------------------------------------------------------------------*/
@@ -263,3 +264,72 @@ function body_lock_add(delay) {
     });
 
 }());
+
+
+/* Hours News Tabs
+---------------------------------------------------------------*/
+const hoursMenu = document.querySelector('.hours-news__menu'),
+      hoursMenuBtns = hoursMenu.querySelectorAll('.hours-news__btn'),
+      hoursContent = document.querySelectorAll('.hours-news__tabs'),
+      topNewsSlider = document.querySelector('.top-news--slider');
+
+
+if (window.getComputedStyle(hoursMenu).display == 'flex') initHoursTabs();
+initHoursTabs();
+function initHoursTabs() {
+    shwoContnet()
+    
+    hoursMenu.addEventListener('click', (event) => {
+        let target = event.target;
+        if (target && target.matches('button.hours-news__btn')) {
+            hoursMenuBtns.forEach((item, i) => {
+                if (target == item) {
+                    shwoContnet(i);
+                }
+            });
+        };
+    })
+
+    function shwoContnet(i = 0) {
+        hideContent();
+        hoursMenuBtns[i].classList.add('active');
+        hoursContent[i].classList.remove('hide')
+    }
+
+    function hideContent() {
+        hoursMenuBtns.forEach(el => {
+            el.classList.remove('active')
+        })
+
+        hoursContent.forEach(el => {
+            el.classList.add('hide')
+        })
+    }
+}
+
+
+/* Hours News Sliders
+---------------------------------------------------------------*/
+let hoursNews = new Swiper('.hours-news__slider', {
+    wrapperClass: 'hours-news__list',
+    slideClass: 'hours-news__slide',
+    slidesPerView: 1,
+    spaceBetween: 50,
+    pagination: {
+        el: '.hours-news__pagination'
+    }
+});
+
+if(topNewsSlider) {
+    let topNews = new Swiper(topNewsSlider, {
+        wrapperClass: 'top-news__list--wrapp',
+        slideClass: 'top-news__row--slide',
+        slidesPerView: 1,
+        spaceBetween: 50,
+        pagination: {
+            el: '.top-news__pagination'
+        }
+    });
+}
+
+

@@ -1,14 +1,39 @@
 /*----------------------------------------------------------------
-    Topics
+    Topics, Posts section
 ----------------------------------------------------------------*/
 .topics {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
     align-items: start;
+    grid-template-rows: auto max(337px) auto;
+    grid-template-areas: "hours-news big-post big-post top-news"
+                         "day-news big-post big-post top-news"
+                         "day-news posts posts posts";
 
     max-width: 1330px;
 	width: 100%;
 	margin: 0 auto;
 
     background-color: #f1f1f1;
+    @media(max-width: 1240px) {
+        grid-template-columns: 30% 1fr;
+        grid-template-areas:  "hours-news big-post"
+                              "day-news big-post"
+                              "day-news posts";
+                                 
+    }
+    @media(max-width: 1050px) {
+        grid-template-areas: "hours-news hours-news"
+                             "day-news big-post"
+                             "day-news posts";
+    }
+}
+
+.posts {
+    grid-area: posts;
+    display: grid;
+    height: 100%;
+    grid-template-columns: repeat(3, 1fr);
+    @media(max-width: 1240px) {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }

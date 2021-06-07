@@ -115,10 +115,10 @@
     color: inherit;
 
     padding-left: 25px;
-    background: url('../../img/icons/comment-dark.png') left center no-repeat;
+    background: url('../img/icons/comment-dark.png') left center no-repeat;
     @include hover($text: initial, $line: underline);
     &--light {
-        background: url('../../img/icons/comment.png') left center no-repeat;
+        background: url('../img/icons/comment.png') left center no-repeat;
     }
 }
 
@@ -135,5 +135,5 @@
     font-family: inherit;
     text-align: center;
     cursor: pointer;
-    background: transparent url('../../img/icons/ico.png') center left no-repeat;
+    background: transparent url('../img/icons/ico.png') center left no-repeat;
 }

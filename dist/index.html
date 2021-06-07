@@ -338,6 +338,109 @@
       <main class="page">
         <div class="topics">
           <h1 class="visually-hidden">Новости России и мира. Газета ру</h1>
+          <!-- hours news -->
+          <section class="hours-news">
+            <h2 class="hours-news__title title">Новсти часа</h2>
+
+            <ul class="hours-news__menu">
+              <li class="hours-news__rubrick">
+                <button class="hours-news__btn" type="button">Нвости часа</button>
+              </li>
+
+              <li class="hours-news__rubrick">
+                <button class="hours-news__btn" type="button">Главное</button>
+              </li>
+            </ul>
+
+            <div class="hours-news__content">
+              <div class="hours-news__slider hours-news__tabs">
+                <ul class="hours-news__list">
+                  <li class="hours-news__slide">
+                    <a class="hours-news__lk" href="#">Греф предсказал "Конец эпохи нефти и газа" в России</a>
+
+                    <div class="hours-news__info article-info">
+                      <a class="article-info__rubric" href="#">Политика</a>
+                      <time class="article-info__time" datetime="2016-06-11T15:23">
+                        <span class="article-info__hours">15:23</span>
+                      </time>
+                    </div>
+                  </li>
+
+                  <li class="hours-news__slide">
+                    <a class="hours-news__lk" href="#">Греф предсказал "Конец эпохи нефти и газа" в России</a>
+
+                    <div class="hours-news__info article-info">
+                      <a class="article-info__rubric" href="#">Политика</a>
+                      <time class="article-info__time" datetime="2016-06-11T15:23">
+                        <span class="article-info__hours">15:23</span>
+                      </time>
+                    </div>
+                  </li>
+
+                  <li class="hours-news__slide">
+                    <a class="hours-news__lk" href="#">Греф предсказал "Конец эпохи нефти и газа" в России</a>
+
+                    <div class="hours-news__info article-info">
+                      <a class="article-info__rubric" href="#">Политика</a>
+                      <time class="article-info__time" datetime="2016-06-11T15:23">
+                        <span class="article-info__hours">15:23</span>
+                      </time>
+                    </div>
+                  </li>
+
+                  <li class="hours-news__slide">
+                    <a class="hours-news__lk" href="#">Греф предсказал "Конец эпохи нефти и газа" в России</a>
+
+                    <div class="hours-news__info article-info">
+                      <a class="article-info__rubric" href="#">Политика</a>
+                      <time class="article-info__time" datetime="2016-06-11T15:23">
+                        <span class="article-info__hours">15:23</span>
+                      </time>
+                    </div>
+                  </li>
+
+                  <li class="hours-news__slide">
+                    <a class="hours-news__lk" href="#">Греф предсказал "Конец эпохи нефти и газа" в России</a>
+
+                    <div class="hours-news__info article-info">
+                      <a class="article-info__rubric" href="#">Политика</a>
+                      <time class="article-info__time" datetime="2016-06-11T15:23">
+                        <span class="article-info__hours">15:23</span>
+                      </time>
+                    </div>
+                  </li>
+                </ul>
+
+                <div class="hours-news__pagination"></div>
+              </div>
+
+              <div class="top-news top-news--slider hours-news__tabs">
+                <ul class="top-news__list top-news__list--wrapp">
+                  <li class="top-news__row top-news__row--slide">
+                    <a class="top-news__lk" href="#">Опознание погибших в катастрофе Ту-154 пройдет в Москве</a>
+                  </li>
+
+                  <li class="top-news__row top-news__row--slide">
+                    <a class="top-news__lk" href="#">Президент Филиппин послал Обаму к черту</a>
+                  </li>
+
+                  <li class="top-news__row top-news__row--slide">
+                    <a class="top-news__lk" href="#">Кудрин рассказал, как «пахал» с Путиным в 90-е</a>
+                  </li>
+
+                  <li class="top-news__row top-news__row--slide">
+                    <a class="top-news__lk" href="#">В РПЦ предложили отредактировать Библию</a>
+                  </li>
+
+                  <li class="top-news__row top-news__row--slide">
+                    <a class="top-news__lk" href="#">В «Мемориале» сообщили о признании организации иноагентом</a>
+                  </li>
+                </ul>
+
+                <div class="top-news__pagination"></div>
+              </div>
+            </div>
+          </section>
 
           <!-- day's news -->
           <section class="day-news">
@@ -470,7 +573,7 @@
           </article>
 
           <!-- top-news -->
-          <section class="top-news">
+          <div class="top-news">
             <h2 class="visually-hidden">Главные новости</h2>
             <ul class="top-news__list">
               <li class="top-news__row top-news__row--head img-cover">
@@ -498,71 +601,76 @@
                 <a class="top-news__lk" href="#">В «Мемориале» сообщили о признании организации иноагентом</a>
               </li>
             </ul>
+          </div>
+
+          <!-- Posts -->
+          <section class="posts">
+            <h2 class="visually-hidden">Самые обсуждаемые новости</h2>
+
+            <article class="post">
+              <div class="post__photo img-cover">
+                <img class="post__img" src="img/photos/photo2.jpg" alt="Photo" width="250" height="165">
+              </div>
+
+              <a class="post__lk" href="#">
+                <h2 class="post__title title">Детройт — город-призрак</h2>
+              </a>
+
+              <div class="post__info article-info">
+                <a class="article-info__rubric">Общество</a>
+                <time class="article-info__time" datetime="2016-06-11T15:23">
+                  <span class="article-info__hours">15:23</span>
+                </time>
+
+                <a class="post__commnets commnets" title="comments">29</a>
+              </div>
+
+              <p class="post__desc article-text crop-text">Сегодня город Детройт в США часто именуют заброшенным, мертвым городом. В силу многих причин этот некогда процветающий город в данный момент потерял свою былую мощь. Что стало тому присчиной ?</p>
+            </article>
+
+            <article class="post">
+              <div class="post__photo img-cover">
+                <img class="post__img" src="img/photos/photo3.jpg" alt="Photo" width="250" height="165">
+              </div>
+
+              <a class="post__lk" href="#">
+                <h2 class="post__title title">Мы с Тамарой ходим парой, санитары мы с Тамарой</h2>
+              </a>
+
+              <div class="post__info article-info">
+                <a class="article-info__rubric">Политика</a>
+                <time class="article-info__time" datetime="2016-06-11T15:33">
+                  <span class="article-info__hours">15:33</span>
+                </time>
+
+                <a class="post__commnets commnets" title="comments">12</a>
+              </div>
+
+              <p class="post__desc article-text crop-text">Люди, которых приговорили к исправительным работам, будут ограничены в определенных удовольствиях. Эти вопросы обсуждали на совете по внутренним делам Российской Федерации.</p>
+            </article>
+
+            <article class="post">
+              <div class="post__photo img-cover">
+                <img class="post__img" src="img/photos/photo4.jpg" alt="Photo" width="250" height="165">
+              </div>
+
+              <a class="post__lk" href="#">
+                <h2 class="post__title title">В Сирии разыграют «афганский сценарий»</h2>
+              </a>
+
+              <div class="post__info article-info">
+                <a class="article-info__rubric">Спорт</a>
+                <time class="article-info__time" datetime="2016-06-11T14:59">
+                  <span class="article-info__hours">14:59</span>
+                </time>
+
+                <a class="post__commnets commnets" title="comments">7</a>
+              </div>
+
+              <p class="post__desc article-text crop-text">«Роснефть» готовится к приватизации «Башнефти», сделка по покупке башкирского актива уже одобрена. Какие выгоды несет данное соглашение ? </p>
+            </article>
           </section>
-
-          <!-- articles -->
-          <article class="post">
-            <div class="post__photo img-cover">
-              <img class="post__img" src="img/photos/photo2.jpg" alt="Photo" width="250" height="165">
-            </div>
-
-            <a class="post__lk" href="#">
-              <h2 class="post__title title">Детройт — город-призрак</h2>
-            </a>
-
-            <div class="post__info article-info">
-              <a class="article-info__rubric">Общество</a>
-              <time class="article-info__time" datetime="2016-06-11T15:23">
-                <span class="article-info__hours">15:23</span>
-              </time>
-
-              <a class="post__commnets commnets" title="comments">29</a>
-            </div>
-
-            <p class="post__desc article-text crop-text">Сегодня город Детройт в США часто именуют заброшенным, мертвым городом. В силу многих причин этот некогда процветающий город в данный момент потерял свою былую мощь. Что стало тому присчиной ?</p>
-          </article>
-
-          <article class="post">
-            <div class="post__photo img-cover">
-              <img class="post__img" src="img/photos/photo3.jpg" alt="Photo" width="250" height="165">
-            </div>
-
-            <a class="post__lk" href="#">
-              <h2 class="post__title title">Мы с Тамарой ходим парой, санитары мы с Тамарой</h2>
-            </a>
-
-            <div class="post__info article-info">
-              <a class="article-info__rubric">Политика</a>
-              <time class="article-info__time" datetime="2016-06-11T15:33">
-                <span class="article-info__hours">15:33</span>
-              </time>
-
-              <a class="post__commnets commnets" title="comments">12</a>
-            </div>
-
-            <p class="post__desc article-text crop-text">Люди, которых приговорили к исправительным работам, будут ограничены в определенных удовольствиях. Эти вопросы обсуждали на совете по внутренним делам Российской Федерации.</p>
-          </article>
-
-          <article class="post">
-            <div class="post__photo img-cover">
-              <img class="post__img" src="img/photos/photo4.jpg" alt="Photo" width="250" height="165">
-            </div>
-
-            <a class="post__lk" href="#">
-              <h2 class="post__title title">В Сирии разыграют «афганский сценарий»</h2>
-            </a>
-
-            <div class="post__info article-info">
-              <a class="article-info__rubric">Спорт</a>
-              <time class="article-info__time" datetime="2016-06-11T14:59">
-                <span class="article-info__hours">14:59</span>
-              </time>
-
-              <a class="post__commnets commnets" title="comments">7</a>
-            </div>
-
-            <p class="post__desc article-text crop-text">«Роснефть» готовится к приватизации «Башнефти», сделка по покупке башкирского актива уже одобрена. Какие выгоды несет данное соглашение ? </p>
-          </article>
+          <!--/.posts section-->
         </div><!-- /.topics-->
       </main> <!-- /.page -->
       <footer class="main-footer">
