@@ -6,12 +6,12 @@
 		<div class="root">
 			@include('_header.html',{})
 			<main class="page">
+				<h1 class="visually-hidden">Новости России и мира. Газета ру</h1>
 				<div class="topics">
-					<h1 class="visually-hidden">Новости России и мира. Газета ру</h1>
+					<aside class="topics__aside">
 						<!-- hours news -->
 						<section class="hours-news">
 							<h2 class="hours-news__title title">Новсти часа</h2>
-							
 							<ul class="hours-news__menu">
 								<li class="hours-news__rubrick">
 									<button class="hours-news__btn" type="button">Нвости часа</button>
@@ -23,6 +23,8 @@
 							</ul>
 
 							<div class="hours-news__content">
+								
+
 								<div class="hours-news__slider hours-news__tabs">
 									<ul class="hours-news__list">
 										<li class="hours-news__slide">
@@ -208,11 +210,13 @@
 
 							<a class="day-news__btn btn" href="#">Все новости</a>
 						</section><!-- /.day-news -->
-
+					</aside>
+					
+					<div class="topics__col">
 						<!-- big post -->
 						<article class="big-post img-cover">
 							<a class="big-post__photo" href="#">
-								<img class="big-post__img" src="img/photos/photo.jpg" alt="Tramp" width="660" height="610">
+								<img class="big-post__img" src="img/photos/photo.jpg" alt="Donald Tramp" width="660" height="610">
 							</a>
 
 							<a class="big-post__content" href="#">
@@ -270,76 +274,76 @@
 								<li class="top-news__row">
 									<a class="top-news__lk" href="#">В «Мемориале» сообщили о признании организации иноагентом</a>
 								</li>
+								
+								<li class="top-news__row">
+									<a class="top-news__lk" href="#">В «Мемориале» сообщили о признании организации иноагентом</a>
+								</li>
 							</ul>
 						</div>
 
-						<!-- Posts -->
-						<section class="posts">
-							<h2 class="visually-hidden">Самые обсуждаемые новости</h2>
+						<article class="post">
+							<div class="post__photo img-cover">
+								<img class="post__img" src="img/photos/photo2.jpg" alt="Photo"  width="250" height="165">
+							</div>
 
-							<article class="post">
-								<div class="post__photo img-cover">
-									<img class="post__img" src="img/photos/photo2.jpg" alt="Photo"  width="250" height="165">
-								</div>
-	
-								<a class="post__lk" href="#">
-									<h2 class="post__title title">Детройт — город-призрак</h2>
-								</a>
-	
-								<div class="post__info article-info">
-									<a class="article-info__rubric">Общество</a>
-									<time class="article-info__time" datetime="2016-06-11T15:23">
-										<span class="article-info__hours">15:23</span>
-									</time>
-	
-									<a class="post__commnets commnets" title="comments">29</a>
-								</div>
-	
-								<p class="post__desc article-text crop-text">Сегодня город Детройт в США часто именуют заброшенным, мертвым городом. В силу многих причин этот некогда процветающий город в данный момент потерял свою былую мощь. Что стало тому присчиной ?</p>
-							</article>
-	
-							<article class="post">
-								<div class="post__photo img-cover">
-									<img class="post__img" src="img/photos/photo3.jpg" alt="Photo"  width="250" height="165">
-								</div>
-	
-								<a class="post__lk" href="#">
-									<h2 class="post__title title">Мы с Тамарой ходим парой, санитары мы с Тамарой</h2>
-								</a>
-	
-								<div class="post__info article-info">
-									<a class="article-info__rubric">Политика</a>
-									<time class="article-info__time" datetime="2016-06-11T15:33">
-										<span class="article-info__hours">15:33</span>
-									</time>
-	
-									<a class="post__commnets commnets" title="comments">12</a>
-								</div>
-	
-								<p class="post__desc article-text crop-text">Люди, которых приговорили к исправительным работам, будут ограничены в определенных удовольствиях. Эти вопросы обсуждали на совете по внутренним делам Российской Федерации.</p>
-							</article>
-	
-							<article class="post">
-								<div class="post__photo img-cover">
-									<img class="post__img" src="img/photos/photo4.jpg" alt="Photo"  width="250" height="165">
-								</div>
-	
-								<a class="post__lk" href="#">
-									<h2 class="post__title title">В Сирии разыграют «афганский сценарий»</h2>
-								</a>
-	
-								<div class="post__info article-info">
-									<a class="article-info__rubric">Спорт</a>
-									<time class="article-info__time" datetime="2016-06-11T14:59">
-										<span class="article-info__hours">14:59</span>
-									</time>
-	
-									<a class="post__commnets commnets" title="comments">7</a>
-								</div>
-	
-								<p class="post__desc article-text crop-text">«Роснефть» готовится к приватизации «Башнефти», сделка по покупке башкирского актива уже одобрена. Какие выгоды несет данное соглашение ? </p>
-							</article>
-						</section><!--/.posts section-->
+							<a class="post__lk" href="#">
+								<h2 class="post__title title">Детройт — город-призрак</h2>
+							</a>
+
+							<div class="post__info article-info">
+								<a class="article-info__rubric">Общество</a>
+								<time class="article-info__time" datetime="2016-06-11T15:23">
+									<span class="article-info__hours">15:23</span>
+								</time>
+
+								<a class="post__commnets commnets" title="comments">29</a>
+							</div>
+
+							<p class="post__desc article-text crop-text">Сегодня город Детройт в США часто именуют заброшенным, мертвым городом. В силу многих причин этот некогда процветающий город в данный момент потерял свою былую мощь. Что стало тому присчиной ?</p>
+						</article>
+
+						<article class="post">
+							<div class="post__photo img-cover">
+								<img class="post__img" src="img/photos/photo3.jpg" alt="Photo"  width="250" height="165">
+							</div>
+
+							<a class="post__lk" href="#">
+								<h2 class="post__title title">Мы с Тамарой ходим парой, санитары мы с Тамарой</h2>
+							</a>
+
+							<div class="post__info article-info">
+								<a class="article-info__rubric">Политика</a>
+								<time class="article-info__time" datetime="2016-06-11T15:33">
+									<span class="article-info__hours">15:33</span>
+								</time>
+
+								<a class="post__commnets commnets" title="comments">12</a>
+							</div>
+
+							<p class="post__desc article-text crop-text">Люди, которых приговорили к исправительным работам, будут ограничены в определенных удовольствиях. Эти вопросы обсуждали на совете по внутренним делам Российской Федерации.</p>
+						</article>
+
+						<article class="post">
+							<div class="post__photo img-cover">
+								<img class="post__img" src="img/photos/photo4.jpg" alt="Photo"  width="250" height="165">
+							</div>
+
+							<a class="post__lk" href="#">
+								<h2 class="post__title title">В Сирии разыграют «афганский сценарий»</h2>
+							</a>
+
+							<div class="post__info article-info">
+								<a class="article-info__rubric">Спорт</a>
+								<time class="article-info__time" datetime="2016-06-11T14:59">
+									<span class="article-info__hours">14:59</span>
+								</time>
+
+								<a class="post__commnets commnets" title="comments">7</a>
+							</div>
+
+							<p class="post__desc article-text crop-text">«Роснефть» готовится к приватизации «Башнефти», сделка по покупке башкирского актива уже одобрена. Какие выгоды несет данное соглашение ? </p>
+						</article>
+					</div>
 				</div><!-- /.topics-->
 			</main> <!-- /.page -->
 			@include('_footer.html', {})

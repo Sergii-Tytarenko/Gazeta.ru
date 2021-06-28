@@ -2,14 +2,21 @@
     Hours News
 ----------------------------------------------------------------*/
 .hours-news {
-    grid-area: hours-news;
-    overflow: hidden;
     --menu-hight: 60px;
+    padding-top: 15px;
+
     background-color: #908080;
+    @media(max-width: 1050px) {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 0;
+    }
     // .hours-news__title
     &__title {
         display: block;
-        margin: 0;
+        margin-bottom: 20px;
 
         text-align: center;
         color: #fff;
@@ -73,11 +80,13 @@
     // .hours-news__content
     &__content {
         position: relative;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        min-height: 170px;
-        padding: 5px 15px 25px;
+        min-height: 130px;
+        @media(max-width: 1050px) {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            min-height: 170px;
+        }
     }
     // .hours-news__tabs 
     &__tabs {
@@ -112,9 +121,10 @@
     &__lk {
         display: inline-block;
         margin-bottom: 5px;
+        padding: 0 15px;
 
         color: #fff;
-        font-size: 18px;
+        font-size: 16px;
     }
     // .hours-news__info
     &__info {
@@ -123,7 +133,7 @@
     // .hours-news__pagination
     &__pagination {
         position: absolute;
-        bottom: 20px;
+        bottom: 15px;
         left: 50%;
 
         transform: translate(-50%, 0);

@@ -1,39 +1,35 @@
 /*----------------------------------------------------------------
-    Topics, Posts section
+    Topics
 ----------------------------------------------------------------*/
 .topics {
-    display: grid;
-    align-items: start;
-    grid-template-rows: auto max(337px) auto;
-    grid-template-areas: "hours-news big-post big-post top-news"
-                         "day-news big-post big-post top-news"
-                         "day-news posts posts posts";
-
-    max-width: 1330px;
-	width: 100%;
-	margin: 0 auto;
-
-    background-color: #f1f1f1;
-    @media(max-width: 1240px) {
-        grid-template-columns: 30% 1fr;
-        grid-template-areas:  "hours-news big-post"
-                              "day-news big-post"
-                              "day-news posts";
-                                 
-    }
+    display: flex;
     @media(max-width: 1050px) {
-        grid-template-areas: "hours-news hours-news"
-                             "day-news big-post"
-                             "day-news posts";
+        padding-top: 230px;
     }
-}
+    &__aside {
+        flex: 0 0 25%;
 
-.posts {
-    grid-area: posts;
-    display: grid;
-    height: 100%;
-    grid-template-columns: repeat(3, 1fr);
-    @media(max-width: 1240px) {
-        grid-template-columns: repeat(2, 1fr);
+        overflow: hidden;
+        border-right: 1px solid #dcdcdc;
+        border-left: 1px solid #dcdcdc;
+        @media(max-width: 1240px) {
+           flex: 0 0 30%;
+        }
+        @media(max-width: 767px) {
+           flex: 0 1 auto;
+           border: none;
+        }
+    }
+    // .topics__col
+    &__col {
+        display: grid;
+        grid-template-areas: "big-post big-post top-news";
+        @media(max-width: 1240px) {
+            grid-template-areas: "big-post big-post";
+        }
+        @media(max-width: 575px) {
+           display: block;
+           align-self: flex-start;
+        }
     }
 }

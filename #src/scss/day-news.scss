@@ -4,12 +4,11 @@
 .day-news {
     grid-area: day-news;
     padding-bottom: var(--m-padding);
-    height: 100%;
-    margin-right: -1px;
 
     text-align: center;
-    border-right: 1px solid #dcdcdc;
-	border-left: 1px solid #dcdcdc;
+    @media(max-width: 767px) {
+        display: none
+    }
     // .day-news__title
     &__title {
         margin: 0;
@@ -24,7 +23,7 @@
     }
     // .day-news__list
     &__list {
-        margin: 0 0 35px;
+        margin: 0;
         padding: 15px var(--m-padding) 35px;
         list-style: none;
         text-align: left;

@@ -3,7 +3,8 @@
 ----------------------------------------------------------------*/
 .top-news {
     grid-area: top-news;
-    padding: 0 var(--m-padding) 0;
+    padding: 0 var(--m-padding) 25px;
+
     border-bottom: 1px solid #dcdcdc;
     border-right: 1px solid #dcdcdc;
     @media(max-width: 1240px) {
@@ -12,7 +13,7 @@
     // .top-news__list
     &__list {
         margin: 0;
-        padding: 0 0 15px;
+        padding: 0;
         list-style: none;
         &--wrapp {
             position: relative;
@@ -25,18 +26,17 @@
     }
     // .top-news__row
     &__row {
+        margin-bottom: 20px;
         &:last-child {
-                .top-news__lk {
-                    margin: 0;
-                }
+                margin: 0;
             }
         &--head {
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: flex-end;
-            min-height: 315px;
-            margin: 0 -30px 15px;
+            height: 250px;
+            margin: 0 -30px 25px;
             padding-bottom: var(--m-padding);
 
             text-align: center;
@@ -47,7 +47,7 @@
             .top-news__lk {
                 margin: 0;
                 color: #fff;
-                font-size: 18px;
+                font-size: 16px;
                 font-weight: 400;
                 &:hover {
                     color: #fff;
@@ -84,7 +84,6 @@
     // .top-news__lk
     &__lk {
         display: inline-block;
-        margin-bottom: 15px;
     
         color: #000;
         font-weight: 500;
@@ -104,6 +103,7 @@
         display: none;
         overflow: hidden;
         border: none;
+        padding: 0;
         @media(max-width: 1050px) {
             display: block;
         }
@@ -111,7 +111,7 @@
     // .top-news__pagination
     &__pagination {
         position: absolute;
-        bottom: 20px;
+        bottom: 15px;
         left: 50%;
 
         transform: translate(-50%, 0);

@@ -3,11 +3,12 @@
 ----------------------------------------------------------------*/
 .big-post {
     grid-area: big-post;
-    height: 100%;
 
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
+    min-height: 500px;
+    padding-top: 80px;
 
     background-color: #000;
     border-bottom: 1px solid #dcdcdc;
@@ -80,6 +81,10 @@
     // .big-post__quick
     &__quick {
         @include hover($text: #fff, $line: underline);
+        @media(max-width: 420px) {
+            font-size: 0;
+            background-position: center;
+        }
     }
 }
 
