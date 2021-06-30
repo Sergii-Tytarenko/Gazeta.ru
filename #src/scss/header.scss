@@ -53,7 +53,7 @@
 			display: inline-block;
 		}
 		@media(max-width: 420px) {
-			font-size: 35px;
+			font-size: 29px;
 		}
 	}
 	// .main-header__middle
@@ -212,9 +212,6 @@
 		transition: color .3s;
 		&:hover {
 			color: rgb(185, 9, 3);
-			.main-header__time {
-				color: rgb(185, 9, 3);
-			}
 		}
 		&:focus {
 			outline: 2px solid rgb(216, 25, 18);
@@ -251,7 +248,7 @@
 	}
 	// .main-header__time
 	&__time {
-		transition: color .3s;
+		color: #000;
 		// .main-header__time--hidden
 		&--hidden {
 			display: none;

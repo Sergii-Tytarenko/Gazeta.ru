@@ -120,7 +120,7 @@
     // .hours-news__lk
     &__lk {
         display: inline-block;
-        margin-bottom: 5px;
+        margin-bottom: 10px;
         padding: 0 15px;
 
         color: #fff;
@@ -129,12 +129,16 @@
     // .hours-news__info
     &__info {
         color: #fff;
+        .article-info__rubric:hover {
+            color: inherit;
+        }
     }
     // .hours-news__pagination
     &__pagination {
         position: absolute;
         bottom: 15px;
         left: 50%;
+        width: 100%;
 
         transform: translate(-50%, 0);
         text-align: center;

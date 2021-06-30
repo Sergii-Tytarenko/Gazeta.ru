@@ -5,8 +5,11 @@
     grid-area: top-news;
     padding: 0 var(--m-padding) 25px;
 
-    border-bottom: 1px solid #dcdcdc;
-    border-right: 1px solid #dcdcdc;
+    outline: 1px solid #dcdcdc;
+    outline-offset: -1px;
+    @media(max-width: 1050px) {
+        outline: none;
+    }
     @media(max-width: 1240px) {
         display: none;
     }
@@ -113,6 +116,7 @@
         position: absolute;
         bottom: 15px;
         left: 50%;
+        width: 100%;
 
         transform: translate(-50%, 0);
         text-align: center;
