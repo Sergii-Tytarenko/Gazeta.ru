@@ -2248,16 +2248,38 @@ body.lock {
   outline-offset: 2px;
 }
 
-.post__lk:hover .post__title {
+.post__lk:hover .post__title,
+.post__lk:hover ~ .article-text {
   color: #b90903;
 }
 
 .post__info {
+  margin-bottom: 15px;
   color: #313131;
 }
 
-.post__commnets {
-  margin-bottom: 15px;
+.post__views {
+  display: inline-block;
+  margin-top: 10px;
+  padding-left: 35px;
+  color: #000;
+  background: url("../img/icons/views.png") left center no-repeat;
+}
+
+.post--actual {
+  padding-top: 25px;
+  padding-bottom: 10px;
+  border: none;
+}
+
+.post--actual .post__lk:hover .post__title,
+.post--actual .post__lk:hover ~ .article-text {
+  color: #000;
+}
+
+.post--actual:hover,
+.post--actual:focus {
+  background-color: #f5f5f5;
 }
 
 /*----------------------------------------------------------------
@@ -2419,6 +2441,51 @@ body.lock {
 
 .swiper-button-lock {
   display: none !important;
+}
+
+/*----------------------------------------------------------------
+    Middle
+----------------------------------------------------------------*/
+
+.middle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #fff;
+}
+
+.middle__column {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 1 50%;
+  flex: 0 1 50%;
+}
+
+.middle__column:first-child {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 1 80%;
+  flex: 0 1 80%;
+}
+
+/*----------------------------------------------------------------
+    Actual news
+----------------------------------------------------------------*/
+
+.actual__title {
+  margin: 0;
+  padding: 15px var(--m-padding);
+  font-size: 24px;
+  text-align: left;
+  border-bottom: 1px solid #dcdcdc;
+}
+
+.actual__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.actual__row:last-child .post {
+  padding-bottom: 20px;
 }
 
 @media (min-width: 768px) {

@@ -125,7 +125,7 @@ window.addEventListener('scroll', () => {
     if (getComputedStyle(headerAside).position == 'absolute') {
         setTimeout(() => {
             headerAside.style.top = height + 'px';
-        }, 500);
+        }, 1000);
 
     }
 })

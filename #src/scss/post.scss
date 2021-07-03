@@ -37,18 +37,41 @@
         }
         @include hover;
         &:hover {
-            .post__title {
+            .post__title,
+            & ~ .article-text {
                 color: #b90903;
             }
         }
     }
     // .post__info
     &__info {
+        margin-bottom: 15px;
         color: rgb(49, 49, 49);
     }
-    // .post__commnets
-    &__commnets {
-        margin-bottom: 15px;
+    // .post__views
+    &__views {
+       display: inline-block;
+       margin-top: 10px;
+       padding-left: 35px;
+       
+       color: #000;
+       background: url('../img/icons/views.png') left center no-repeat;
+    }
+    // .post--actual
+    &--actual {
+        padding-top: 25px;
+        padding-bottom: 10px;
+        border: none;
+        .post__lk:hover {
+            .post__title,
+            & ~ .article-text {
+                color: #000;
+            }
+        }
+        &:hover,
+        &:focus {
+            background-color: #f5f5f5;
+        }
     }
 }
 

@@ -1,0 +1,28 @@
+/*----------------------------------------------------------------
+    Actual news
+----------------------------------------------------------------*/
+.actual {
+    // .actual__title
+    &__title {
+        margin: 0;
+        padding: 15px var(--m-padding);
+
+        font-size: 24px;
+        text-align: left;
+        border-bottom: 1px solid #dcdcdc;
+    }
+    // .actual__list
+    &__list {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+    // .actual__row
+    &__row {
+        &:last-child {
+            .post {
+                padding-bottom: 20px;
+            }
+        }
+    }
+}
