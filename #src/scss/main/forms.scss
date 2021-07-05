@@ -10,9 +10,6 @@
     transition: color .3s;
     // .title--hot
     &--hot {
-        color: #fff;
-        font-size: 44px;
-        padding: 0 var(--m-padding);
         &:before {
             content: '';
             position: absolute;
@@ -22,6 +19,30 @@
             width: 30%;
             height: 3px;
             background-color: #b11217;
+        }
+    }
+    &--video {
+        padding-top: .6em !important;
+        &::after {
+            content: '';
+            position: absolute;
+            top: -12px;
+            left: var(--m-padding);
+            width: 24px;
+            height: 24px;
+            
+            background: url("../img/icons/video.svg") center no-repeat;
+        }
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left:  calc(var(--m-padding) + 35px);
+
+            width: 200px;
+            height: 3px;
+            background-image: linear-gradient(to right, #b11217 30%, rgba(#fff, .3) 30%);
+            
         }
     }
 }
@@ -116,7 +137,6 @@
 
     padding-left: 25px;
     background: url('../img/icons/comment-dark.png') left center no-repeat;
-    @include hover($text: initial, $line: underline);
     &--light {
         background: url('../img/icons/comment.png') left center no-repeat;
     }

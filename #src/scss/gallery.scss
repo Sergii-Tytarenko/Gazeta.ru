@@ -1,0 +1,114 @@
+/*----------------------------------------------------------------
+    Gallery, photos and videos
+----------------------------------------------------------------*/
+.gallery {
+    position: relative;
+    height: 100%;
+    // .gallery__nav
+    &__nav {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 10;
+
+        width: 140px;
+        padding: 20px 15px;
+
+        background: rgba(#000, .2);
+        backdrop-filter: blur(20px);
+        @supports not (backdrop-filter: blur(20px)) {
+           background: rgba(#000, .5);
+        }
+    }
+    // .gallery__list
+    &__list {
+        display: flex;
+        height: 100%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        margin: 0;
+        padding: 0;
+
+        list-style: none;
+        text-align: center;
+    }
+    // .gallery__item
+    &__item {}
+    // .gallery__btn
+    &__btn {
+        position: relative;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;;
+        width: 75px;
+        height: 75px;
+        margin-bottom: 10px;
+
+        border: none;
+        border-radius: 50%;
+        cursor: pointer;
+        overflow: hidden;
+        background: black;
+        
+        // .gallery__btn--active
+        &--active {
+            border: 2px solid #b11217;
+        }
+        &:hover {
+            .gallery__icon {
+                fill:rgba(#fff, .9);
+            }
+        }
+        &:focus {
+            outline: 2px solid #fff;
+            outline-offset: 2px;
+        }
+       
+    }
+    // .gallery__icon
+    &__icon {
+        z-index: 1;
+        fill: rgba(#fff, .5);
+        transition: fill .3s;
+    }
+    // .gallery__bg
+    &__bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    
+        object-fit: cover;
+        object-position: center;
+    }
+    // .gallery__dsc
+    &__dsc {
+        display: inline-block;
+        color: #fff;
+    }
+    // .gallery__lk
+    &__lk {
+        display: inline-block;
+        height: 30px;
+        padding: 0 15px;
+
+        color: #fff;
+        font-size: 12px;
+        text-align: center;
+        line-height: 30px;
+
+        border-radius: 20px;
+        background-color: rgba(#fff, .4);
+        transition: background .3s;
+        &:hover {
+            background-color: rgba(#fff, .2);
+        }
+        &:focus {
+            outline: 2px solid #fff;
+            outline-offset: 2px;
+        }
+    }
+}

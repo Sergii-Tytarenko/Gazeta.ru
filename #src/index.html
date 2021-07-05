@@ -293,12 +293,12 @@
 							</a>
 
 							<div class="post__info article-info">
-								<a class="article-info__rubric">Общество</a>
+								<span class="article-info__rubric">Общество</span>
 								<time class="article-info__time" datetime="2016-06-11T15:23">
 									<span class="article-info__hours">15:23</span>
 								</time>
 
-								<a class="post__commnets commnets" title="comments">29</a>
+								<span class="post__commnets commnets" title="комментарии">29</span>
 							</div>
 
 							<p class="post__desc article-text crop-text">Сегодня город Детройт в США часто именуют заброшенным, мертвым городом. В силу многих причин этот некогда процветающий город в данный момент потерял свою былую мощь. Что стало тому присчиной ?</p>
@@ -314,12 +314,12 @@
 							</a>
 
 							<div class="post__info article-info">
-								<a class="article-info__rubric">Политика</a>
+								<span class="article-info__rubric">Политика</span>
 								<time class="article-info__time" datetime="2016-06-11T15:33">
 									<span class="article-info__hours">15:33</span>
 								</time>
 
-								<a class="post__commnets commnets" title="comments">12</a>
+								<span class="post__commnets commnets" title="комментарии">12</span>
 							</div>
 
 							<p class="post__desc article-text crop-text">Люди, которых приговорили к исправительным работам, будут ограничены в определенных удовольствиях. Эти вопросы обсуждали на совете по внутренним делам Российской Федерации.</p>
@@ -335,12 +335,12 @@
 							</a>
 
 							<div class="post__info article-info">
-								<a class="article-info__rubric">Спорт</a>
+								<span class="article-info__rubric">Спорт</span>
 								<time class="article-info__time" datetime="2016-06-11T14:59">
 									<span class="article-info__hours">14:59</span>
 								</time>
 
-								<a class="post__commnets commnets" title="comments">7</a>
+								<span class="post__commnets commnets" title="комментарии">7</span>
 							</div>
 
 							<p class="post__desc article-text crop-text">«Роснефть» готовится к приватизации «Башнефти», сделка по покупке башкирского актива уже одобрена. Какие выгоды несет данное соглашение ? </p>
@@ -349,9 +349,78 @@
 				</div><!-- /.topics-->
 
 				<!-- middle content-->
-				<div class="middle">
-					<div class="middle__column" style="background: url('img/photos/photo5.jpg') center / cover no-repeat;">
-						
+				<section class="middle">
+					<h2 class="visually-hidden">Фото и видео</h2>
+
+					<div class="middle__column">
+						<div class="gallery">
+							<nav class="gallery__nav">
+								<ul class="gallery__list">
+									<li class="gallery__item">
+										<button class="gallery__btn gallery__btn--active" type="button">
+											<svg class="gallery__icon" width="18" height="18">
+												<use xlink:href="img/sprite.svg#video"></use>
+											</svg>
+
+											<img class="gallery__bg" src="img/photos/photo5.jpg" alt="Photo" width="80" height="80">
+										</button>
+										<span class="gallery__dsc">Удар конвоем по России</span>
+									</li>
+
+									<li class="gallery__item">
+										<button class="gallery__btn" type="button">
+											<svg class="gallery__icon" width="18" height="18">
+												<use xlink:href="img/sprite.svg#photo"></use>
+											</svg>
+
+											<img class="gallery__bg" src="img/photos/photo6.jpg" alt="Photo" width="80" height="80">
+										</button>
+										<span class="gallery__dsc">Дикая природа: Камчатка</span>
+									</li>
+
+									<li class="gallery__item">
+										<button class="gallery__btn" type="button">
+											<svg class="gallery__icon" width="18" height="18">
+												<use xlink:href="img/sprite.svg#photo"></use>
+											</svg>
+
+											<img class="gallery__bg" src="img/photos/photo8.jpg" alt="Photo" width="80" height="80">
+										</button>
+										<span class="gallery__dsc">Поклонская в госдуме</span>
+									</li>
+
+									<li class="gallery__item">
+										<a class="gallery__lk" href="#">Фото и видео</a>
+									</li>
+								</ul>
+							</nav>
+
+							<article class="big-post big-post--gallery img-cover">
+								<a class="big-post__photo" href="#">
+									<img class="big-post__img" src="img/photos/photo5.jpg" alt="Солдаты в танке" width="660" height="610">
+								</a>
+	
+								<div class="big-post__content">
+									<h3 class="big-post__title title title--video">
+										Удар конвоем по Роcсии
+										<span class="big-post__watch-time">3.50</span>
+									</h3>
+									
+									<div class="big-post__about article-info article-info--big">
+										<time class="article-info__time" datetime="2016-06-11T15:23">
+											<span class="article-info__date">20 января 2017</span>
+											<span class="article-info__hours">15:23</span>
+										</time>
+
+										<span class="commnets" title="комментарии" href="#">7</span>
+									</div>
+	
+									<div class="big-post__desc">
+										<p class="article-text crop-text">Столица США Вашингтон сегодня превратиласьв декорацию к главному политическому карнавалу Америки — инаугурации президента. «Газета.Ru» вела онлайн-трансляцию goto</p>
+									</div>
+								</div>
+							</article>
+						</div>
 					</div>
 
 					<div class="middle__column">
@@ -418,7 +487,7 @@
 							</ul>
 						</div>
 					</div>
-				</div><!-- /.middle -->
+				</section><!-- /.middle -->
 			</main> <!-- /.page -->
 			@include('_footer.html', {})
 		</div><!-- /.root -->
