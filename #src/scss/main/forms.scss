@@ -30,8 +30,10 @@
             left: var(--m-padding);
             width: 24px;
             height: 24px;
+            border-radius: 50%;
             
-            background: url("../img/icons/video.svg") center no-repeat;
+            background: #000 url("../img/icons/video.svg") center / cover no-repeat;
+            transition: background .3s linear, transform .3s;
         }
         &::before {
             content: '';
@@ -42,6 +44,7 @@
             width: 200px;
             height: 3px;
             background-image: linear-gradient(to right, #b11217 30%, rgba(#fff, .3) 30%);
+            transition: background .3s;
             
         }
     }

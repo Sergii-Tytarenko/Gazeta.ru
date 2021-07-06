@@ -9,7 +9,13 @@
     &__column {
         flex: 0 1 80%;
         &:last-child {
-            flex: 0 0 420px;
+            flex: 0 1 40%;
+            @media(max-width: 1050px) {
+                display: none;
+            }
+        }
+        @media(max-width: 1050px) {
+            flex: 1 1 auto;
         }
     }
 }
