@@ -443,6 +443,44 @@ if(topNewsSlider) {
 
 }());
 
+
+/* Gallery's Tabs
+---------------------------------------------------------------*/
+const galleryMenu = document.querySelector('.gallery__nav'),
+      galleryBtns = galleryMenu.querySelectorAll('.gallery__btn'),
+      galleryContents = document.querySelectorAll('.big-post--gallery');
+
+galleryMenu.addEventListener('click', (event) => {
+    let target = event.target;
+    if (target && target.matches('button.gallery__btn')) {
+        galleryBtns.forEach((item, i) => {
+            if (target == item) {
+                shwoContnet(i);
+            }
+        });
+    };
+})
+
+shwoContnet();
+
+function shwoContnet(i = 0) {
+    hideContent();
+    galleryBtns[i].classList.add('gallery__btn--active');
+    galleryContents[i].classList.remove('hide');
+    galleryContents[i].classList.add('show');
+}
+
+function hideContent() {
+    galleryBtns.forEach(el => {
+        el.classList.remove('gallery__btn--active')
+    })
+
+    galleryContents.forEach(el => {
+        el.classList.add('hide');
+        el.classList.remove('show');
+    })
+}
+
 /***/ }),
 
 /***/ "./#src/js/vendors/focusVisible.js":

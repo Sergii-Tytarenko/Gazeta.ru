@@ -11,6 +11,10 @@
     padding-top: 80px;
 
     border-bottom: 1px solid #dcdcdc;
+    background-color: #000;
+    @media(max-width: 575px) {
+        min-height: 430px;
+    }
     // .big-post__photo
     &__photo {
         &::after {
@@ -58,6 +62,9 @@
         font-family: "Hoefler-Text", serif;
         @media(max-width: 767px) {
             font-size: 35px;
+        }
+        @media(max-width: 420px) {
+            font-size: 26px;
         }
     }
     // .big-post__watch-time
@@ -117,7 +124,6 @@
     }
     &--gallery {
         height: 100%;
-        padding-right: 120px;
 
         border: none;
         .big-post__desc {
@@ -130,6 +136,15 @@
         .big-post__photo.focus-visible::before {
             background-color: rgba(#000, .3);
             border: 2px solid #fff
+        }
+        @media(min-width: 576px) {
+            padding-right: 120px;
+        }
+        @media(max-width: 575px) {
+            padding-bottom: 100px;
+            .big-post__desc {
+                display: none;
+            }
         }
     }
 }
