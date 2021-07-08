@@ -1,5 +1,7 @@
 import focusVisible from './vendors/focusVisible';
 import Swiper from 'swiper/bundle';
+import macy from 'macy';
+
 
 /* Burger 
 -----------------------------------------------------------------------------*/
@@ -239,7 +241,8 @@ function body_lock_add(delay) {
 }
 
 
-/* Hours News Tabs*/
+/* Hours News Tabs
+---------------------------------------------------------------*/
 const hoursMenu = document.querySelector('.hours-news__menu'),
       hoursMenuBtns = hoursMenu.querySelectorAll('.hours-news__btn'),
       hoursContent = document.querySelectorAll('.hours-news__tabs'),
@@ -280,7 +283,8 @@ function initHoursTabs() {
 }
 
 
-/* Hours News Sliders*/
+/* Hours News sliders
+---------------------------------------------------------------*/
 let hoursNews = new Swiper('.hours-news__slider', {
     loop: true,
     autoplay: {
@@ -380,3 +384,22 @@ function hideContent() {
         el.classList.remove('show');
     })
 }
+
+
+/* Masonry  grid 
+---------------------------------------------------------------*/
+let myGrid = macy({
+    container: '.articles__inner',
+    trueOrder: false,
+    waitForImages: false,
+    margin: {
+        x: 15,
+        y: 15,
+    },
+    columns: 4,
+    breakAt: {
+        1200: 3,
+        920: 2,
+        530: 1
+    }
+});

@@ -59,6 +59,7 @@
 
         color: #fff;
         font-size: 44px;
+        line-height: 1.1;
         font-family: "Hoefler-Text", serif;
         @media(max-width: 767px) {
             font-size: 35px;
@@ -147,6 +148,26 @@
             }
         }
     }
+    &--art {
+        box-shadow: 2px 2px 8px rgba(#000, .1);
+        &:hover {
+            box-shadow: 2px 2px 8px rgba(#000, .5);
+        }
+        transition: box-shadow .3s;
+
+        .big-post__footer {
+            height: auto;
+            padding: 15px var(--m-padding);
+    
+            color: #fff;
+            border-top: 1px solid #4e4d4d;
+        }
+    
+        .big-post__title {
+            font-size: 35px;
+        }
+    }
+   
 }
 
 

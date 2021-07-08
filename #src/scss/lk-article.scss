@@ -1,0 +1,70 @@
+/*----------------------------------------------------------------
+    Link to Article
+----------------------------------------------------------------*/
+.lk-article {
+    display: flex;
+    flex-direction: column;
+    min-height: 420px;
+    padding: 40px 27px var(--m-padding);
+
+    background-color: #5a5959;
+    box-shadow: 2px 2px 8px rgba(#000, .1);
+    &:hover {
+        box-shadow: 2px 2px 8px rgba(#000, .5);
+    }
+    transition: box-shadow .3s;
+    // .lk-article__text
+    &__text {
+        margin: auto 0;
+
+        text-align: center;
+    }
+    // .lk-article__title
+    &__title {
+        color: #fff;
+        font-size: 24px;
+        font-weight: 400;
+        padding-bottom: 15px;
+        margin-bottom: 15px;
+
+        border-bottom: 1px solid rgba(#fff, .4);
+    }
+    // .lk-article__author
+    &__author {
+        color: #fff;
+        font-size: 16px;
+    }
+    // .lk-article__src
+    &__src {
+        position: relative;
+        display: block;
+        padding-left: 50px;
+        margin-bottom: 20px;
+
+        color: #fff;
+        &:after {
+            content: "";
+            position: absolute;
+            top: -50%;
+            left: 0;
+            width: 40px;
+            height: 40px;
+
+            border-radius: 50%;
+        }
+    }
+    // .lk-article--fb
+    &--fb {
+        background-color: #3a5898;
+        .lk-article__src::after {
+            background: rgba(#fff, .4) url('../img/icons/facebook.svg') center / 15px 15px no-repeat;
+        }
+    }
+    // .lk-article--fb
+    &--tw {
+        background-color: #1da1f2;
+        .lk-article__src::after {
+            background: rgba(#fff, .4) url('../img/icons/twitter.svg') center / 15px 15px no-repeat;
+        }
+    }
+}
