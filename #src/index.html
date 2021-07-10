@@ -543,169 +543,205 @@
 					<nav class="articles__nav">
 						<ul class="articles__list">
 							<li class="articles__item">
-								<button class="articles__btn" type="button"></button>
+								<button class="articles__btn articles__btn--active" type="button" data-descr="js-news">Новости</button>
+							</li>
+							<li class="articles__item">
+								<button class="articles__btn" type="button" data-descr="js-politics">Политика</button>
+							</li>
+							<li class="articles__item">
+								<button class="articles__btn" type="button" data-descr="js-sport">Спорт</button>
+							</li>
+							<li class="articles__item">
+								<button class="articles__btn" type="button"  data-descr="js-society">Общество</button>
+							</li>
+							<li class="articles__item">
+								<button class="articles__btn" type="button"  data-descr="js-buisness">Бизнес</button>
+							</li>
+							<li class="articles__item">
+								<button class="articles__btn" type="button"  data-descr="js-army">Армия</button>
+							</li>
+							<li class="articles__item">
+								<button class="articles__btn" type="button"  data-descr="js-opinions">Мнения</button>
+							</li>
+							<li class="articles__item">
+								<button class="articles__btn" type="button" data-descr="js-culture">Культура</button>
+							</li>
+							<li class="articles__item">
+								<button class="articles__btn" type="button" data-descr="js-science">Наука</button>
+							</li>
+							<li class="articles__item">
+								<button class="articles__btn" type="button" data-descr="js-teshno">Технологии</button>
+							</li>
+							<li class="articles__item">
+								<button class="articles__btn" type="button" data-descr="js-car">Авто</button>
 							</li>
 						</ul>
 					</nav>
 
 					<!-- masonry-->
-					<div class="articles__inner">
-						<article class="post">
-							<div class="post__photo img-cover">
-								<img class="post__img" src="img/photos/photo9.jpg" alt="Photo"  width="250" height="165">
-							</div>
-
-							<div class="post__content">
-								<a class="post__lk" href="#">
-									<h2 class="post__title title">Детройт — город-призрак</h2>
+					<div class="articles__container">
+						<div class="articles__inner">
+							<article class="post js-post js-news js-society">
+								<div class="post__photo img-cover">
+									<img class="post__img" src="img/photos/photo9.jpg" alt="Photo"  width="250" height="165">
+								</div>
+	
+								<div class="post__content">
+									<a class="post__lk" href="#">
+										<h2 class="post__title title">Детройт — город-призрак</h2>
+									</a>
+		
+									<div class="post__info article-info">
+										<span class="article-info__rubric">Общество</span>
+										<time class="article-info__time" datetime="2016-06-11T15:23">
+											<span class="article-info__hours">15:23</span>
+										</time>
+		
+										<span class="post__commnets commnets" title="комментарии">29</span>
+									</div>
+		
+									<p class="post__desc article-text crop-text">Сегодня город Детройт в США часто именуют заброшенным, мертвым городом. В силу многих причин этот некогда процветающий город в данный момент потерял свою былую мощь. Что стало тому присчиной ?</p>
+								</div>
+							</article>
+	
+							<article class="big-post big-post--art img-cover js-post js-news js-society">
+								<a class="big-post__photo" href="#">
+									<img class="big-post__img" src="img/photos/photo10.jpg" alt="Donald Tramp" width="660" height="610">
 								</a>
 	
-								<div class="post__info article-info">
-									<span class="article-info__rubric">Общество</span>
-									<time class="article-info__time" datetime="2016-06-11T15:23">
-										<span class="article-info__hours">15:23</span>
-									</time>
+								<a class="big-post__content" href="#">
+									<h2 class="big-post__title title title--hot">Полиция подавила бунт в лагере для беженцев</h2>
+									
+									<div class="big-post__about article-info article-info--big">
+										<span class="article-info__rubric">Общество</span>
 	
-									<span class="post__commnets commnets" title="комментарии">29</span>
-								</div>
-	
-								<p class="post__desc article-text crop-text">Сегодня город Детройт в США часто именуют заброшенным, мертвым городом. В силу многих причин этот некогда процветающий город в данный момент потерял свою былую мощь. Что стало тому присчиной ?</p>
-							</div>
-						</article>
-
-						<article class="big-post big-post--art img-cover">
-							<a class="big-post__photo" href="#">
-								<img class="big-post__img" src="img/photos/photo10.jpg" alt="Donald Tramp" width="660" height="610">
-							</a>
-
-							<a class="big-post__content" href="#">
-								<h2 class="big-post__title title title--hot">Полиция подавила бунт в лагере для беженцев</h2>
-								
-								<div class="big-post__about article-info article-info--big">
-									<span class="article-info__rubric">Общество</span>
-
-									<time class="article-info__time" datetime="2016-06-11T15:23">
-										<span class="article-info__hours">15:23</span>
-									</time>
-								</div>
-							</a>
-
-							<footer class="big-post__footer">
-								<p class="author">Алексей Топалов</p>
-							</footer>
-						</article>
-
-						<article class="post">
-							<div class="post__photo img-cover">
-								<img class="post__img" src="img/photos/photo11.jpg" alt="Photo"  width="250" height="165">
-							</div>
-
-							<div class="post__content">
-								<a class="post__lk" href="#">
-									<h2 class="post__title title">В Сирии разыграют «афганский сценарий»</h2>
+										<time class="article-info__time" datetime="2016-06-11T15:23">
+											<span class="article-info__hours">15:23</span>
+										</time>
+									</div>
 								</a>
 	
-								<div class="post__info article-info">
-									<span class="article-info__rubric">Спорт</span>
-									<time class="article-info__time" datetime="2016-06-11T14:59">
-										<span class="article-info__hours">14:59</span>
-									</time>
+								<footer class="big-post__footer">
+									<p class="author">Алексей Топалов</p>
+								</footer>
+							</article>
 	
-									<span class="post__commnets commnets" title="комментарии">7</span>
+							<article class="post js-post js-news js-sport">
+								<div class="post__photo img-cover">
+									<img class="post__img" src="img/photos/photo11.jpg" alt="Photo"  width="250" height="165">
 								</div>
 	
-								<p class="post__desc article-text crop-text">«Роснефть» готовится к приватизации «Башнефти», сделка по покупке башкирского актива уже одобрена. Какие выгоды несет данное соглашение ? </p>
-							</div>
-						</article>
-
-						<article class="post">
-							<div class="post__photo img-cover">
-								<img class="post__img" src="img/photos/photo12.jpg" alt="Photo"  width="250" height="165">
-							</div>
-
-							<div class="post__content">
-								<a class="post__lk" href="#">
-									<h2 class="post__title title">Детройт — город-призрак</h2>
+								<div class="post__content">
+									<a class="post__lk" href="#">
+										<h2 class="post__title title">В Сирии разыграют «афганский сценарий»</h2>
+									</a>
+		
+									<div class="post__info article-info">
+										<span class="article-info__rubric">Спорт</span>
+										<time class="article-info__time" datetime="2016-06-11T14:59">
+											<span class="article-info__hours">14:59</span>
+										</time>
+		
+										<span class="post__commnets commnets" title="комментарии">7</span>
+									</div>
+		
+									<p class="post__desc article-text crop-text">«Роснефть» готовится к приватизации «Башнефти», сделка по покупке башкирского актива уже одобрена. Какие выгоды несет данное соглашение ? </p>
+								</div>
+							</article>
+	
+							<article class="post js-post js-news js-society">
+								<div class="post__photo img-cover">
+									<img class="post__img" src="img/photos/photo12.jpg" alt="Photo"  width="250" height="165">
+								</div>
+	
+								<div class="post__content">
+									<a class="post__lk" href="#">
+										<h2 class="post__title title">Детройт — город-призрак</h2>
+									</a>
+		
+									<div class="post__info article-info">
+										<span class="article-info__rubric">Общество</span>
+										<time class="article-info__time" datetime="2016-06-11T15:23">
+											<span class="article-info__hours">15:23</span>
+										</time>
+		
+										<span class="post__commnets commnets" title="комментарии">29</span>
+									</div>
+		
+									<p class="post__desc article-text crop-text">Сегодня город Детройт в США часто именуют заброшенным, мертвым городом. В силу многих причин этот некогда процветающий город в данный момент потерял свою былую мощь. Что стало тому присчиной ?</p>
+								</div>
+							</article>
+							
+							<article class="post js-post js-news js-politics">
+								<a class="lk-article lk-article--fb" href="#" target="_blank">
+									<div class="lk-article__text">
+										<h3 class="lk-article__title title">Как растопить холодную войну</h3>
+										<span class="lk-article__author">Мария Минина</span>
+									</div>
+		
+									<span class="lk-article__src">fb.com/m.minina</span>
 								</a>
-	
-								<div class="post__info article-info">
-									<span class="article-info__rubric">Общество</span>
-									<time class="article-info__time" datetime="2016-06-11T15:23">
-										<span class="article-info__hours">15:23</span>
-									</time>
-	
-									<span class="post__commnets commnets" title="комментарии">29</span>
-								</div>
-	
-								<p class="post__desc article-text crop-text">Сегодня город Детройт в США часто именуют заброшенным, мертвым городом. В силу многих причин этот некогда процветающий город в данный момент потерял свою былую мощь. Что стало тому присчиной ?</p>
-							</div>
-						</article>
+							</article>
 
-						<a class="lk-article lk-article--fb" href="#" target="_blank">
-							<div class="lk-article__text">
-								<h3 class="lk-article__title title">Как растопить холодную войну</h3>
-								<span class="lk-article__author">Мария Минина</span>
-							</div>
-
-							<span class="lk-article__src">fb.com/m.minina</span>
-						</a>
-
-						<a class="lk-article lk-article--tw" href="#" target="_blank">
-							<div class="lk-article__text">
-								<h3 class="lk-article__title title">Готов отдать все полномочия, а никто не берет</h3>
-								<span class="lk-article__author">Виталий Мутко</span>
-							</div>
-
-							<span class="lk-article__src">gazetaru</span>
-						</a>
-
-						<article class="post">
-							<div class="post__photo img-cover">
-								<img class="post__img" src="img/photos/photo13.jpg" alt="Photo"  width="250" height="165">
-							</div>
-
-							<div class="post__content">
-								<a class="post__lk" href="#">
-									<h2 class="post__title title">Мы с Тамарой ходим парой, санитары мы с Тамарой</h2>
+							<article class="post js-post js-news js-politics">
+								<a class="lk-article lk-article--tw" href="#" target="_blank">
+									<div class="lk-article__text">
+										<h3 class="lk-article__title title">Готов отдать все полномочия, а никто не берет</h3>
+										<span class="lk-article__author">Виталий Мутко</span>
+									</div>
+		
+									<span class="lk-article__src">gazetaru</span>
 								</a>
-	
-								<div class="post__info article-info">
-									<span class="article-info__rubric">Политика</span>
-									<time class="article-info__time" datetime="2016-06-11T15:33">
-										<span class="article-info__hours">15:33</span>
-									</time>
-	
-									<span class="post__commnets commnets" title="комментарии">12</span>
+							</article>
+							
+							<article class="post js-post js-news js-politics">
+								<div class="post__photo img-cover">
+									<img class="post__img" src="img/photos/photo13.jpg" alt="Photo"  width="250" height="165">
 								</div>
 	
-								<p class="post__desc article-text crop-text">Люди, которых приговорили к исправительным работам, будут ограничены в определенных удовольствиях. Эти вопросы обсуждали на совете по внутренним делам Российской Федерации.</p>
-							</div>
-						</article>
-
-						<article class="post">
-							<div class="post__photo img-cover">
-								<img class="post__img" src="img/photos/photo14.jpg" alt="Photo"  width="250" height="165">
-							</div>
-
-							<div class="post__content">
-								<a class="post__lk" href="#">
-									<h2 class="post__title title">В Сирии разыграют «афганский сценарий»</h2>
-								</a>
+								<div class="post__content">
+									<a class="post__lk" href="#">
+										<h2 class="post__title title">Мы с Тамарой ходим парой, санитары мы с Тамарой</h2>
+									</a>
+		
+									<div class="post__info article-info">
+										<span class="article-info__rubric">Политика</span>
+										<time class="article-info__time" datetime="2016-06-11T15:33">
+											<span class="article-info__hours">15:33</span>
+										</time>
+		
+										<span class="post__commnets commnets" title="комментарии">12</span>
+									</div>
+		
+									<p class="post__desc article-text crop-text">Люди, которых приговорили к исправительным работам, будут ограничены в определенных удовольствиях. Эти вопросы обсуждали на совете по внутренним делам Российской Федерации.</p>
+								</div>
+							</article>
 	
-								<div class="post__info article-info">
-									<span class="article-info__rubric">Спорт</span>
-									<time class="article-info__time" datetime="2016-06-11T14:59">
-										<span class="article-info__hours">14:59</span>
-									</time>
-	
-									<span class="post__commnets commnets" title="комментарии">7</span>
+							<article class="post js-post js-news js-sport">
+								<div class="post__photo img-cover">
+									<img class="post__img" src="img/photos/photo14.jpg" alt="Photo"  width="250" height="165">
 								</div>
 	
-								<p class="post__desc article-text crop-text">«Роснефть» готовится к приватизации «Башнефти», сделка по покупке башкирского актива уже одобрена. Какие выгоды несет данное соглашение ? </p>
-							</div>
-						</article>
-					</div>
-
+								<div class="post__content">
+									<a class="post__lk" href="#">
+										<h2 class="post__title title">В Сирии разыграют «афганский сценарий»</h2>
+									</a>
+		
+									<div class="post__info article-info">
+										<span class="article-info__rubric">Спорт</span>
+										<time class="article-info__time" datetime="2016-06-11T14:59">
+											<span class="article-info__hours">14:59</span>
+										</time>
+		
+										<span class="post__commnets commnets" title="комментарии">7</span>
+									</div>
+		
+									<p class="post__desc article-text crop-text">«Роснефть» готовится к приватизации «Башнефти», сделка по покупке башкирского актива уже одобрена. Какие выгоды несет данное соглашение ? </p>
+								</div>
+							</article>
+						</div><!-- /. articles__inner-->
+					</div><!-- /. articles__container-->
+					
 					<button class="articles__more btn btn--more" type="button">Показать еще</button>
 				</section>
 			</main> <!-- /.page -->

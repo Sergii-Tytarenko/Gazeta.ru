@@ -394,10 +394,6 @@ let hoursNews = new swiper_bundle__WEBPACK_IMPORTED_MODULE_1__["default"]('.hour
         disableOnInteraction: true,
     },
     speed: 700,
-    effect: 'fade',
-    fadeEffect: {
-        crossFade: true
-    },
     wrapperClass: 'hours-news__list',
     slideClass: 'hours-news__slide',
     slidesPerView: 1,
@@ -415,10 +411,6 @@ if(topNewsSlider) {
             disableOnInteraction: true,
         },
         speed: 700,
-        effect: 'fade',
-        fadeEffect: {
-            crossFade: true
-        },
         wrapperClass: 'top-news__list--wrapp',
         slideClass: 'top-news__row--slide',
         slidesPerView: 1,
@@ -492,7 +484,6 @@ function hideContent() {
 ---------------------------------------------------------------*/
 let myGrid = macy__WEBPACK_IMPORTED_MODULE_2___default()({
     container: '.articles__inner',
-    trueOrder: false,
     waitForImages: false,
     margin: {
         x: 15,
@@ -505,6 +496,53 @@ let myGrid = macy__WEBPACK_IMPORTED_MODULE_2___default()({
         530: 1
     }
 });
+
+/* Articles Tabs
+---------------------------------------------------------------*/
+const artNav = document.querySelector('.articles__nav'),
+      artBtns = artNav.querySelectorAll('button.articles__btn'),
+      artPosts = document.querySelectorAll('.js-post');
+
+artNav.addEventListener('click', (el) => {
+    let target = el.target;
+        
+    if(target && target.matches('button.articles__btn')) {
+        showArticles(target.dataset.descr);
+        // myGrid.recalculate();
+    }
+})
+
+showArticles()
+
+function showArticles(x = 'js-news') {
+    hideArticles()
+
+    artPosts.forEach(el => {
+        if (el.classList.contains(x)) {
+            el.classList.add('selected');
+            el.classList.remove('disabled');
+        }
+    });
+
+    artBtns.forEach(el => {
+        if (el.dataset.descr == x) {
+            el.classList.add('articles__btn--active');
+        }
+    });
+
+    myGrid.recalculate('true');
+}
+
+function hideArticles() {
+    artBtns.forEach(el => {
+        el.classList.remove('articles__btn--active')
+    });
+
+    artPosts.forEach(el => {
+        el.classList.add('disabled');
+        el.classList.remove('selected')
+    });
+}
 
 /***/ }),
 

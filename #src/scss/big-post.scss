@@ -37,6 +37,10 @@
             height: 100%;
             z-index: 2;
         }
+        &:focus::after {
+            outline: 2px solid red;
+            outline-offset: -2px;
+        }
     }
     // .big-post__content
     &__content {
@@ -44,7 +48,8 @@
         z-index: 1;
         @include hover($text: #fff);
         &:focus {
-            outline-offset: -2px;
+            text-decoration: underline;
+            outline: none;
         }
     }
     // .big-post__about

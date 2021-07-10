@@ -2,26 +2,20 @@
     Articles
 ----------------------------------------------------------------*/
 .articles {
-    padding: 0 var(--m-padding) 50px;
+    padding-bottom: 50px;
     @media(min-width: 1536px) {
         padding-top: 50px;
         padding-bottom: 100px;
     }
-    // .articles__nav
-    &__nav {}
-    // .articles__list
-    &__list {
-        margin: 0;
-        padding: 0;
-        list-style: none;
-    }
-    // .articles__item
-    &__item {}
     // .articles__btn
     &__btn {
         border: none;
         outline: none;
         background: transparent;
+    }
+    // .articles__container
+    &__container {
+        padding: 0 var(--m-padding);
     }
     // .articles__inner
     &__inner {
@@ -29,5 +23,15 @@
     }
     // .articles__more
     &__more {
+        min-width: 200px;
     }
+}
+
+.selected {
+    display: block;
+    transition: top .5s, left .5s;
+}
+
+.disabled {
+    display: none;
 }

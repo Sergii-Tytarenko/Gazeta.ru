@@ -4,15 +4,16 @@
 .lk-article {
     display: flex;
     flex-direction: column;
+    height: 100%;
     min-height: 420px;
     padding: 40px 27px var(--m-padding);
 
     background-color: #5a5959;
     box-shadow: 2px 2px 8px rgba(#000, .1);
-    &:hover {
-        box-shadow: 2px 2px 8px rgba(#000, .5);
+    &:focus {
+        outline: 2px solid red;
+        outline-offset: -2px;
     }
-    transition: box-shadow .3s;
     // .lk-article__text
     &__text {
         margin: auto 0;
