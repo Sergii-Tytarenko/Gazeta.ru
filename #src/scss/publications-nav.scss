@@ -32,7 +32,6 @@
         border: none;
         border-bottom: 1px solid #92929259;
         background-color: transparent;
-        transition: background .1s;
         &:hover:not(.publications__btn--active),
         &.focus-visible:not(.publications__btn--active) {
             background-color: #fff;
@@ -48,13 +47,13 @@
 
             transform: rotate(45deg);
             background-color: transparent;
-            transition: background .2s;
         }
         &--active {
             color: #fff;
             background-color: #b11217;
             &::after {
                 background-color: #b11217;
+                // opacity: 1;
             }
         }
     }

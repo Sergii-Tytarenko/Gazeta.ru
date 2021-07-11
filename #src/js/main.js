@@ -66,7 +66,7 @@ calcNavHeigt()
 function calcNavHeigt() {
     if (mainNav) {
         let h = document.body.clientHeight - (headerAside.offsetHeight +  menu.offsetHeight);
-        navWrapper.style.maxHeight = h + 'px';
+        navWrapper.style.height = h + 'px';
     }
 }
 

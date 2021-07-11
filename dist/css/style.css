@@ -1222,13 +1222,11 @@ body.lock {
   z-index: 999;
   display: none;
   width: 100%;
-  max-height: 100vh;
   background: #b11217;
   opacity: 0;
   -webkit-transition: opacity .3s;
   -o-transition: opacity .3s;
   transition: opacity .3s;
-  overflow-y: auto;
 }
 
 .main-nav.active {
@@ -1295,6 +1293,7 @@ body.lock {
   -ms-flex-direction: column;
   flex-direction: column;
   padding: 35px 80px 30px;
+  overflow-y: auto;
 }
 
 .main-nav__content {
@@ -2935,9 +2934,6 @@ body.lock {
   border: none;
   border-bottom: 1px solid #92929259;
   background-color: transparent;
-  -webkit-transition: background .1s;
-  -o-transition: background .1s;
-  transition: background .1s;
 }
 
 .publications__btn:hover:not(.publications__btn--active),
@@ -2957,9 +2953,6 @@ body.lock {
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
   background-color: transparent;
-  -webkit-transition: background .2s;
-  -o-transition: background .2s;
-  transition: background .2s;
 }
 
 .publications__btn--active {
