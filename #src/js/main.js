@@ -125,10 +125,7 @@ window.addEventListener('scroll', () => {
     let height = pageYOffset;
 
     if (getComputedStyle(headerAside).position == 'absolute') {
-        setTimeout(() => {
-            headerAside.style.top = height + 'px';
-        }, 1000);
-
+        headerAside.style.top = height + 'px';
     }
 })
 
