@@ -1100,6 +1100,21 @@ body.lock {
   pointer-events: none;
 }
 
+.main-header__overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 50;
+  display: none;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.main-header__overlay--active {
+  display: block;
+}
+
 /*----------------------------------------------------------------
 	Media links
 ----------------------------------------------------------------*/
@@ -3001,7 +3016,7 @@ body.lock {
   }
 
   .main-header__aside {
-    position: static;
+    position: relative;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
     -ms-flex-direction: row;

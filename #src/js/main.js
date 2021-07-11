@@ -3,12 +3,14 @@ import Swiper from 'swiper/bundle';
 import macy from 'macy';
 
 
+
 /* Burger 
 -----------------------------------------------------------------------------*/
 const mainHeader = document.querySelector('.main-header'),
       burger = document.querySelector('.burger'),
       burgerNav = document.querySelector('.main-nav'),
-      burgerNavLink = mainHeader.querySelectorAll('a');
+      burgerNavLink = mainHeader.querySelectorAll('a'),
+      navOverlay = mainHeader.querySelector('.main-header__overlay');
 
 
 /* Burger is active*/
@@ -33,18 +35,25 @@ for (let i = 0; i < burgerNavLink.length; i++) {
     });
 }
 
+navOverlay.addEventListener('click', () => {
+    closeBurgerNav();
+});
+
 
 /* Burger's nav functions*/
 function showBurgerNav () {
     burgerNav.classList.add('active');
-    mainHeader.classList.add('active');
+    mainHeader.classList.add('active');  
+    navOverlay.classList.add('main-header__overlay--active');  
 }
 
 function closeBurgerNav () {
     burger.classList.remove('active');
     burgerNav.classList.remove('active');
     mainHeader.classList.remove('active');
+    navOverlay.classList.remove('main-header__overlay--active');
 }
+
 
 
 /* Header's functions
@@ -56,8 +65,10 @@ let headerAside = document.querySelector('.main-header__aside'),
 
 
 /* Navigation's tabs*/
-window.addEventListener('resize', () => checkMenu());
+initTabs()
 checkMenu()
+
+window.addEventListener('resize', () => checkMenu());
 
 function checkMenu() {
     let  menuHide = getComputedStyle(menu).display === 'none';
@@ -66,8 +77,6 @@ function checkMenu() {
         linksBlock.forEach(el => {
             el.classList.remove('hide')
         })
-    } else {
-        initTabs()
     }
 }
 
@@ -112,6 +121,7 @@ window.addEventListener('scroll', () => {
         headerAside.style.top = height + 'px';
     }
 })
+
 
 
 /* Modal Windows
@@ -222,6 +232,7 @@ function body_lock_add(delay) {
 }
 
 
+
 /* Hours News Tabs
 ---------------------------------------------------------------*/
 const hoursMenu = document.querySelector('.hours-news__menu'),
@@ -264,6 +275,7 @@ function initHoursTabs() {
 }
 
 
+
 /* Hours News sliders
 ---------------------------------------------------------------*/
 let hoursNews = new Swiper('.hours-news__slider', {
@@ -301,6 +313,7 @@ if(topNewsSlider) {
 }
 
 
+
 /* Crop text
 ---------------------------------------------------------------*/
 (function () {
@@ -319,6 +332,7 @@ if(topNewsSlider) {
     });
 
 }());
+
 
 
 /* Gallery's Tabs
@@ -359,6 +373,7 @@ function hideContent() {
 }
 
 
+
 /* Masonry  grid 
 ---------------------------------------------------------------*/
 let myGrid = macy({
@@ -375,6 +390,8 @@ let myGrid = macy({
         530: 1
     }
 });
+
+
 
 /* Publications Tabs
 ---------------------------------------------------------------*/
