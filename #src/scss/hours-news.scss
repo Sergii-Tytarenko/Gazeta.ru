@@ -2,7 +2,7 @@
     Hours News
 ----------------------------------------------------------------*/
 .hours-news {
-    --menu-hight: 60px;
+    --menu-hight: 50px;
     padding-top: 15px;
 
     background-color: #908080;
@@ -52,7 +52,6 @@
         width: 100%;
 
         font-size: 18px;
-        font-weight: 500;
         color: #fff;
         border: none;
         outline: none;
@@ -125,6 +124,9 @@
 
         color: #fff;
         font-size: 16px;
+        @media(max-width: 420px) {
+            font-size: 14px;
+        }
     }
     // .hours-news__info
     &__info {
@@ -136,7 +138,7 @@
     // .hours-news__pagination
     &__pagination {
         position: absolute;
-        bottom: 15px;
+        bottom: 12px;
         left: 50%;
         width: 100%;
 
@@ -146,14 +148,16 @@
             display: inline-block;
             margin-right: 5px;
             width: 27px;
-            height: 4px;
+            height: 3px;
             background-color: rgba(#fff, .5);
+            opacity: .5;
             &:last-child {
                 margin: 0;
             }
         }
         .swiper-pagination-bullet-active {
             background-color: #fff;
+            opacity: .8;
         }
     }
 }
