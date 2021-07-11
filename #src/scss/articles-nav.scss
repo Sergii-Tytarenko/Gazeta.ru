@@ -32,7 +32,7 @@
         border: none;
         border-bottom: 1px solid #92929259;
         background-color: transparent;
-        transition: background .3s;
+        transition: background .1s;
         &:hover:not(.articles__btn--active),
         &.focus-visible:not(.articles__btn--active) {
             background-color: #fff;
@@ -42,18 +42,19 @@
             position: absolute;
             left: 50%;
             bottom: -8px;
-            display: none;
             width: 16px;
             height: 16px;
             margin-left: -8px;
+
             transform: rotate(45deg);
-            background-color: #b11217;
+            background-color: transparent;
+            transition: background .2s;
         }
         &--active {
             color: #fff;
             background-color: #b11217;
             &::after {
-                display: block;
+                background-color: #b11217;
             }
         }
     }

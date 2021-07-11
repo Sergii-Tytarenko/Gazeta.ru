@@ -2097,18 +2097,6 @@ body.lock {
   -ms-grid-column: 1;
   -ms-grid-column-span: 2;
   grid-area: big-post;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-pack: end;
-  -ms-flex-pack: end;
-  justify-content: flex-end;
-  min-height: 480px;
-  padding-top: 80px;
   border-bottom: 1px solid #dcdcdc;
   background-color: #000;
 }
@@ -2136,32 +2124,26 @@ body.lock {
   z-index: 2;
 }
 
-.big-post__photo:focus::after {
+.big-post__photo.focus-visible::after {
   outline: 2px solid red;
   outline-offset: -2px;
 }
 
 .big-post__content {
-  display: block;
-  z-index: 1;
-  -webkit-transition: color .3s;
-  -o-transition: color .3s;
-  transition: color .3s;
-}
-
-.big-post__content:hover {
-  color: #fff;
-  text-decoration: initial;
-}
-
-.big-post__content:focus {
-  outline: 2px solid #d81912;
-  outline-offset: 2px;
-}
-
-.big-post__content:focus {
-  text-decoration: underline;
-  outline: none;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  height: 100%;
+  min-height: 480px;
+  padding-top: 80px;
 }
 
 .big-post__about {
@@ -2202,7 +2184,7 @@ body.lock {
 }
 
 .big-post__footer {
-  z-index: 3;
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2264,6 +2246,7 @@ body.lock {
 
 .big-post--gallery {
   height: 100%;
+  padding-right: 140px;
   border: none;
 }
 
@@ -2280,7 +2263,7 @@ body.lock {
 
 .big-post--gallery .big-post__photo.focus-visible::before {
   background-color: rgba(0, 0, 0, 0.3);
-  border: 2px solid #fff;
+  border: 2px solid #86070b;
 }
 
 .big-post--art {
@@ -2761,9 +2744,7 @@ body.lock {
 }
 
 .show {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: block;
   -webkit-animation-name: view;
   animation-name: view;
   -webkit-animation-duration: .2s;
@@ -2822,9 +2803,11 @@ body.lock {
 
 .selected {
   display: block;
-  -webkit-transition: top .5s, left .5s;
-  -o-transition: top .5s, left .5s;
-  transition: top .5s, left .5s;
+  -webkit-transition: top .5s, left .5s, -webkit-box-shadow .3s;
+  transition: top .5s, left .5s, -webkit-box-shadow .3s;
+  -o-transition: top .5s, left .5s, box-shadow .3s;
+  transition: top .5s, left .5s, box-shadow .3s;
+  transition: top .5s, left .5s, box-shadow .3s, -webkit-box-shadow .3s;
 }
 
 .disabled {
@@ -2945,9 +2928,9 @@ body.lock {
   border: none;
   border-bottom: 1px solid #92929259;
   background-color: transparent;
-  -webkit-transition: background .3s;
-  -o-transition: background .3s;
-  transition: background .3s;
+  -webkit-transition: background .1s;
+  -o-transition: background .1s;
+  transition: background .1s;
 }
 
 .articles__btn:hover:not(.articles__btn--active),
@@ -2960,14 +2943,16 @@ body.lock {
   position: absolute;
   left: 50%;
   bottom: -8px;
-  display: none;
   width: 16px;
   height: 16px;
   margin-left: -8px;
   -webkit-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
-  background-color: #b11217;
+  background-color: transparent;
+  -webkit-transition: background .2s;
+  -o-transition: background .2s;
+  transition: background .2s;
 }
 
 .articles__btn--active {
@@ -2976,13 +2961,7 @@ body.lock {
 }
 
 .articles__btn--active::after {
-  display: block;
-}
-
-@media (min-width: 576px) {
-  .big-post--gallery {
-    padding-right: 120px;
-  }
+  background-color: #b11217;
 }
 
 @media (min-width: 768px) {
@@ -3299,6 +3278,10 @@ body.lock {
     font-size: 12px;
   }
 
+  .big-post--gallery {
+    padding-right: 120px;
+  }
+
   .gallery__nav {
     width: 120px;
   }
@@ -3311,11 +3294,12 @@ body.lock {
     align-self: flex-start;
   }
 
-  .big-post {
+  .big-post__content {
     min-height: 430px;
   }
 
   .big-post--gallery {
+    padding-right: 0;
     padding-bottom: 100px;
   }
 
@@ -3412,7 +3396,7 @@ body.lock {
   }
 
   .big-post__title {
-    font-size: 26px;
+    font-size: 28px;
   }
 
   .big-post__quick {
