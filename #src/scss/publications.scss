@@ -1,27 +1,27 @@
 /*----------------------------------------------------------------
-    Articles
+    publications
 ----------------------------------------------------------------*/
-.articles {
+.publications {
     padding-bottom: 50px;
     @media(min-width: 1536px) {
         padding-top: 50px;
         padding-bottom: 100px;
     }
-    // .articles__btn
+    // .publications__btn
     &__btn {
         border: none;
         outline: none;
         background: transparent;
     }
-    // .articles__container
+    // .publications__container
     &__container {
         padding: 0 var(--m-padding);
     }
-    // .articles__inner
+    // .publications__inner
     &__inner {
         margin-bottom: 50px;
     }
-    // .articles__more
+    // .publications__more
     &__more {
         min-width: 200px;
     }

@@ -1,7 +1,7 @@
 /*----------------------------------------------------------------
-    Post (article)
+    Article
 ----------------------------------------------------------------*/
-.post {
+.article {
     position: relative;
     box-shadow: 2px 2px 8px rgba(#000, .1);
     background-color: #fff;
@@ -9,17 +9,17 @@
         box-shadow: 2px 2px 8px rgba(#000, .5);
     }
     transition: box-shadow .3s;
-    // .post__content
+    // .article__content
     &__content {
         padding: var(--m-padding);
         padding-top: 0;
     }
-    // .post__photo
+    // .article__photo
     &__photo {
         height: 180px;
         margin-bottom: 15px;
     }
-    // .post__lk
+    // .article__lk
     &__lk {
         display: block;
         margin-bottom: 8px;
@@ -39,12 +39,12 @@
             outline-offset: -2px;
         }
     }
-    // .post__info
+    // .article__info
     &__info {
         margin-bottom: 15px;
         color: rgb(49, 49, 49);
     }
-    // .post__views
+    // .article__views
     &__views {
        display: inline-block;
        margin-top: 10px;
@@ -53,7 +53,7 @@
        color: #000;
        background: url('../img/icons/views.png') left center no-repeat;
     }
-    // .post--actual
+    // .article--actual
     &--actual {
         padding: 25px var(--m-padding) 10px;
         border: none;

@@ -344,7 +344,7 @@ if(topNewsSlider) {
 ---------------------------------------------------------------*/
 const galleryMenu = document.querySelector('.gallery__nav'),
       galleryBtns = galleryMenu.querySelectorAll('.gallery__btn'),
-      galleryContents = document.querySelectorAll('.big-post--gallery');
+      galleryContents = document.querySelectorAll('.big-article--gallery');
 
 galleryMenu.addEventListener('click', (event) => {
     let target = event.target;
@@ -381,7 +381,7 @@ function hideContent() {
 /* Masonry  grid 
 ---------------------------------------------------------------*/
 let myGrid = macy({
-    container: '.articles__inner',
+    container: '.publications__inner',
     waitForImages: false,
     margin: {
         x: 15,
@@ -395,18 +395,17 @@ let myGrid = macy({
     }
 });
 
-/* Articles Tabs
+/* Publications Tabs
 ---------------------------------------------------------------*/
-const artNav = document.querySelector('.articles__nav'),
-      artBtns = artNav.querySelectorAll('button.articles__btn'),
-      artPosts = document.querySelectorAll('.js-post');
+const publicationsNav = document.querySelector('.publications__nav'),
+      publicationsBtns = publicationsNav.querySelectorAll('button.publications__btn'),
+      articles = document.querySelectorAll('.js-article');
 
-artNav.addEventListener('click', (el) => {
+publicationsNav.addEventListener('click', (el) => {
     let target = el.target;
         
-    if(target && target.matches('button.articles__btn')) {
+    if(target && target.matches('button.publications__btn')) {
         showArticles(target.dataset.descr);
-        // myGrid.recalculate();
     }
 })
 
@@ -415,16 +414,16 @@ showArticles()
 function showArticles(x = 'js-news') {
     hideArticles()
 
-    artPosts.forEach(el => {
+    articles.forEach(el => {
         if (el.classList.contains(x)) {
             el.classList.add('selected');
             el.classList.remove('disabled');
         }
     });
 
-    artBtns.forEach(el => {
+    publicationsBtns.forEach(el => {
         if (el.dataset.descr == x) {
-            el.classList.add('articles__btn--active');
+            el.classList.add('publications__btn--active');
         }
     });
 
@@ -432,11 +431,11 @@ function showArticles(x = 'js-news') {
 }
 
 function hideArticles() {
-    artBtns.forEach(el => {
-        el.classList.remove('articles__btn--active')
+    publicationsBtns.forEach(el => {
+        el.classList.remove('publications__btn--active')
     });
 
-    artPosts.forEach(el => {
+    articles.forEach(el => {
         el.classList.add('disabled');
         el.classList.remove('selected')
     });

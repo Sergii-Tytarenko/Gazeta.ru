@@ -22,9 +22,9 @@
     // .topics__col
     &__col {
         display: grid;
-        grid-template-areas: "big-post big-post top-news";
+        grid-template-areas: "big-article big-article top-news";
         @media(max-width: 1240px) {
-            grid-template-areas: "big-post big-post";
+            grid-template-areas: "big-article big-article";
         }
         @media(max-width: 575px) {
            display: block;
