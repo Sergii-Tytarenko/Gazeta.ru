@@ -140,37 +140,21 @@ for (let i = 0; i < burgerNavLink.length; i++) {
 function showBurgerNav () {
     burgerNav.classList.add('active');
     mainHeader.classList.add('active');
-    body_lock(0);
 }
 
 function closeBurgerNav () {
     burger.classList.remove('active');
     burgerNav.classList.remove('active');
     mainHeader.classList.remove('active');
-    body_lock(0);
 }
 
 
 /* Header's functions
 ---------------------------------------------------------------*/
 let headerAside = document.querySelector('.main-header__aside'),
-    mainNav = document.querySelector('.main-nav'),
-    navWrapper = document.querySelector('.main-nav__wrapper'),
     menu = document.querySelector('.main-nav__menu'),
     menuBtns = document.querySelectorAll('.main-nav__btn'),
     linksBlock = document.querySelectorAll('.main-nav__links');
-
-
-/* Navigation wrapper's height (max-height on the small display)*/
-window.addEventListener('resize', () => calcNavHeigt());
-calcNavHeigt()
-
-function calcNavHeigt() {
-    if (mainNav) {
-        let h = document.body.clientHeight - (headerAside.offsetHeight +  menu.offsetHeight);
-        navWrapper.style.height = h + 'px';
-    }
-}
 
 
 /* Navigation's tabs*/

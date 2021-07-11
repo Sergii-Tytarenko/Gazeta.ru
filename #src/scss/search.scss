@@ -3,15 +3,6 @@
 ----------------------------------------------------------------*/
 .search {
     position: relative;
-    &--modal {
-        width: clamp(280px, 500px, 50vw);
-        .search__input {
-            border-bottom: 2px solid #fff;
-        }
-        .search__input::placeholder {
-            font-size: 22px;
-        }
-    }
     // .search__input
     &__input {
         display: block;
@@ -25,15 +16,12 @@
         outline: none;
         background: transparent;
         border-radius: 0 !important;
-        border-bottom: 4px solid #fff;
+        border-bottom: 2px solid #fff;
         &::placeholder {
             color: #fff;
             font-family: inherit;
-            font-size: 28px;
+            font-size: 18px;
             font-weight: 300;
-            @media(max-width: 420px) {
-                font-size: 24px;
-            }
         }
         &:focus::placeholder {
             color: transparent;
@@ -60,5 +48,8 @@
             width: 25px;
             height: 25px;
         }
+    }
+    &--modal {
+        width: clamp(280px, 500px, 50vw);
     }
 }

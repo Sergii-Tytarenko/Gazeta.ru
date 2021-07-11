@@ -1325,34 +1325,6 @@ body.lock {
   position: relative;
 }
 
-.search--modal {
-  width: clamp(280px, 500px, 50vw);
-}
-
-.search--modal .search__input {
-  border-bottom: 2px solid #fff;
-}
-
-.search--modal .search__input::-webkit-input-placeholder {
-  font-size: 22px;
-}
-
-.search--modal .search__input::-moz-placeholder {
-  font-size: 22px;
-}
-
-.search--modal .search__input:-ms-input-placeholder {
-  font-size: 22px;
-}
-
-.search--modal .search__input::-ms-input-placeholder {
-  font-size: 22px;
-}
-
-.search--modal .search__input::placeholder {
-  font-size: 22px;
-}
-
 .search__input {
   display: block;
   width: 100%;
@@ -1364,41 +1336,41 @@ body.lock {
   outline: none;
   background: transparent;
   border-radius: 0 !important;
-  border-bottom: 4px solid #fff;
+  border-bottom: 2px solid #fff;
 }
 
 .search__input::-webkit-input-placeholder {
   color: #fff;
   font-family: inherit;
-  font-size: 28px;
+  font-size: 18px;
   font-weight: 300;
 }
 
 .search__input::-moz-placeholder {
   color: #fff;
   font-family: inherit;
-  font-size: 28px;
+  font-size: 18px;
   font-weight: 300;
 }
 
 .search__input:-ms-input-placeholder {
   color: #fff;
   font-family: inherit;
-  font-size: 28px;
+  font-size: 18px;
   font-weight: 300;
 }
 
 .search__input::-ms-input-placeholder {
   color: #fff;
   font-family: inherit;
-  font-size: 28px;
+  font-size: 18px;
   font-weight: 300;
 }
 
 .search__input::placeholder {
   color: #fff;
   font-family: inherit;
-  font-size: 28px;
+  font-size: 18px;
   font-weight: 300;
 }
 
@@ -1437,6 +1409,10 @@ body.lock {
 
 .search__icon {
   fill: #fff;
+}
+
+.search--modal {
+  width: clamp(280px, 500px, 50vw);
 }
 
 /*----------------------------------------------------------------
@@ -3213,7 +3189,7 @@ body.lock {
   }
 
   .main-nav__wrapper {
-    padding: 50px 30px 30px;
+    padding: 50px 30px 15px;
   }
 
   .main-nav__content {
@@ -3361,26 +3337,6 @@ body.lock {
 
   .main-nav__btn {
     font-size: 18px;
-  }
-
-  .search__input::-webkit-input-placeholder {
-    font-size: 24px;
-  }
-
-  .search__input::-moz-placeholder {
-    font-size: 24px;
-  }
-
-  .search__input:-ms-input-placeholder {
-    font-size: 24px;
-  }
-
-  .search__input::-ms-input-placeholder {
-    font-size: 24px;
-  }
-
-  .search__input::placeholder {
-    font-size: 24px;
   }
 
   .search__icon {
