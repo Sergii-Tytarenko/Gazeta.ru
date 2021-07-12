@@ -666,14 +666,11 @@ body.lock {
 
 .article-info__rubric {
   margin-right: 5px;
-  -webkit-transition: color .3s;
-  -o-transition: color .3s;
-  transition: color .3s;
 }
 
-.article-info__rubric:hover {
-  color: #000;
+.article-info__rubric[href]:hover {
   text-decoration: underline;
+  color: #000;
 }
 
 .article-info__rubric:focus {
@@ -2325,7 +2322,7 @@ body.lock {
   outline-offset: -2px;
 }
 
-.article__info {
+.article__about {
   margin-bottom: 15px;
   color: #313131;
 }
@@ -2938,6 +2935,166 @@ body.lock {
   background-color: #b11217;
 }
 
+/*----------------------------------------------------------------
+    Columns
+----------------------------------------------------------------*/
+
+.columns {
+  position: relative;
+  height: 500px;
+  overflow: hidden;
+}
+
+.columns__wrapper {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.columns__slide {
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 50px 60px 50px 50px;
+}
+
+.columns__pagination {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.columns__pagination .swiper-pagination-bullet {
+  display: block;
+  margin-bottom: 5px;
+  margin-left: auto;
+  height: 2px;
+  width: 15px;
+  background-color: #000;
+  -webkit-transition: width .3s;
+  -o-transition: width .3s;
+  transition: width .3s;
+}
+
+.columns__pagination .swiper-pagination-bullet-active {
+  width: 25px;
+}
+
+.swiper-container-autoheight .swiper-wrapper {
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+}
+
+/*----------------------------------------------------------------
+    Subject
+----------------------------------------------------------------*/
+
+.subject {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 1 50%;
+  flex: 0 1 50%;
+  padding: 30px 75px;
+  margin-right: 15px;
+  background-color: #f9f9f9;
+  -webkit-box-shadow: 2px 2px 5px #ccc;
+  box-shadow: 2px 2px 5px #ccc;
+  border-radius: 5px;
+}
+
+.subject:last-child {
+  margin: 0;
+}
+
+.subject__author {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.subject__author-photo {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 90px;
+  flex: 0 0 90px;
+  height: 90px;
+  margin-right: 20px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.subject__img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  -o-object-position: top;
+  object-position: top;
+}
+
+.subject__name {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.subject__title {
+  margin: 0;
+  font-size: 32px;
+  font-weight: 400;
+}
+
+.subject__lk {
+  color: #222;
+  -webkit-transition: color .3s;
+  -o-transition: color .3s;
+  transition: color .3s;
+}
+
+.subject__lk:hover {
+  color: #b90903;
+  text-decoration: initial;
+}
+
+.subject__lk:focus {
+  outline: 2px solid #d81912;
+  outline-offset: 2px;
+}
+
+.subject__about {
+  margin-bottom: 25px;
+}
+
+.subject__text {
+  max-width: 70%;
+  padding-top: 15px;
+  margin: 0;
+  font-family: 'Hoefler-Text', serif;
+  font-style: oblique;
+  border-top: 1px solid #000;
+}
+
 @media (min-width: 768px) {
   .btn:hover,
   .btn:focus {
@@ -2989,6 +3146,13 @@ body.lock {
 
   .main-header__rubrics {
     display: none;
+  }
+}
+
+@media (max-width: 1360px) {
+  .columns__slide {
+    padding: 35px;
+    padding-right: 50px;
   }
 }
 
@@ -3083,6 +3247,14 @@ body.lock {
     display: none;
   }
 
+  .columns {
+    height: 480px;
+  }
+
+  .subject {
+    padding: 30px 45px;
+  }
+
   .big-article {
     -ms-grid-row: 1;
     -ms-grid-column: 1;
@@ -3164,6 +3336,40 @@ body.lock {
 
   .gallery__dsc {
     font-size: 12px;
+  }
+
+  .columns {
+    height: auto;
+    padding: 0 15px;
+  }
+
+  .columns__wrapper {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+  }
+
+  .columns__slide {
+    padding: 15px 0;
+    display: block;
+  }
+
+  .columns__pagination {
+    display: none;
+  }
+
+  .subject {
+    padding: 30px;
+    margin: 0 0 15px 0;
+  }
+
+  .subject__title {
+    font-size: 28px;
+  }
+
+  .subject__text {
+    display: none;
   }
 }
 

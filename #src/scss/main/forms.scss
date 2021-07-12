@@ -100,9 +100,16 @@
     }
     &__rubric {
         margin-right: 5px;
-        @include hover($text: #000, $line: underline);
+        &[href]:hover {
+            text-decoration: underline;
+            color: #000;
+        }
+        &:focus {
+            outline: 2px solid rgb(216, 25, 18);
+            outline-offset: 2px;
+        }
     }
-     // .article-info__time, rubric
+    // .article-info__time, rubric
     &__time,
     &__rubric,
     &__hours {

@@ -221,8 +221,10 @@ window.addEventListener('scroll', () => {
 
     if (getComputedStyle(headerAside).position == 'absolute') {
         headerAside.style.top = height + 'px';
+    } else {
+        headerAside.style.top ='';
     }
-})
+});
 
 
 
@@ -540,6 +542,45 @@ function hideArticles() {
         el.classList.remove('selected')
     });
 }
+
+
+
+/* Columns slider
+---------------------------------------------------------------*/
+let columnsSlider = new swiper_bundle__WEBPACK_IMPORTED_MODULE_1__["default"]('.columns', {
+    wrapperClass: 'columns__wrapper',
+    slideClass: 'columns__slide',
+    grabCursor: true,
+    observer: true,
+    observeParents: true,
+    pagination: {
+        el: '.columns__pagination',
+    },
+    breakpoints: {
+        //when window width is >= 320px
+        320: {
+            slidesPerView: 1.1,
+            spaceBetween: 10,
+        },
+        //when window width is >= 420px
+        420: {
+            slidesPerView: 1.2,
+            spaceBetween: 15,
+        },
+        //when window width is >= 575px
+        575: {
+          slidesPerView: 1.6,
+          spaceBetween: 15,
+          direction: 'horizontal',
+        },
+        // when window width is >= 1051px
+        1051: {
+            direction: 'vertical',
+            slidesPerView: 1,
+        }
+      }
+});
+
 
 /***/ }),
 
