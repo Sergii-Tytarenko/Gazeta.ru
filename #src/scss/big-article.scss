@@ -144,6 +144,9 @@
             .big-article__desc {
                 display: none;
             }
+            .big-article__content {
+                min-height: 360px;
+            }
         }
     }
     &--art {
