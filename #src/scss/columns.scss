@@ -10,7 +10,7 @@
     }
     @media(max-width: 1050px) {
         height: auto;
-        padding: 0 15px;
+        padding: 0 15px 40px 15px;
     }
     // .columns__wrapper
     &__wrapper {
@@ -60,7 +60,24 @@
             width: 25px;
         }
         @media(max-width: 1050px) {
-            display: none;
+            top: initial;
+            right: 50%;
+            bottom: 12px;
+            transform: translateX(50%);
+            .swiper-pagination-bullet {
+                display: inline-block;
+                margin-right: 10px;
+                margin-left: 0;
+                height: 8px;
+                width: 8px;
+                background-color: #000;
+                transition: bacground .3s, transform .3s;
+                border-radius: 50%;
+            }
+            .swiper-pagination-bullet-active {
+                background-color: #b11217;
+                transform: scale(1.4);
+            }
         }
     }
 }

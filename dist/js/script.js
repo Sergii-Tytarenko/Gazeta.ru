@@ -559,17 +559,12 @@ let columnsSlider = new swiper_bundle__WEBPACK_IMPORTED_MODULE_1__["default"]('.
     breakpoints: {
         //when window width is >= 320px
         320: {
-            slidesPerView: 1.1,
+            slidesPerView: 1,
             spaceBetween: 10,
         },
-        //when window width is >= 420px
-        420: {
-            slidesPerView: 1.2,
-            spaceBetween: 15,
-        },
-        //when window width is >= 575px
-        575: {
-          slidesPerView: 1.6,
+        //when window width is >= 768px
+        768: {
+          slidesPerView: 2,
           spaceBetween: 15,
           direction: 'horizontal',
         },
