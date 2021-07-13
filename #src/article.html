@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="ru">
+@include('_head.html', {
+    "title":"Статья"
+})
+<body>
+	<div class="wrapper">
+		<div class="root">
+			@include('_header.html',{})
+			<main class="page page--post">
+                <article class="post">
+                    <div class="post__photo">
+                        <img class="post__img" src="img/artilces/politkovskaya.jpg" alt="Анна Политковская" width="1705" height="602">
+
+                        <div class="post__writer writer">
+                            <div class="writer__photo">
+                                <img  class="writer__img" src="img/artilces/golovanov.jpg" alt="Алексей Голованов" width="63" height="58">
+                            </div>
+
+                            <div class="writer__inner">
+                                <p class="writer__name">Алексей Голованов</p>
+                                <p class="writer__author author">Автор статьи</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="post__container">
+                        <header class="post__header">
+                            <h2 class="post__title">Десять лет со дня убийства Анны Политковской</h2>
+    
+                            <div class="post__about article-info">
+                                <span class="article-info__rubric">Общество</span>
+                                <time class="article-info__time" datetime="2016-06-11T14:59">
+                                    <span class="article-info__hours">14:59</span>
+                                </time>
+    
+                                <span class="commnets" title="комментарии">77</span>
+                            </div>
+    
+                            <p class="post__desc">Журналистка Анна Политковская была убита 7 октября 2006 года в лифте своего дома на улице Лесной в центре Москвы. Специальный корреспондент «Новой газеты» была застрелена из пистолета Макарова.</p>
+    
+                            <ul class="post__share share">
+                                <li class="share__item">
+                                    <a class="share__link share__link--fb" href="#" title="Поделиться в фейсбук">
+                                        <span class="shar__num">72</span>
+
+                                        <svg class="share__icon" width="15" height="15">
+                                            <use xlink:href="img/sprite.svg#fb"></use>
+                                        </svg>
+                                    </a>
+                                </li>
+    
+                                <li class="share__item">
+                                    <a class="share__link share__link--twi" href="#" title="Поделиться в твиттере">
+                                        <span class="shar__num">35</span>
+
+                                        <svg class="share__icon" width="15" height="15">
+                                            <use xlink:href="img/sprite.svg#twi"></use>
+                                        </svg>
+                                    </a>
+                                </li>
+    
+                                <li class="share__item">
+                                    <a class="share__link share__link--vk" href="#" title="Поделиться в вконтаке">
+                                        <span class="share__num">144</span>
+
+                                        <svg class="share__icon" width="15" height="15">
+                                            <use xlink:href="img/sprite.svg#vk"></use>
+                                        </svg>
+                                    </a>
+                                </li>
+                            </ul>
+                        </header>
+    
+                        <p>Специальный корреспондент «Новой газеты» была застрелена из пистолета Макарова. Убийца произвел четыре выстрела, в том числе один в голову. С самого начала у следствия не было сомнений в том, что убийство заказное и, скорее всего, связано с профессиональной деятельностью Политковской. Но за 10 лет преступление так и не было не раскрыто: на скамью подсудимых сели лишь исполнители, но не заказчики.</p>
+                        <div class="post__include">Анна Политковская родилась 30 августа 1958 году в Нью-Йорке в семье дипломатов. Ее отец, Степан Мазепа, был сотрудником миссии Украинской ССР при ООН. В 1980-м окончила факультет журналистики МГУ. Еще во время учебы вышла замуж за Александра Политковского, впоследствии — ведущего популярнейшей в конце 1980-х телепрограммы «Взгляд». Начав карьеру в газетах «Известия» и «Воздушный транспорт», в перестроечные годы Анна Политковская стала известна как автор статей на острые социальные и политические темы. В 1990-е ее карьера продолжилась сначала в «Общей газете», где она возглавляла отдел чрезвычайных происшествий, а затем в «Новой газете», спецкором и обозревателем которой она работала с 1999 года и до самой смерти.Политковская стала известна как автор статей на острые социальные и политические темы. В 1990-е ее карьера продолжилась сначала в «Общей газете», где она возглавляла отдел чрезвычайных.
+                            <a class="post__lk post-preview" href="#">
+                                <div class="post-preview__photo">
+                                    <img class="post-preview__img" src="img/artilces/politkovskaya-1.jpg" alt="Анна Политковская" width="256" height="195">
+                                </div>
+    
+                                <div class="post-preview__inner">
+                                    <h3 class="post-preview__title title">Политковская Анна</h3>
+    
+                                    <div class="post-preview__about article-info">
+                                        <span class="article-info__rubric">Общество</span>
+                                        <time class="article-info__time" datetime="2016-06-11T14:59">
+                                            <span class="article-info__hours">14:59</span>
+                                        </time>
+                                    </div>
+    
+                                    <p class="post-preview__text crop-text">Журналист, обозреватель «Новой газеты». Получила известность как автор острых материалов о Чечне и о том, какие правонарушения были совершены властью</p>
+                                </div>
+                            </a>
+                        </div>
+                        
+                        <p>Анна Политковская активно занималась правозащитной деятельностью, помогала матерям погибших солдат отстаивать права в судах, расследовала коррупционный скандал в Министерстве обороны. В 1999-м году организовала эвакуацию жителей грозненского дома престарелых — благодаря журналистке его обитатели были расселены на территории России.</p>
+    
+                        <a class="post__button btn btn--more" href="#">Статьи по теме</a>
+                    </div><!-- /.post__container-->
+                </article>
+
+                <section class="day-news day-news--post">
+                    <h2 class="day-news__title">Новости дня</h2>
+
+                    <ul class="day-news__list">
+                        <li class="day-news__row">
+                            <a class="day-news__lk" href="#">Росздравнадзор изымает препараты от тромбза компании Pfizer</a>
+
+                            <div class="day-news__footer article-info">
+                                <a class="article-info__rubric" href="#">Политика</a>
+                                <time class="article-info__time" datetime="2016-06-11T15:23">
+                                    <span class="article-info__hours">15:23</span>
+                                </time>
+                            </div>
+                        </li>
+
+                        <li class="day-news__row">
+                            <a class="day-news__lk" href="#">Гости фестиваля в Москве купили более 8 тонн варенья за три дня</a>
+
+                            <div class="day-news__footer article-info">
+                                <a class="article-info__rubric" href="#">Общество</a>
+                                <time class="article-info__time" datetime="2016-06-11T16:15">
+                                    <span class="article-info__hours">16:15</span>
+                                </time>
+                            </div>
+                        </li>
+
+                        <li class="day-news__row">
+                            <a class="day-news__lk" href="#">Росздравнадзор изымает препараты от тромбоза компании Pfizer</a>
+
+                            <div class="day-news__footer article-info">
+                                <a class="article-info__rubric" href="#">Политика</a>
+                                <time class="article-info__time" datetime="2016-06-11T18:56">
+                                    <span class="article-info__hours">18:56</span>
+                                </time>
+                            </div>
+                        </li>
+                        
+                        <li class="day-news__row">
+                            <a class="day-news__lk" href="#">Власти Казахстана установили связь подозреваемого из Алма-Аты с салафитами</a>
+
+                            <div class="day-news__footer article-info">
+                                <a class="article-info__rubric" href="#">Армия</a>
+                                <time class="article-info__time" datetime="2016-06-11T19:03">
+                                    <span class="article-info__hours">19:03</span>
+                                </time>
+                            </div>
+                        </li>
+
+                        <li class="day-news__row">
+                            <a class="day-news__lk" href="#">Источник: в Рыбинске заключенные прекратили голодовку</a>
+
+                            <div class="day-news__footer article-info">
+                                <a class="article-info__rubric" href="#">Политика</a>
+                                <time class="article-info__time" datetime="2016-06-11T15:23">
+                                    <span class="article-info__hours">15:23</span>
+                                </time>
+                            </div>
+                        </li>
+
+                        <li class="day-news__row">
+                            <a class="day-news__lk" href="#">Гости фестиваля в Москве купили более 8 тонн варенья за три дня</a>
+
+                            <div class="day-news__footer article-info">
+                                <a class="article-info__rubric" href="#">Общество</a>
+                                <time class="article-info__time" datetime="2016-06-11T16:15">
+                                    <span class="article-info__hours">16:15</span>
+                                </time>
+                            </div>
+                        </li>
+
+                        <li class="day-news__row">
+                            <a class="day-news__lk" href="#">Росздравнадзор изымает препараты от тромбоза компании Pfizer</a>
+
+                            <div class="day-news__footer article-info">
+                                <a class="article-info__rubric" href="#">Политика</a>
+                                <time class="article-info__time" datetime="2016-06-11T18:56">
+                                    <span class="article-info__hours">18:56</span>
+                                </time>
+                            </div>
+                        </li>
+
+                        <li class="day-news__row">
+                            <a class="day-news__lk" href="#">Белый дом прокомментировал резкие высказывания Дутерте в адрес Обамы</a>
+
+                            <div class="day-news__footer article-info">
+                                <a class="article-info__rubric" href="#">Армия</a>
+                                <time class="article-info__time" datetime="2016-06-11T19:03">
+                                    <span class="article-info__hours">19:03</span>
+                                </time>
+                            </div>
+                        </li>
+                    </ul><!-- /.day-news__list -->
+
+                    <a class="day-news__btn btn" href="#">Все новости</a>
+                </section><!-- /.day-news -->
+            </main>
+			@include('_footer.html', {})
+		</div><!-- /.root -->
+	</div> <!-- /.wrapper -->
+	
+	<!-- Modal windows-->
+	@include('_modal.html',{})
+	<script src="js/script.js"></script>
+</body>
+</html>

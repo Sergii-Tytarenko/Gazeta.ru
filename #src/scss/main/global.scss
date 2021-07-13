@@ -51,6 +51,12 @@ body.lock {
 .page {
 	position: relative;
 	flex: 1 1 auto;
+	&--post {
+		@media(min-width: 768px) {
+			display: grid;
+			grid-template-columns: 2.5fr 1fr;
+		}
+	}
 }
 
 .img-cover {

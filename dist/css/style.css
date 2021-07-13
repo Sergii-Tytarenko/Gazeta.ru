@@ -756,6 +756,7 @@ body.lock {
 
 :root {
   --m-padding: 30px;
+  --l-padding: 50px;
 }
 
 /*----------------------------------------------------------------
@@ -1230,7 +1231,7 @@ body.lock {
 
 .main-nav {
   position: absolute;
-  top: -100%;
+  top: -200%;
   left: 0;
   z-index: 999;
   display: none;
@@ -2061,6 +2062,10 @@ body.lock {
 
 .day-news__btn {
   margin: 0 auto;
+}
+
+.day-news--post {
+  grid-area: initial;
 }
 
 /*----------------------------------------------------------------
@@ -3096,7 +3101,174 @@ body.lock {
   border-top: 1px solid #000;
 }
 
+/*----------------------------------------------------------------
+    Post
+----------------------------------------------------------------*/
+
+.post {
+  background-color: #fff;
+}
+
+.post__photo {
+  position: relative;
+  margin-bottom: var(--l-padding);
+}
+
+.post__container {
+  padding: 0 var(--l-padding) var(--l-padding);
+}
+
+.post__img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.post__writer {
+  position: absolute;
+  left: var(--m-padding);
+  bottom: var(--m-padding);
+  color: #fff;
+}
+
+.post__header {
+  margin-bottom: var(--l-padding);
+}
+
+.post__title {
+  margin: 0 0 10px 0;
+  font-family: "Hoefler-text", serif;
+  font-size: 44px;
+  line-height: 1.2;
+  color: #000;
+  font-weight: 400;
+}
+
+.post__about {
+  margin-bottom: var(--m-padding);
+}
+
+.post__desc {
+  margin: 0 0 20px;
+  font-size: 22px;
+  line-height: 1.5;
+}
+
+/*----------------------------------------------------------------
+    Writer
+----------------------------------------------------------------*/
+
+.writer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.writer__photo {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 60px;
+  flex: 0 0 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin-right: 15px;
+  overflow: hidden;
+}
+
+.writer__img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  -o-object-position: center;
+  object-position: center;
+}
+
+.writer__name {
+  color: currentColor;
+  margin: 0;
+  font-size: 16px;
+}
+
+.writer__author {
+  color: currentColor;
+}
+
+/*----------------------------------------------------------------
+    Share
+----------------------------------------------------------------*/
+
+.share {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.share__item {
+  margin-right: 30px;
+}
+
+.share__item:last-child {
+  margin: 0;
+}
+
+.share__link {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+  -ms-flex-direction: row-reverse;
+  flex-direction: row-reverse;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: currentColor;
+}
+
+.share__link--vk:hover .share__icon {
+  fill: #6287ae;
+}
+
+.share__link--fb {
+  height: 18px;
+}
+
+.share__link--fb:hover .share__icon {
+  fill: #5070b4;
+}
+
+.share__link--twi:hover .share__icon {
+  fill: #1da1f2;
+}
+
+.share__icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+  fill: #b4b4b4;
+  -webkit-transition: fill .3s;
+  -o-transition: fill .3s;
+  transition: fill .3s;
+}
+
+/*----------------------------------------------------------------
+    Post Perview
+----------------------------------------------------------------*/
+
 @media (min-width: 768px) {
+  .page--post {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 2.5fr 1fr;
+    grid-template-columns: 2.5fr 1fr;
+  }
+
   .btn:hover,
   .btn:focus {
     -webkit-box-shadow: 2px 2px 4px #a0a0a0;
@@ -3413,6 +3585,10 @@ body.lock {
   :root {
     --m-padding: 15px;
   }
+
+  :root {
+    --m-padding: 25px;
+  }
 }
 
 @media (max-width: 767px) {
@@ -3497,6 +3673,12 @@ body.lock {
 
   .gallery__nav {
     width: 120px;
+  }
+}
+
+@media (max-width: 767) {
+  .post__desc {
+    font-size: 18px;
   }
 }
 

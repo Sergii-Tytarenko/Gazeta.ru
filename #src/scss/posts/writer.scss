@@ -1,0 +1,35 @@
+/*----------------------------------------------------------------
+    Writer
+----------------------------------------------------------------*/
+.writer {
+    display: flex;
+    // .writer__photo
+    &__photo {
+        flex: 0 0 60px;
+        height: 60px;
+        border-radius: 50%;
+        margin-right: 15px;
+        overflow: hidden;
+    }
+    // .writer__img
+    &__img {
+        display: block;
+        width: 100%;
+        height: 100%;
+
+        object-fit: cover;
+        object-position: center;
+    }
+    // .writer__inner
+    &__inner {}
+    // .writer__name
+    &__name {
+        color: currentColor;
+        margin: 0;
+        font-size: 16px;
+    }
+    // .writer__author
+    &__author {
+        color: currentColor;
+    }
+}

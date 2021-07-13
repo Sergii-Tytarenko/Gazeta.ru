@@ -1,0 +1,60 @@
+/*----------------------------------------------------------------
+    Share
+----------------------------------------------------------------*/
+.share {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+    
+    list-style: none;
+    // .share__item
+    &__item {
+        margin-right: 30px;
+        &:last-child {
+            margin: 0;
+        }
+    }
+    // .share__link
+    &__link {
+        display: inline-flex;
+        flex-direction: row-reverse;
+        align-items: center;
+
+        color: currentColor;
+        &--vk {
+            &:hover {
+                .share__icon {
+                    fill: #6287ae;
+                } 
+            }
+        }
+        &--fb {
+            height: 18px;
+            &:hover {
+                .share__icon {
+                    fill: #5070b4;
+                }
+            }
+        }
+        &--twi {
+            &:hover {
+                .share__icon {
+                    fill: #1da1f2;
+                }
+            }
+        }
+    }
+    // .share__num
+    &__num {}
+    // .share__icon
+    &__icon {
+        width: 20px;
+        height: 20px;
+        margin-right: 5px;
+
+        fill: #b4b4b4;
+        transition: fill .3s;
+    }
+}
+

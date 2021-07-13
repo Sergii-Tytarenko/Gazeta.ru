@@ -3,8 +3,9 @@
 @import "./main/reset";
 @import "./main/fonts";
 @import "./main/global";
-@import "./main/forms";
+@import "./main/forms"; // различные компоненты блоков
 
+// Главная
 @import 'root';
 @import 'social';
 @import 'header';
@@ -30,4 +31,10 @@
 @import 'publications-nav';
 @import 'columns';
 @import 'subject';
+
+// Стили поста 
+@import 'posts/post';
+@import 'posts/writer';
+@import 'posts/share';
+@import 'posts/post-preview';
 

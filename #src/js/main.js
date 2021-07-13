@@ -237,42 +237,46 @@ function body_lock_add(delay) {
 
 /* Hours News Tabs
 ---------------------------------------------------------------*/
-const hoursMenu = document.querySelector('.hours-news__menu'),
-      hoursMenuBtns = hoursMenu.querySelectorAll('.hours-news__btn'),
+const hoursNews = document.querySelector('.hour-news'),
+      hoursMenu = document.querySelector('.hours-news__menu'),
+      hoursMenuBtns = document.querySelectorAll('.hours-news__btn'),
       hoursContent = document.querySelectorAll('.hours-news__tabs'),
       topNewsSlider = document.querySelector('.top-news--slider');
 
 
-if (window.getComputedStyle(hoursMenu).display == 'flex') initHoursTabs();
-initHoursTabs();
-function initHoursTabs() {
-    shwoContnet()
+if (hoursNews) {
+    if (window.getComputedStyle(hoursMenu).display == 'flex') initHoursTabs();
+    initHoursTabs();
+
+    function initHoursTabs() {
+        shwoContnet()
+        
+        hoursMenu.addEventListener('click', (event) => {
+            let target = event.target;
+            if (target && target.matches('button.hours-news__btn')) {
+                hoursMenuBtns.forEach((item, i) => {
+                    if (target == item) {
+                        shwoContnet(i);
+                    }
+                });
+            };
+        })
     
-    hoursMenu.addEventListener('click', (event) => {
-        let target = event.target;
-        if (target && target.matches('button.hours-news__btn')) {
-            hoursMenuBtns.forEach((item, i) => {
-                if (target == item) {
-                    shwoContnet(i);
-                }
-            });
-        };
-    })
-
-    function shwoContnet(i = 0) {
-        hideContent();
-        hoursMenuBtns[i].classList.add('active');
-        hoursContent[i].classList.remove('hide')
-    }
-
-    function hideContent() {
-        hoursMenuBtns.forEach(el => {
-            el.classList.remove('active')
-        })
-
-        hoursContent.forEach(el => {
-            el.classList.add('hide')
-        })
+        function shwoContnet(i = 0) {
+            hideContent();
+            hoursMenuBtns[i].classList.add('active');
+            hoursContent[i].classList.remove('hide')
+        }
+    
+        function hideContent() {
+            hoursMenuBtns.forEach(el => {
+                el.classList.remove('active')
+            })
+    
+            hoursContent.forEach(el => {
+                el.classList.add('hide')
+            })
+        }
     }
 }
 
@@ -280,7 +284,7 @@ function initHoursTabs() {
 
 /* Hours News sliders
 ---------------------------------------------------------------*/
-let hoursNews = new Swiper('.hours-news__slider', {
+let hoursNewsSlider = new Swiper('.hours-news__slider', {
     loop: true,
     autoplay: {
         delay: 5000,
@@ -296,7 +300,7 @@ let hoursNews = new Swiper('.hours-news__slider', {
     }
 });
 
-if(topNewsSlider) {
+if (topNewsSlider) {
     let topNews = new Swiper(topNewsSlider, {
         loop: true,
         autoplay: {
@@ -339,31 +343,33 @@ if(topNewsSlider) {
 
 /* Gallery's Tabs
 ---------------------------------------------------------------*/
-const galleryMenu = document.querySelector('.gallery__nav'),
-      galleryBtns = galleryMenu.querySelectorAll('.gallery__btn'),
+const gallery = document.querySelector('.gallery'),
+      galleryMenu = document.querySelector('.gallery__nav'),
+      galleryBtns = document.querySelectorAll('.gallery__btn'),
       galleryContents = document.querySelectorAll('.big-article--gallery');
 
-galleryMenu.addEventListener('click', (event) => {
-    let target = event.target;
-    if (target && target.matches('button.gallery__btn')) {
-        galleryBtns.forEach((item, i) => {
-            if (target == item) {
-                shwoContnet(i);
-            }
-        });
-    };
-})
+if (gallery) {
+    galleryMenu.addEventListener('click', (event) => {
+        let target = event.target;
+        if (target && target.matches('button.gallery__btn')) {
+            galleryBtns.forEach((item, i) => {
+                if (target == item) {
+                    shwoContnet(i);
+                }
+            });
+        };
+    })
 
-shwoContnet();
+    shwoContnet();
 
-function shwoContnet(i = 0) {
-    hideContent();
-    galleryBtns[i].classList.add('gallery__btn--active');
-    galleryContents[i].classList.remove('hide');
-    galleryContents[i].classList.add('show');
-}
+    function shwoContnet(i = 0) {
+        hideContent();
+        galleryBtns[i].classList.add('gallery__btn--active');
+        galleryContents[i].classList.remove('hide');
+        galleryContents[i].classList.add('show');
+    }
 
-function hideContent() {
+    function hideContent() {
     galleryBtns.forEach(el => {
         el.classList.remove('gallery__btn--active')
     })
@@ -373,72 +379,73 @@ function hideContent() {
         el.classList.remove('show');
     })
 }
-
-
-
-/* Masonry  grid 
----------------------------------------------------------------*/
-let myGrid = macy({
-    container: '.publications__inner',
-    waitForImages: false,
-    margin: {
-        x: 15,
-        y: 15,
-    },
-    columns: 4,
-    breakAt: {
-        1200: 3,
-        920: 2,
-        530: 1
-    }
-});
+}
 
 
 
 /* Publications Tabs
 ---------------------------------------------------------------*/
-const publicationsNav = document.querySelector('.publications__nav'),
-      publicationsBtns = publicationsNav.querySelectorAll('button.publications__btn'),
+const publications = document.querySelector('.publications'),
+      publicationsNav = document.querySelector('.publications__nav'),
+      publicationsBtns = document.querySelectorAll('button.publications__btn'),
       articles = document.querySelectorAll('.js-article');
 
-publicationsNav.addEventListener('click', (el) => {
-    let target = el.target;
-        
-    if(target && target.matches('button.publications__btn')) {
-        showArticles(target.dataset.descr);
+if (publications) {
+    /* Masonry  grid */
+    let myGrid = macy({
+        container: '.publications__inner',
+        waitForImages: false,
+        margin: {
+            x: 15,
+            y: 15,
+        },
+        columns: 4,
+        breakAt: {
+            1200: 3,
+            920: 2,
+            530: 1
+        }
+    });
+
+    publicationsNav.addEventListener('click', (el) => {
+        let target = el.target;
+            
+        if(target && target.matches('button.publications__btn')) {
+            showArticles(target.dataset.descr);
+        }
+    })
+
+    showArticles()
+
+    function showArticles(x = 'js-news') {
+        hideArticles()
+
+        articles.forEach(el => {
+            if (el.classList.contains(x)) {
+                el.classList.add('selected');
+                el.classList.remove('disabled');
+            }
+        });
+
+        publicationsBtns.forEach(el => {
+            if (el.dataset.descr == x) {
+                el.classList.add('publications__btn--active');
+            }
+        });
+
+        myGrid.recalculate('true');
     }
-})
 
-showArticles()
+    function hideArticles() {
+        publicationsBtns.forEach(el => {
+            el.classList.remove('publications__btn--active')
+        });
 
-function showArticles(x = 'js-news') {
-    hideArticles()
-
-    articles.forEach(el => {
-        if (el.classList.contains(x)) {
-            el.classList.add('selected');
-            el.classList.remove('disabled');
-        }
-    });
-
-    publicationsBtns.forEach(el => {
-        if (el.dataset.descr == x) {
-            el.classList.add('publications__btn--active');
-        }
-    });
-
-    myGrid.recalculate('true');
-}
-
-function hideArticles() {
-    publicationsBtns.forEach(el => {
-        el.classList.remove('publications__btn--active')
-    });
-
-    articles.forEach(el => {
-        el.classList.add('disabled');
-        el.classList.remove('selected')
-    });
+        articles.forEach(el => {
+            el.classList.add('disabled');
+            el.classList.remove('selected')
+        });
+    }
 }
 
 
