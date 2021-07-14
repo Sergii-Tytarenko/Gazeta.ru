@@ -2,16 +2,41 @@
     Post Perview
 ----------------------------------------------------------------*/
 .post-preview {
+    background-color: #f9f9f9;
+    transition: box-shadow .3s;
+    &:hover {
+        box-shadow: 1px 1px 5px #ccc;
+    }
+    &:focus {
+        outline: 2px solid #b90903;
+        outline-offset: 2px;
+    }
     // .post-preview__photo
-    &__photo {}
+    &__photo {
+        margin-bottom: 15px;
+    }
     // .post-preview__img
-    &__img {}
+    &__img {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
     // .post-preview__inner
-    &__inner {}
+    &__inner {
+        padding: 20px;
+        padding-top: 0;
+    }
     // .post-preview__title
     &__title {}
     // .post-preview__about
-    &__about {}
+    &__about {
+        margin-bottom: 15px;
+        color: #000;
+    }
     // .post-preview__text
-    &__text {}
+    &__text {
+        margin: 0;
+        color: #000;
+        line-height: 1.3;
+    }
 }

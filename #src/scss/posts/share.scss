@@ -44,6 +44,10 @@
                 }
             }
         }
+        &:focus {
+            outline: 2px solid #b90903;
+            outline-offset: 2px;
+        }
     }
     // .share__num
     &__num {}

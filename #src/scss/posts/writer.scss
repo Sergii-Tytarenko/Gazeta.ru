@@ -3,6 +3,7 @@
 ----------------------------------------------------------------*/
 .writer {
     display: flex;
+    width: 100%;
     // .writer__photo
     &__photo {
         flex: 0 0 60px;
@@ -10,6 +11,10 @@
         border-radius: 50%;
         margin-right: 15px;
         overflow: hidden;
+        @media(max-width: 420px) {
+            flex: 0 0 45px;
+            height: 45px;
+        }
     }
     // .writer__img
     &__img {
@@ -27,6 +32,9 @@
         color: currentColor;
         margin: 0;
         font-size: 16px;
+        @media(max-width: 420px) {
+            font-size: 14px;
+        }
     }
     // .writer__author
     &__author {

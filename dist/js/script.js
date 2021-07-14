@@ -339,7 +339,7 @@ function body_lock_add(delay) {
 
 /* Hours News Tabs
 ---------------------------------------------------------------*/
-const hoursNews = document.querySelector('.hour-news'),
+const hoursNews = document.querySelector('.hours-news'),
       hoursMenu = document.querySelector('.hours-news__menu'),
       hoursMenuBtns = document.querySelectorAll('.hours-news__btn'),
       hoursContent = document.querySelectorAll('.hours-news__tabs'),

@@ -50,5 +50,9 @@
     }
     &--post {
         grid-area: initial;
+        display: none;
+        @media(min-width: 1050px) {
+            display: block;
+        }
     }
 }

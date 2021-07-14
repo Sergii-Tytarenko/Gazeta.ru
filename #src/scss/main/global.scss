@@ -52,7 +52,7 @@ body.lock {
 	position: relative;
 	flex: 1 1 auto;
 	&--post {
-		@media(min-width: 768px) {
+		@media(min-width: 1050px) {
 			display: grid;
 			grid-template-columns: 2.5fr 1fr;
 		}
