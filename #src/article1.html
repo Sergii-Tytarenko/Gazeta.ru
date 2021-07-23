@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="ru">
+@include('_head.html', {
+    "title":"Статья"
+})
+<body>
+	<div class="wrapper">
+		<div class="root">
+			@include('_header.html',{})
+			<main class="page page--post">
+                <article class="post">
+                    <div class="post__photo">
+                        <img class="post__img" src="img/photos/riot.jpg" alt="Проетс" width="640" height="426">
+
+                        <div class="post__writer writer">
+                            <div class="writer__photo">
+                                <img  class="writer__img" src="img/photos/denis.jpg" alt="Алексей Топалов" width="63" height="58">
+                            </div>
+
+                            <div class="writer__inner">
+                                <p class="writer__name">Алексей Топалов</p>
+                                <p class="writer__author author">Автор статьи</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="post__container">
+                        <header class="post__header">
+                            <h2 class="post__title">Полиция подавила бунт в лагере для беженцев</h2>
+    
+                            <div class="post__about article-info">
+                                <span class="article-info__rubric">Общество</span>
+                                <time class="article-info__time" datetime="2016-06-11T15:59">
+                                    <span class="article-info__hours">15:59</span>
+                                </time>
+    
+                                <span class="commnets" title="комментарии">77</span>
+                            </div>
+    
+                            <p class="post__desc">На севере Италии в лагере для беженцев, расположенном на бывшей военной базе близ городка Кона (около Венеции), произошел бунт. Полиции удалось договориться с мигрантами, освободить заложников и вернуть порядок, сообщает итальянское издание.</p>
+    
+                            <ul class="post__share share">
+                                <li class="share__item">
+                                    <a class="share__link share__link--fb" href="#" title="Поделиться в фейсбук">
+                                        <span class="shar__num">72</span>
+
+                                        <svg class="share__icon" width="15" height="15">
+                                            <use xlink:href="img/sprite.svg#fb"></use>
+                                        </svg>
+                                    </a>
+                                </li>
+    
+                                <li class="share__item">
+                                    <a class="share__link share__link--twi" href="#" title="Поделиться в твиттере">
+                                        <span class="shar__num">35</span>
+
+                                        <svg class="share__icon" width="15" height="15">
+                                            <use xlink:href="img/sprite.svg#twi"></use>
+                                        </svg>
+                                    </a>
+                                </li>
+    
+                                <li class="share__item">
+                                    <a class="share__link share__link--vk" href="#" title="Поделиться в вконтаке">
+                                        <span class="share__num">144</span>
+
+                                        <svg class="share__icon" width="15" height="15">
+                                            <use xlink:href="img/sprite.svg#vk"></use>
+                                        </svg>
+                                    </a>
+                                </li>
+                            </ul>
+                        </header>
+    
+                        <p class="post__text">Мигранты, ожидающие получение временных документов, захватили в заложники 25 социальных работников, в том числе двоих врачей и медсестру. Помимо этого они стали жечь костры из мебели. Позднее заложников отпустили, однако волнения продолжились.</p>
+                           
+                        <p class="post__text"> Днем 3 января итальянская полиция заявила о подавлении беспорядков в миграционном центре. 25 работников центра были освобождены.</p>
+                        <p class="post__text"> Инцидент произошел после смерти гражданки Кот д'Ивуара. По мнению беженцев, 25-летней Сандрин Бакайоко слишком поздно оказали помощь.</p>
+                        <p class="post__text">Как сообщалось, системе предоставления убежищ в Италии все труднее выдерживать приток мигрантов. Более 176 тысяч человек в настоящее время находятся в специальных центрах размещения по всей стране. Большинство из них прибыли в Италию из африканских стран: около 36 тысяч из Нигерии, около 20 тысяч из Эритреи и около 12 тысяч — из Гвинеи. Многие намерены ехать на север, среди самых популярных направлений — Германия и Швеция.</p>
+                        <p class="post__text">Количество мигрантов, прибывающих в Италию, выросло, после того как пути через Грецию и Балканы были в основном заблокированы с помощью соглашения между Евросоюзом и Турцией. По этому соглашению все нелегальные мигранты, прибывающие в Грецию из Турции, возвращаются обратно..</p>
+                        <p class="post__text">Все прибывающие в Италию беженцы должны сдать отпечатки пальцев. Однако многие мигранты отказываются, опасаясь, что в будущем у них могут возникнуть проблемы. Правозащитники из Amnesty International утверждают, что располагает свидетельствами более 20 человек, рассказавших о жестких методах принуждения к снятию отпечатков пальцев.</p>
+    
+                        <a class="post__button btn btn--more" href="#">Статьи по теме</a>
+                    </div><!-- /.post__container-->
+                </article>
+
+                <section class="day-news day-news--post">
+                    <h2 class="day-news__title">Новости дня</h2>
+
+                    <ul class="day-news__list">
+                        <li class="day-news__row">
+                            <a class="day-news__lk" href="#">Росздравнадзор изымает препараты от тромбза компании Pfizer</a>
+
+                            <div class="day-news__footer article-info">
+                                <a class="article-info__rubric" href="#">Политика</a>
+                                <time class="article-info__time" datetime="2016-06-11T15:23">
+                                    <span class="article-info__hours">15:23</span>
+                                </time>
+                            </div>
+                        </li>
+
+                        <li class="day-news__row">
+                            <a class="day-news__lk" href="#">Гости фестиваля в Москве купили более 8 тонн варенья за три дня</a>
+
+                            <div class="day-news__footer article-info">
+                                <a class="article-info__rubric" href="#">Общество</a>
+                                <time class="article-info__time" datetime="2016-06-11T16:15">
+                                    <span class="article-info__hours">16:15</span>
+                                </time>
+                            </div>
+                        </li>
+
+                        <li class="day-news__row">
+                            <a class="day-news__lk" href="#">Росздравнадзор изымает препараты от тромбоза компании Pfizer</a>
+
+                            <div class="day-news__footer article-info">
+                                <a class="article-info__rubric" href="#">Политика</a>
+                                <time class="article-info__time" datetime="2016-06-11T18:56">
+                                    <span class="article-info__hours">18:56</span>
+                                </time>
+                            </div>
+                        </li>
+                        
+                        <li class="day-news__row">
+                            <a class="day-news__lk" href="#">Власти Казахстана установили связь подозреваемого из Алма-Аты с салафитами</a>
+
+                            <div class="day-news__footer article-info">
+                                <a class="article-info__rubric" href="#">Армия</a>
+                                <time class="article-info__time" datetime="2016-06-11T19:03">
+                                    <span class="article-info__hours">19:03</span>
+                                </time>
+                            </div>
+                        </li>
+
+                        <li class="day-news__row">
+                            <a class="day-news__lk" href="#">Источник: в Рыбинске заключенные прекратили голодовку</a>
+
+                            <div class="day-news__footer article-info">
+                                <a class="article-info__rubric" href="#">Политика</a>
+                                <time class="article-info__time" datetime="2016-06-11T15:23">
+                                    <span class="article-info__hours">15:23</span>
+                                </time>
+                            </div>
+                        </li>
+
+                        <li class="day-news__row">
+                            <a class="day-news__lk" href="#">Гости фестиваля в Москве купили более 8 тонн варенья за три дня</a>
+
+                            <div class="day-news__footer article-info">
+                                <a class="article-info__rubric" href="#">Общество</a>
+                                <time class="article-info__time" datetime="2016-06-11T16:15">
+                                    <span class="article-info__hours">16:15</span>
+                                </time>
+                            </div>
+                        </li>
+
+                        <li class="day-news__row">
+                            <a class="day-news__lk" href="#">Росздравнадзор изымает препараты от тромбоза компании Pfizer</a>
+
+                            <div class="day-news__footer article-info">
+                                <a class="article-info__rubric" href="#">Политика</a>
+                                <time class="article-info__time" datetime="2016-06-11T18:56">
+                                    <span class="article-info__hours">18:56</span>
+                                </time>
+                            </div>
+                        </li>
+
+                        <li class="day-news__row">
+                            <a class="day-news__lk" href="#">Белый дом прокомментировал резкие высказывания Дутерте в адрес Обамы</a>
+
+                            <div class="day-news__footer article-info">
+                                <a class="article-info__rubric" href="#">Армия</a>
+                                <time class="article-info__time" datetime="2016-06-11T19:03">
+                                    <span class="article-info__hours">19:03</span>
+                                </time>
+                            </div>
+                        </li>
+                    </ul><!-- /.day-news__list -->
+
+                    <a class="day-news__btn btn" href="#">Все новости</a>
+                </section><!-- /.day-news -->
+            </main>
+			@include('_footer.html', {})
+		</div><!-- /.root -->
+	</div> <!-- /.wrapper -->
+	
+	<!-- Modal windows-->
+	@include('_modal.html',{})
+	<script src="js/script.js"></script>
+</body>
+</html>
